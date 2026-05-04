@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lex Educationis | The Jurisprudence Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+        --gold: #c9a227;
+        --gold-muted: rgba(201, 162, 39, 0.2);
+        --dark-bg: #0a0a0a;
+        --card-bg: rgba(20, 20, 20, 0.95);
+        --text-main: #e0e0e0;
+        --accent-font: 'Playfair Display', 'Times New Roman', serif;
+    }
+	
+	body{
+		background-color: var(--dark-bg); 
+		color: var(--text-main);
+		margin:0;
+		padding:0;
+		font-family: Cinzel;
+	
+		p1{
+		--gold: #c9a227;
+		}
+	
+	}
+	
+	.list-item{
+			margin: 10px 0;
+			padding: 20px;
+			background:rgba(255,255,255, 0.02);
+			border-left: 3px solid var(--gold);
+			border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+			cursor: pointer;
+			transition: all 0.3s ease;
+			font-family: 'Cinzel', serif;
+			letter-spacing: 1px;
+			}
+			.list-html:hover {
+			background: rgba(201, 162, 39, 0.1);
+			padding-left: 35px;
+			border-left-width: 10px;
+			}
+	
+			.gold-frame{
+			border: 6px solid #D4AF37;
+			box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.3);
+			border-radius: 2px;
+			box-sizing: border-box;
+			padding: 4px;
+			background-color: #000;
+			}
+			
+			.gold-frame:hover{
+			border-color: #FFD700;
+			box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+			transition: all 0.3s ease;
+			}
+			
+			html {
+			scroll-behavior: smooth;
+			}
+			
+			.portal-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			max-width: 800px;
+			margin: 2rem auto;
+			padding: 20px;
+			background: radial-gradient(circle at top right, rgba(184, 134, 11, 0.2), var(--card-bg));
+			border: 4px solid #d4af37;
+			}
+	
+			.portal-quote{
+			color: #d4af37;
+			text-align: center;
+			font-family: 'Cinzel', serif;
+			line-height: 1.6;
+			margin-bottom: 2rem;
+			font-size: 20px;
+			}
+	
+			
+			
+			
+	
+    /* ... (keep your existing body, header, and gallery styles here) ... */
+
+    /* --- LANDING PAGE (THE GATE) --- */
+    #landing-gate {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        z-index: 1000; display: flex; align-items: center; justify-content: center;
+        /* Brightened the gradient: reduced the dark overlay from 0.8 to 0.6 */
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), 
+                    url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=2000');
+        background-size: cover; 
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        transition: transform 1s cubic-bezier(0.7, 0, 0.3, 1);
+    }
+
+    /* --- MOBILE OPTIMIZATION --- */
+    @media (max-width: 600px) {
+        #landing-gate {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), 
+                              url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800&h=1200');
+        }
+
+        /* Reduced padding and font size for the acknowledgement block on phones */
+        .gate-content {
+            padding: 20px !important;
+        }
+
+        .acknowledgement-text {
+            font-size: 0.9rem !important;
+            line-height: 1.4 !important;
+            margin: 15px 0 !important;
+            padding: 10px 0 !important;
+        }
+    }
+
+    /* ... (rest of your styles) ... */
+
+        #landing-gate.dismissed { transform: translateY(-100%); }
+
+        .gate-content {
+            max-width: 700px; padding: 40px; text-align: center;
+            background: rgba(10, 10, 10, 0.85);
+            border: 1px solid var(--gold);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+        }
+
+        .acknowledgement-text {
+            font-family: var(--accent-font); font-style: italic;
+            font-size: 1.1rem; line-height: 1.8; margin: 30px 0;
+            color: #ccc; border-top: 1px solid var(--gold-muted);
+            border-bottom: 1px solid var(--gold-muted); padding: 20px 0;
+			
+        }
+
+        /* --- MAIN DASHBOARD STYLE --- */
+        .main-wrapper {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.95)), 
+                        url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=1500');
+            background-attachment: fixed; background-size: cover;
+        }
+
+        header { padding: 40px 20px; text-align: center; border-bottom: 1px solid var(--gold); background: rgba(0,0,0,0.9); }
+        .gold-text { color: var(--gold); letter-spacing: 5px; text-transform: uppercase; margin: 0; font-family: 'Cinzel', serif; }
+        
+        .gallery-container {
+            display: flex; justify-content: center; align-items: flex-end;
+            gap: 20px; margin: 40px auto; max-width: 800px;
+        }
+        .frame { flex: 1; aspect-ratio: 3/4; border: 2px solid var(--gold); background: #1a1a1a; transition: 0.3s; }
+        .frame.elevated { transform: translateY(-25px); border-width: 3px; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .view { display: none; animation: fadeIn 0.5s ease forwards; }
+        .view.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .card {
+            background: radial-gradient(circle at top right, rgba(184, 134, 11, 0.2), var(--card-bg)); padding: 40px; 
+            border: 1px solid var(--gold-muted); box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .level-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-bottom: 40px; }
+        .btn-premium {
+            background: radial-gradient(circle at top right, rgba(184, 134, 11, 0.2), var(--card-bg)); color: var(--gold); border: 1px solid var(--gold);
+            padding: 20px 10px; cursor: pointer; transition: 0.3s; font-family: 'Cinzel'; font-weight: bold;
+			font-size: 20px;
+        }
+        .btn-premium:hover { background: var(--gold); color: black; }
+
+        .back-btn { background: none; border: none; color: var(--gold); cursor: pointer; margin-bottom: 20px; text-transform: uppercase; font-weight: bold; font-size: 20px;}
+        
+        .comment-form input, .comment-form textarea {
+            width: 100%; padding: 12px; margin-bottom: 15px; background: #000; border: 1px solid #444; color: white;
+        }
+        .comment-form button { background: var(--gold); color: black; border: none; padding: 12px 30px; cursor: pointer; font-family: 'Cinzel'; font-weight: bold; }
+
+        footer { text-align: center; padding: 40px; opacity: 0.5; font-size: 0.8rem; letter-spacing: 2px; }
+      
+      
+     
+    </style>
+</head>
+<body>
+
+    <div id="landing-gate">
+        <div class="gate-content">
+            <h1 class="gold-text" style="font-size: 2.5rem;">Lex Educationis</h1>
+            <p style="letter-spacing: 3px; font-size: 0.8rem; opacity: 0.7;">VIRTUS ET SCIENTIA</p>
+            
+            <div class="acknowledgement-text">
+                <h1 class="gold-text">WELCOME</h1>
+                "This portal is dedicated to the pursuit of legal excellence. Special thanks to the mentors, 
+                scholars, and peers who contributed to the synthesis of these notes. Your guidance serves 
+                as the cornerstone of this academic vault."
+            </div>
+
+            <button class="btn-premium" style="padding: 15px 50px;" onclick="enterPortal()">Proceed to Chambers</button>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+        <header>
+            <h2 class="gold-text">The Academic Vault</h2>
+        </header>
+
+        <div class="container">
+            <div id="home-view" class="view active">
+                <div class="gallery-container">
+                    <div class="frame">
+					<img src="img/spiv2.jpg" alt="Author" style="width:100%; height:auto;" class="gold-frame">
+					</div>
+                    <div class="frame elevated">
+					<img src="img/spiv1.jpg" alt="Author" style="width:100%; height:auto;" class="gold-frame">
+					
+					</div>
+                    <div class="frame">
+					<img src="img/spiv3.jpg" alt="Author" style="width:100%; height:auto;"class="gold-frame">
+					</div>
+                </div>
+				
+				<section class="portal-container">
+				<p class="portal-quote" >
+				They say the strength of one is a singularity of the strength of all. The few of us and many more to come, have lent that little strength to you, just as some-many before us did. So let that strength sharpen you till you gleam...
+				</p></section>
+                <div class="level-grid">
+                    <button class="btn-premium" onclick="showLevel('100L')">100 Level</button>
+                    <button class="btn-premium" onclick="showLevel('200L')">200 Level</button>
+                    <button class="btn-premium" onclick="showLevel('300L')">300 Level</button>
+                    <button class="btn-premium" onclick="showLevel('400L')">400 Level</button>
+                    <button class="btn-premium" onclick="showLevel('500L')">500 Level</button>
+                </div>
+				
+				<section class="portal-container">
+				<h2> Status Notice </h2>
+				<p class="portal-quote" >
+				Lex Educationis is currently undergoing rigorous expansion. While our editorial board continues to work tirelessly to curate the complete content of the legal curricula, please be advised that our resources are being published in phases. At present, the 200-level module is fully archived and available for consultation with exception for the "Labour Law Course". Importantly, this is also a call to legal writers who wish to have their work published here under the courses. You may reach out to us via the "Legal Inquiries" box. We thank you all for your patience as we build this foundation of knowledge together.
+				</p></section>
+             
+				
+                <div class="card">
+                    <h3 style="color: var(--gold); font-family: 'Cinzel'; margin-top: 0;">Legal Inquiries</h3>
+                    <form class="comment-form" action="https://formsubmit.co/vokalaigiri247@gmail.com" method="POST">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                        <textarea name="message" rows="4" placeholder="Request a topic or leave a note..." required></textarea>
+                        <button type="submit">Submit to Registry</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="level-view" class="view">
+                <button class="back-btn" onclick="openView('home-view')">← Return to Lobby</button>
+                <div class="card">
+                    <h2 id="level-title" style="color:var(--gold); font-family: 'Cinzel'; border-bottom: 1px solid var(--gold-muted); padding-bottom: 10px;"></h2>
+                    <div id="course-list"></div>
+                </div>
+            </div>
+
+            <div id="toc-view" class="view">
+                <button class="back-btn" id="toc-back-btn">← Back</button>
+                <div class="card">
+                    <h2 id="course-title" style="color:var(--gold); font-family: 'Cinzel';"></h2>
+                    <div id="topic-list"></div>
+                </div>
+            </div>
+
+            <div id="digest-view" class="view">
+                <button class="back-btn" id="digest-back-btn">← Previous</button>
+                <div class="card">
+                    <h1 id="digest-title" style="color: var(--gold); font-family: var(--accent-font);"></h1>
+                    <div id="digest-content" style="font-size: 1.1rem; line-height: 1.8;"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>&copy; 2026 LEX EDUCATIONIS | THE JURISPRUDENCE PORTAL</footer>
+    </div>
+
+    <script>
+        // --- Navigation Logic ---
+        function enterPortal() {
+            document.getElementById('landing-gate').classList.add('dismissed');
+			window.history.pushState({viewId: 'home-view'}, "", "#home-view");
+			//Save the state in the URL window.location.hash="in-portal";
+        }
+
+        function openView(id, addToHistory = true) {
+			document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+			if (addToHistory){
+			window.history.pushState({viewId: id}, "", "#" +id);
+			}
+            window.scrollTo(0,0);
+        }
+
+        // --- Data Structure ---
+        const curriculum = {
+            '100L': { 'Legal Method': [{ title: 'Fundamentals', content: '## Legal Method\nWelcome to your 100 level studies.' }] },
+            '200L': {
+                'Law of Contract': [
+                    { 
+                        title: 'Vitiating elements of contract', 
+                        isParent: true,
+                        subTopics: [
+                            { title: 'Mistake', content: 'digest/Mistake.html' },
+                            { title: 'Misrepresentation', content: 'digest/Misrep.html' },
+                            { title: 'Undue influence and Duress', content: 'digest/Dur.html' },
+                            { title: 'Illegal contracts', content: 'digest/Illeg.html' }
+                        ]
+                    },
+                    { title: 'Privity of contract', content: 'digest/Privity.html' },
+					 { title: 'Remedies', content: 'by Breach\nFundamental' },
+					
+                    { 
+                        title: 'Discharge of contract', 
+                        isParent: true,
+                        subTopics: [
+                            { title: 'Performance', content: 'digest/Disperf.html' },
+                            { title: 'Agreement', content: 'digest/Disagre.html' },
+                            { title: 'Frustration', content: 'digest/Disfru.html' },
+                            { title: 'Breach', content: '## Discharge by Breach\nFundamental vs Minor breaches.' }
+                        ]
+                    }
+                ],
+                'Constitutional law': [
+                    { title: 'Citizenship(updated)', content: 'digest/Citizenship.html' },
+                    { title: 'Fundamental Rights (Chapter IV)(updated)', content: 'digest/Fundamental.html' },
+                    { title: 'Fundamental Objectives(updated)', content: 'digest/Fundobj.html' },
+                    { title: 'Creation of States', content: '## State Creation\nConstitutional Amendment procedures.' },
+                    { title: 'Legislative Power(updated)', content: 'digest/Legis.html' },
+                    { title: 'Judicial Power', content: '## Judicial\nPowers of the Supreme and High Courts.' },
+                    { title: 'Executive Power', content: '## Executive\nPresidential and Gubernatorial oversight.' },
+                    { title: 'Local Government(updated)', content: 'digest/Localgov.html' }
+                ],
+                'Legal system': [{ title: 'Sources of Law', content: 'digest/Source.html' }],
+                'Labour law': [{ title: 'Master and Servant', content: '## Labour Law\nContract of Service and Liability.' }]
+            },
+            '300L': {
+                'Law of Tort': [
+                    { title: 'Strict Liability', content: '## Strict Liability\nRylands v Fletcher.' },
+                    { title: 'Defamation', content: '## Defamation\nLibel and Slander.' },
+                    { title: 'Malicious Falsehood', content: '## Falsehood\nIntentional economic harm.' },
+                    { title: 'Tort of Conspiracy', content: '## Conspiracy\nCollective tortious acts.' },
+                    { title: 'Tort of Interference', content: '## Interference\nBusiness and contract disruption.' }
+                ],
+                'Criminal law': [{ title: 'Felonies and Misdemeanors', content: '## Criminal Law' }],
+                'Commercial law': [{ title: 'Sale of Goods', content: '## Commercial Law' }],
+                'Criminal litigation': [{ title: 'Arrest and Bail', content: '## Criminal Lit' }],
+                'Civil litigation': [{ title: 'Writ of Summons', content: '## Civil Lit' }]
+            },
+            '400L': {
+                'Law of Evidence': [{ title: 'Admissibility', content: '## Evidence' }],
+                'Equity and Trust': [{ title: 'Maxims of Equity', content: '## Equity' }],
+                'Land Law': [{ title: 'Tenure Systems', content: '## Land Law' }],
+                'Family law': [{ title: 'Matrimonial Causes', content: '## Family Law' }]
+            },
+            '500L': {
+                'Jurisprudence': [{ title: 'Natural Law', content: '## Jurisprudence' }],
+                'Company Law': [{ title: 'Incorporation', content: '## Company Law' }]
+            }
+        };
+
+        // --- Renderers ---
+        function showLevel(lvl) {
+            const list = document.getElementById('course-list');
+            document.getElementById('level-title').innerText = "CHAMBER: " + lvl;
+            list.innerHTML = '';
+            
+            Object.keys(curriculum[lvl]).forEach(course => {
+                const item = document.createElement('div');
+                item.className = 'list-item';
+                item.innerText = course;
+                item.onclick = () => showCourse(lvl, course);
+                list.appendChild(item);
+            });
+            openView('level-view');
+        }
+
+        function showCourse(lvl, course) {
+            const list = document.getElementById('topic-list');
+            document.getElementById('course-title').innerText = course;
+            document.getElementById('toc-back-btn').onclick = () => showLevel(lvl);
+            list.innerHTML = '';
+
+            curriculum[lvl][course].forEach(topic => {
+                const item = document.createElement('div');
+                item.className = 'list-item';
+                item.innerText = topic.title;
+                if(topic.isParent) {
+                    item.onclick = () => showSubTopics(topic, lvl, course);
+                } else {
+                    item.onclick = () => showDigest(topic, () => showCourse(lvl, course));
+                }
+                list.appendChild(item);
+            });
+            openView('toc-view');
+        }
+
+        function showSubTopics(parent, lvl, course) {
+            const list = document.getElementById('topic-list');
+            document.getElementById('course-title').innerText = parent.title;
+            document.getElementById('toc-back-btn').onclick = () => showCourse(lvl, course);
+            list.innerHTML = '';
+
+            parent.subTopics.forEach(sub => {
+                const item = document.createElement('div');
+                item.className = 'list-item';
+                item.innerText = "→ " + sub.title;
+                item.onclick = () => showDigest(sub, () => showSubTopics(parent, lvl, course));
+                list.appendChild(item);
+            });
+            openView('toc-view');
+        }
+
+       function showDigest(topic, backFn) {
+    // If the content starts with "http" or ends with ".html", it's a link!
+    if (topic.content.endsWith('.html') || topic.content.startsWith('http')) {
+        window.location.href = topic.content;
+    } else {
+        // Otherwise, show it on the same page as usual
+        document.getElementById('digest-title').innerText = topic.title;
+        let parsed = topic.content
+            .replace(/^## (.*$)/gm, '<h2 style="color:var(--gold);">$1</h2>')
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        
+        document.getElementById('digest-content').innerHTML = parsed;
+        document.getElementById('digest-back-btn').onclick = backFn;
+        openView('digest-view');
+    }
+}
+
+		window.addEventListener('load', () => {
+		if(window.location.hash === "#in-portal") {
+			document.getElementById('landing-gate').classList.add('dismissed');
+			}
+		});
+		
+		window.addEventListener('popstate', (event) => {
+		if(event.state&&event.state.viewId){
+			openView(event.state.viewId, false);
+			}else{
+			openView('home-view', false);
+			//if no state exists, default to home openView('home-view', false);
+		}
+		});
+		
+		
+    </script>
+</body>
+</html>

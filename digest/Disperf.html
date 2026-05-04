@@ -1,0 +1,214 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Digest | Lex Educationis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --gold: #c9a227; 
+            --dark-bg: #0a0a0a; 
+            --paper-bg: #141414;
+            --text-main: #e0e0e0; 
+        }
+
+        body { 
+            background: var(--dark-bg); 
+            color: var(--text-main); 
+            font-family: 'Playfair Display', serif; 
+            line-height: 1.8;
+            padding: 50px; 
+            margin: 0;
+        }
+
+        .paper { 
+            max-width: 850px; 
+            margin: auto; 
+            background: var(--paper-bg); 
+            padding: 80px; 
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.8);
+        }
+
+        /* Editorial Drop Cap */
+        #content-area p:first-of-type::first-letter {
+            font-family: 'Cinzel', serif;
+            float: left;
+            font-size: 3.5rem;
+            line-height: 1;
+            padding-right: 12px;
+            color: var(--gold);
+        }
+
+        h2, h3 { 
+            color: var(--gold); 
+            font-family: 'Cinzel', serif; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+            padding-bottom: 8px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .case-law {
+            color: var(--gold);
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        blockquote { 
+            border-left: 3px solid var(--gold); 
+            padding: 10px 20px; 
+            font-style: italic; 
+            margin: 25px 0;
+            background: rgba(201, 162, 39, 0.05);
+        }
+
+        .back-link { 
+            color: var(--gold); 
+            text-decoration: none; 
+            font-family: 'Cinzel', serif; 
+            margin-bottom: 30px; 
+            display: inline-block;
+            transition: 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .back-link:hover { 
+            opacity: 1; 
+            letter-spacing: 1px;
+        }
+
+        ::selection { 
+            background: var(--gold); 
+            color: var(--dark-bg); 
+        }
+
+        center {
+            display: block;
+            padding: 20px;
+            font-style: italic;
+            border-top: 1px solid rgba(201, 162, 39, 0.1);
+            border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+            margin: 20px 0;
+        }
+
+        /* RESPONSIVE CORRECTIONS */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px; /* Less outer padding on mobile */
+            }
+
+            .paper {
+                padding: 40px 20px; /* Narrower internal margins */
+                box-shadow: none; /* Shadow can look messy on small screens */
+            }
+
+            #content-area p:first-of-type::first-letter {
+                font-size: 2.8rem; /* Scale down drop cap */
+            }
+
+            h2 {
+                font-size: 1.4rem; /* Scale down titles */
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#in-portal" class="back-link">← Return to Vault</a>
+    <div class="paper">
+        <div id="content-area">
+            <!-- JavaScript populates this section -->
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+        
+        document.getElementById('content-area').innerHTML = `
+            <h2>Discharge of Contract</h2>
+<p>At law, it’s a settled position that nothing offends the principle of perpetuity. As there is a beginning to a thing, there shall also be an end and contracts aren’t exempted. 
+Discharge of contract refers to the ways a contract may be extinguished or brought to an end. Obligations as between parties shall not tarry upon their necks forever so it is necessary that there can be an end to them. </p>
+<p>Actually, performance of a contract is the usual way a contract is to be discharged because at the inception of the contract, parties are presumed to intend to perform their obligations.
+However, certain circumstances may arise and parties may satisfy the contract in any such way other than an outright performance and be legally free from their contractual relationship.</p>
+<p>Accordingly, <span class="case-law">the following are ways a contract may be discharged;<span class="case-law">
+<ol>
+<li><span class="case-law">Discharge of contract by Actual Performance</span></li>
+<li><span class="case-law">Discharge of contract by Agreement </span></li>
+<li><span class="case-law">Discharge of contract by Frustration</span></li> 
+<li><span class="case-law">Discharge of contract by Breach </span></li></ol></p>
+
+<h2> Discharge by Performance</h2>
+<p>As earlier said, the usual way a contract is discharged is by performance. Performance simply means doing in completeness, all the terms and obligations contained and as agreed by parties in the contract. 
+Naturally, failure to fulfill the entire terms of a contract amounts to a breach, for which the aggrieved party may sue for his contract right in damages. So it is essential that a party fulfills precisely what was agreed for the contract to be discharged by performance.<br>
+<span class="case-law">As a general rule</span>, for a contract to be discharged by performance, the performance must be total, precise and complete. He must fulfil his obligations with such levels of mathematical-exactitude that no obligations are left unexecuted for that in actuality amounts to <span class="case-law">partial performance</span>.</p>
+<p><span class="case-law">Partial performance</span> is not good performance to discharge a contract. It is in-fact no performance in law and a party may be liable in damages for the breach.<br>
+In <span class="case-law">Cutter v Powell<span>, a sailor was contracted for a 10 week voyage as a second mate. It was agreed that upon arrival at the destination, he would be paid after some days. Unfortunately, he died after only 7 weeks of duty, onboard the ship and could not complete the contract. His employer refused to pay his wages and his wife, instituted a suit to recover the sum. She claimed quatum meriut that is, the sum for which he had already put in work for. The court held that she was entitled to nothing as he failed to complete the contract. <span class="case-law">See also Sumpter v. Hedges</span></p> 
+<p>It is not unforeseeable that adhering to this general rule stricto senso, might cause some injustices and hardship, -as in the instance above, the employer has received some enrichment <span class="case-law">(7weeks of work)</span>, and has been permitted not to offer any value for it, because of the discernable principle of exactness of performance. So the law has created 4 exceptions to the rule. They include;</p>
+
+<h3>	Severable or Divisible Contracts:</h3>
+<p>What determines if a contract is severable or not can be perceived from the nature of the contract or the intention of the parties. <span class="case-law">Intention of the parties here call to examination, whether it was the mind of parties that the performance of the contract be severable that is, divisible, however it may also apply where <u>-by virtue of the nature of a contract, it is possible to perform the obligations in units, or in bits, although the obligation is to be treated as one, -the contract may be considered severable and a party may insist on getting paid for the units or relative portion he has executed.</u></span> </p>
+	<blockquote><p><span class="case-law">Take that John requires <u>3 trips of sand</u> from Samuel. Samuel agrees to do the job at <u>1 trip at a particular amount</u> -If he fails to provide all 3 as agreed, he may still be entitled for the number he may have already provided.</span></p></blockquote>
+<p>The considerations in play are that, 3 trips of sand common-sensically imply 3 distinct haulages of sand.
+Parties here have also agreed what per trip of sand would cost, so in an event where he fails to complete the contract of the absolute 3 as initially agreed, it would be inequitable to deny him of his pay except some other fact exist, as the contract would be perfectly severable and divisible. Another way to guage this, is if another contractor can easily fulfil the remainder with the repaid contract sum(that is the sum of the unexecuted or unperformed obligation)
+ <span class="case-law">-See Ritchie v. Atkinson</span></p>
+
+<h3>Tender of Performance:  </h3>
+<p> Two concepts exist under this head, they are;<br>
+<span class="case-law">a.	Prevention of Performance:</span> where a party passively or actively prevents the other, from performing his obligations under a contract, the prevented party may recover the sum for the work he has already done, that is, quantum meriut -and be effectively discharged from the contract. Some parties may venture to sue under the contract, where they believe a serious advantage has been denied of them and for which must flow naturally as damages from the prevention of the performance.<span class="case-law">-See Colburn v. Planche.</span></p>
+
+<p><span class="case-law">b.	Tender of Performance:</span></p> 
+<p>Unlike prevention of performance where a party merely prevents the other from fulfilling his obligations, a tender of performance will occur where one party actually offers to fulfill his obligation but the other party outrightly rejects it or refuses him from doing it. In a phrase <span class="case-law">"Rejection of Performance."</span><br>
+
+In an instance; A makes a contract with B to provide chairs at his wedding. On the agreed day of the wedding, B actually arrives to provide the chairs in furtherance of his obligation, but A rejects the chairs or refuses to take delivery for whatever reason, -B would be said to have tendered (offered) his performance of the contract.<br>
+
+Most importantly, <span class="case-law">the position of the law is that, <u>A’s rejection is sufficient to discharge B from the contract and A is also expected to pay B for his work as though B actually did it</u></span>. B may sue A, if he refuses to pay him under the contract.</p>
+
+<p><span class="case-law">iii.	 Acceptance of Partial Performance:</span></p>
+<p>It was stated before that partial performance of contract is no performance at all in law, but in a case where a party willing accepts it, it becomes sufficient and good performance.
+
+The sense is that the contract is treated as though parties have substituted it as against the original agreement and they may be so discharged from their relationship.<br> 
+
+In introducing this maxim, it follows that the party offering partial performance may only receive pay <span class="case-law"><u>pro tan to</u></span> that is, to the extent of his performance. <span class="case-law">See Christy v. Row</span></p>
+
+<p><span class="case-law">iv.	Substantial Performance;</span></p>
+<p>Whether the doctrine of substantial performance can be applied is a responsibility of the courts and a matter of questioning facts. 
+Accordingly and for quick understanding, lets bring to mind that there are two types of contractual terms among other classifications. Those two types of contractual terms are called <span class="case-law">“conditions and warranties’</span>. While <span class="case-law">warranties</span> can be said to be implied, enabling, lesser or incidental terms to a contract where a breach of it may only amount to a suit for contract right, <span class="case-law">a condition</span> on the other hand is so fundamental that the breach of it may give a party the power to repudiate the contract while suing for contract right as well.</p>
+<p>That said, where the performance in pursuance to a contract has been done substantially, but not without the breach of a warranty or less-clinically-speaking, -that the performance was done with errors, defects or mistakes that can be corrected with money or available resources, -the defendant may be entitled to the extent of his substantial performance with a deduction to meet his errors. This is applicable especially in contracts that are not severable and as well, seems to be a better modification for quantum meriut. <span class="case-law">-See Darkin Co ltd v. Lee</span>.
+ <p>However, like earlier said, what constitutes substantial performance is the responsibility of the courts. As seen in <span class="case-law">Bolton v Mahadeva</span>, for a court to be persuaded in holding that a contract was substantially performed, -such errors or breaches of warranties should not be so potent as to frustrate the purpose of the contract but enough to merely enable its viable intergrity. Afterall, where it is minimal, the law need not concern itself with such little things as expressed in the legal maxim <span class="case-law">De minimis non curat lex.</span> </p>
+
+Now you know the 4 ways contracts can be discharged by performance. 
+
+			<footer><center><span class="case-law">  An Appreciation by IGIRI VOKALA  </span></center ></footer>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+        `;
+    </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>
+
+
+
+

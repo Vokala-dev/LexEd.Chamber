@@ -1,0 +1,319 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Digest | Lex Educationis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --gold: #c9a227; 
+            --dark-bg: #0a0a0a; 
+            --paper-bg: #141414;
+            --text-main: #e0e0e0; 
+        }
+
+        body { 
+            background: var(--dark-bg); 
+            color: var(--text-main); 
+            font-family: 'Playfair Display', serif; 
+            line-height: 1.8;
+            padding: 50px; 
+            margin: 0;
+        }
+
+        .paper { 
+            max-width: 850px; 
+            margin: auto; 
+            background: var(--paper-bg); 
+            padding: 80px; 
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.8);
+        }
+
+        /* Editorial Drop Cap */
+        #content-area p:first-of-type::first-letter {
+            font-family: 'Cinzel', serif;
+            float: left;
+            font-size: 3.5rem;
+            line-height: 1;
+            padding-right: 12px;
+            color: var(--gold);
+        }
+
+        h2, h3 { 
+            color: var(--gold); 
+            font-family: 'Cinzel', serif; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+            padding-bottom: 8px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .case-law {
+            color: var(--gold);
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        blockquote { 
+            border-left: 3px solid var(--gold); 
+            padding: 10px 20px; 
+            font-style: italic; 
+            margin: 25px 0;
+            background: rgba(201, 162, 39, 0.05);
+        }
+
+        .back-link { 
+            color: var(--gold); 
+            text-decoration: none; 
+            font-family: 'Cinzel', serif; 
+            margin-bottom: 30px; 
+            display: inline-block;
+            transition: 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .back-link:hover { 
+            opacity: 1; 
+            letter-spacing: 1px;
+        }
+
+        ::selection { 
+            background: var(--gold); 
+            color: var(--dark-bg); 
+        }
+
+        center {
+            display: block;
+            padding: 20px;
+            font-style: italic;
+            border-top: 1px solid rgba(201, 162, 39, 0.1);
+            border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+            margin: 20px 0;
+        }
+
+        /* RESPONSIVE CORRECTIONS */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px; /* Less outer padding on mobile */
+            }
+
+            .paper {
+                padding: 40px 20px; /* Narrower internal margins */
+                box-shadow: none; /* Shadow can look messy on small screens */
+            }
+
+            #content-area p:first-of-type::first-letter {
+                font-size: 2.8rem; /* Scale down drop cap */
+            }
+
+            h2 {
+                font-size: 1.4rem; /* Scale down titles */
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#in-portal" class="back-link">← Return to Vault</a>
+    <div class="paper">
+        <div id="content-area">
+            <!-- JavaScript populates this section -->
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+        
+        document.getElementById('content-area').innerHTML = `
+            <h2>THE LEGISLATURE</h2>
+
+<p><span class= "case-law">According to Section 4(1) of the 1999 Constitution of the Federal Republic of Nigeria,</span> the primary function of the legislature is to make laws for the peace, order and good governance of the country. This power is shared by the Federal and State Legislative houses through the exclusive, concurrent and residual list.<br>
+Nigeria practices a bicameral system of legislature at the federal level. Hence, the National Assembly comprises the Senate, headed by the senate president and Deputy senate president; and the House of Representatives, headed by the speaker and deputy speakers <span class= "case-law">(see s. 47 of the constitution)</span>.
+The constitution also provides for the composition of both houses. Section 48 of the constitution provides that the Senate shall comprise three Senators from each state and one from the Federal Capital Territory. The House of Rep however shall consist of 360 members representing constituencies of nearly equal population and as far as possible, provided no constituency shall fall within more than one state.</p>
+<p>Theoretically, the Bicameral nature of the legislature is aimed at ensuring some kind of check between the two houses.
+It should be noted that the presiding officers of both houses are to be elected by the members of the house from among themselves, and while the constitution may be silent as to the procedure for the selection and removal of the presiding officers, the standing order for both houses contain such procedures, in exercise of the powers conferred by <span class= "case-law">section 60 of the constitution that empowers them to <u>"regulate its own procedures..."</u></span>
+In contrast to the Federal legislature, the State House of Assembly is the only legislative house in the state, making it a unicameral legislature.<br>
+The House of Assembly of a state shall consist of three or four times the number of seats which the state has in the House of Representatives divided in a way to reflect, as far as possible, nearly equal population, provided the House of Assembly shall consist of not less than 24 and not more than 40 members—<span class= "case-law">see Section 91 CFRN</span>.</p>
+<p><span class= "case-law">Section 101 of the constitution</span> also empowers the House of Assembly to make regulations of its own procedure.
+
+The power to legislate is exclusively those of the legislature, although it may delegate rule making and regulatory powers to departments in the executive branch, it may not delegate its law making powers. Consistent with this principle, <span class= "case-law"><u>section 4(1) vests legislative power on the National Assembly, while section 4(6) of the constitution vests the same power on the State House of Assembly.</u></span></p>
+<p>Both houses are however separated by the scope and jurisdiction of their law-making powers by the Exclusive list—which outlines the areas for which the Federal Government can legislate; the Concurrent list—for which both the Federal and state government can legislate; and the Residual list—which are list of items, neither contained in the exclusive nor concurrent lists—which falls exclusively to the state to legislate on.
+<span class= "case-law">See: ATTORNEY GENERAL OF ABIA v. ATTORNEY GENERAL OF THE FEDERATION (2002)<br>
+The State House of Assembly by explicit provisions of <span class= "case-law">S. 4(6) shall have the power to legislate for the <u>"peace, order and good governance of the state or any part thereof with respect to any matter not included in the exclusive list; any matter included in the concurrent legislative list; and Any other matters with to which it is empowered to make laws in accordance with the provisions of the constitution."</u></span></p>
+
+<h3>MODE OF EXERCISING LEGISLATIVE POWER</h3>
+
+<p>The power to make laws is exercised through Bills passed by the legislature and assented to by the president or Governor of the Federation or state respectively <span class= "case-law">(see Sections: 58 and 100 of the constitution).</span><br>
+The passing of a bill to law, involves a series of procedures, divided into three or four stages depending on how they are outlined. From the introduction of a Bill; the reading of the bill by the clerk; the second reading in which case the bill is read for the second time, depending on the nature of the bill it shall be seconded by a member of the house, the sponsor of the bill shall then state the benefit of the bill, its importance and objectives. The bill will then be supported by a vote to pass to the next stage or to jettison it; the next process will be the committee stage; the report stage; the final reading, Harmonization and Assent.</p>
+
+<p>The following facts are important to note with regards to the passage of Bills:</p>
+<ul><li><span class= "case-law">Section 58(2)</span> provides that a bill shall originate from either house in the case of the Federal legislature which is bicameral.</li>
+	<li><p>Where the bill has been passed by the house to which it originated it shall be sent to the other house, where there are any discrepancies as to the content of a bill, both houses of the National Assembly shall convene to harmonize the bill; without which it cannot be sent to the president for assent.</p></li>
+	<li><p><span class= "case-law">By virtue of S. 58(4) and S. 100(4)</span> where the bill has been sent to the president or governor for assent they are required to within thirty days from the day of presentation signify their assent or withholding of assent.</p></li></ul>
+<p>Where however the president or governor of the Federation and the state fail to assent or withhold their assent <span class= "case-law">sub-section (5)</span> provides that the house can veto the assent by again passing the bill by two-thirds majority of each house for the federal legislature and two thirds majority of the state house of assembly as the case may be.<br>
+It bears stating at this point that where the president has assented to a bill he cannot request or compel the National Assembly to amend or make an Act. No part of the Constitution gives him such right or power. Therefore, for such an amendment to be effected, there are procedures and mechanisms available within the legislature for an amendment of such provision or an entire repeal of the law but not for another organ to interfere. The case of, President, <span class= "case-law">F.R.N. v. National Assembly [2023] 3 NWLR :</span> illustrates this position, where the court held that:</p> 
+<blockquote><center><span class= "case-law"><u>“The role of the President in the law-making process ceases after his signification of assent or withholding of assent. In the instant case, the President assented and consented to what the two Houses of the National Assembly had done and presented to him and the Bill became law.</u></span></center></blockquote>”
+The court also held that: 
+<blockquote><center><span class= "case-law"><u>By virtue of section 58 of the 1999 Constitution (as amended), once there is an assent to a Bill, it signifies the acceptance and concurrence of the Presidency to the entirety of the Bill to become an Act of the National Assembly. In the instant case, having given his assent to the Bill, the plaintiff could not under any guise, turn around to invoke the judicial process to challenge the constitutionality, validity or otherwise of an Act of the National Assembly, duly made in the exercise of its legislative powers. This was against the spirit and letter of section 4 of the 1999 Constitution (as amended)”.</u></span></center></blockquote>
+
+<h3>LIMITATIONS OF THE POWERS OF THE HOUSE OF ASSEMBLY:</h3>
+
+<ul> <li><p><span class= "case-law">Section 4(5)</span> provides that if any law enacted by the state legislature is inconsistent with those of the National Assembly, the law by the National Assembly shall prevail and the other law shall capitulate—to the extent of the inconsistency be void. This principle operates particularly in matters within the concurrent legislative list.</p></li>
+<li><p>	 The legislative powers of the legislative houses are subject to judicial reviews. What this implies is that any law enacted by the legislature is subject to the review of the court when the constitutionality of the law is in contention. The case of <span class= "case-law">A.G BENDEL STATE v. A.G FEDERATION (1982)</span> illustrates this principle. In the case, the supreme court held that the procedure adopted by the National Assembly in passing the appropriation bill was unconstitutional, null and void.</p></li>
+<li><p>Both the National Assembly and the state house of assembly are prohibited from making retrospective or retroactive legislations. <span class= "case-law">See Section 4(9) of the constitution</span></p></li>.
+<li><p>	<span class= "case-law">S. 4(8)</span> also prohibits the making of legislations intended to oust or ousts the jurisdiction of a court or judicial tribunal established by law; unless as otherwise provided by the constitution. This section therefore subjects the National Assembly and state house of assembly to the jurisdiction of the courts.</p></li></ul>
+
+<h3>EXCEPTION:</h3>
+<p>While the right to make laws generally falls within the purview of the legislature, there are other ways through which the executive can make laws. First is when they have been so empowered through what is known as an Enabling Statute. An enabling legislation grants departments and agencies of the executive arm the power to make law and regulations. A classical example of a subsidiary or delegated legislation is National Tobacco Control Regulations (2019) which is a product of the enabling act—The National Tobacco Control Act (2015).<br>
+Also, the Governors and President are through the provision of <span class= "case-law">Section 315(1)(a) of the constitution</span> permitted to make such modifications in the text of existing laws to bring it  in conformity with the provisions of the constitution. Existing law was defined in <span class= "case-law">Section 315(4)(b)</span> to mean any law and includes any rule of law or any enactment or instrument whatsoever which is in force immediately before the date when this section comes into force or which is being passed or made before that date comes into force after that date. The president is by this provision bestowed with legislative powers which are exercised through enactment of executive orders.</p>
+
+
+<h3>CONSTITUTIONAL FUNCTIONS OF THE LEGISLATURE</h3>
+
+<p>Some of the functions of the legislature in Nigeria include the following:</p>
+<ol>
+ <li>Removal of elected executive officials <span class= "case-law">—Sections 143 & 188 of the constitution</span></li> 
+<li> Power over public funds—sections <span class= "case-law">80(3) & (4) CFRN</span></li> 
+<li> Power to amend constitution <span class= "case-law">—section 9 CFRN</span></li>
+<li> Power to create states <span class= "case-law">—S. 8(1)(a)</span></li>
+<li> Deployment <span class= "case-law">of Armed forces—S. 5(4)</span></li>
+<li> Ratification of <span class= "case-law">treaties—S. 12</span></li>
+<li> Confirmation of executive appointments.</span></li>
+<li> Law making<span class= "case-law">—S. 4</span></li>
+<li> Oversight of the executive</li>
+<li> Removal of judicial officers <span class= "case-law">—section 292(1)(a)(i) CFRN</span></li>
+<li>Power to conduct investigations <span class= "case-law">—sections 128 & S. 88(1)(b) CFRN</span></li></ol>
+
+<h3>POWER OVER FUNDS:</h3>
+<p>The National Assembly has power to make law in relation to taxation, profits and capital gains under <span class= "case-law">item 59 of the exclusive list,</span> and the authority to determine how public funds are spent by the executive arm. As a general position, the constitution by virtue of <span class= "case-law">section 80</span> requires that all revenue or monies raised and received by the Federal government go into the Consolidated Revenue Fund of the Federation. The legislature therefore, monitors the expenditure of these revenues by regulating the withdrawal and authorizing in appropriation act, supplementary appropriation act or any act passed in pursuance to <span class= "case-law">S. 81</span> of the constitution.<br>
+An Appropriation bill  is a proposed law that authorizes the expenditure of government funds from the public treasury, commonly known as the annual budget. It enables the executive branch to withdraw money from the Consolidated Fund for official use.
+<span class= "case-law">S. 80 of the constitution</span> clearly vests in the legislature the power to determine, in which public funds the manner can be appropriated. In doing so the legislature can alter an appropriation Bill. Thus the legislature scrutinizes the source of government Finance and its expenditure.</p>
+
+<center><span class= "case-law">REPRESENTATION:</span></center> 
+<p>Every member of the legislature has been elected to represent their constituencies and the interest of its people.
+While Senators represent electoral districts, the members of the house of representatives represent constituencies. Failure to effectively represent their people could lead to the invocation of the constitutional process of Recall. Recall is a robust procedure on its own that involves the people of the electoral district or constituency; it is a process by which the people seek the removal and replacement of their senators and representatives. This is provided for in <span class= "case-law">Sections 69 and 110 of the constitution</span> for the National and state houses of assembly respectively.</p>
+
+<center><span class= "case-law">POWER TO INVESTIGATE:</span></center> <p><span class= "case-law">Sections 128 and 88 of the constitution</span> empowers the legislature to investigate certain matters—matters listed in the exclusive and concurrent list for the National Assembly and any of such matters as the houses of assembly can legislate on.<br>
+This powers are circumscribed to the extent permitted by <span class= "case-law">S. 88(2)(a)(b) of the constitution which provides that the powers are exercisable for the purpose of enabling the legislature to; <u>make laws to any matter within its legislative competence and correct defects in existing laws; and to "expose corruption, inefficiency or waste in the execution or administration of laws within its legislative competence and in the disbursement or administration of funds appropriated by it."</u></span>
+Effectively, any investigation done outside the purview of <span class= "case-law">section 88 is ultra vires</span>. Thus in <span class= "case-law">SENATE OF THE NATIONAL ASSEMBLY & ORS v. TONY MOMOH</span>, The court held that the investigative powers of the legislature is not meant to be a leeway for them to usurp the general investigative powers of the executive or adjudicating powers of the judiciaries.</p>
+
+<center><span class= "case-law">CONFIRMATION OF APPOINTMENTS:</span></center> 
+<p>Confirmation of appointments made by the president at the Federal level and Governor at the State level is another important function of the legislature. This includes judicial appointments, ambassadorial appointments and other public offices in executive departments and governmental agencies. Lack of senate approval nullifies such an appointment.<br>
+<span class= "case-law">Legislative ratifications are also necessary in cases where <u>the president declares state of emergency (section 305), declares war (section 5(4)(B)), deploys armed forces, signs treaties (section 12) and so on.</u></span>
+This oversight function of the legislature is meant to ensure checks and balance.
+The legislature also plays a vital role in affirming the removal of appointees by the president, without which the removal is ineffective.</p>
+
+<center><span class= "case-law">IMPEACHMENT:</span></center>
+<p> The power to impeach is a power given by the constitution to the legislature to checkmate the activities of public office holders while in office.<br>
+The constitution of Nigeria gives one ground for impeachment, which is Gross misconduct. The constitution describes Gross misconduct as a violation of the constitution as is subject to the opinion of the legislature. This is understandable considering the president upon being sworn in to power took an oath to discharge his duties in accordance with the constitution <span class= "case-law">(see seventh schedule of the constitution)</span>. Hence whatever the legislature perceives to be a violation of the constitution is a ground for impeachment. In <span class= "case-law">MUSA v. KADUNA STATE HOUSE OF ASSEMBLY,</span> the house considered the failure to submit names of appointees an act of gross misconduct.<br>
+Although the word impeachment is not expressly mentioned in the constitution it is provided for under <span class= "case-law">sections 143 and 188 of the constitution</span> for the removal of the <u>President, Vice president, Governor and Deputy Governor respectively.</u>
+
+<h3>THE FOLLOWING SITUATIONS COULD MAR AN IMPEACHMENT PROCESS:</h3>
+<p>You must first note that by the express provision of subsection 10 of the above sections on Impeachment, an impeachment process cannot be challenged in any court save for situations where the procedure is unconstitutional. That is where it errs in one of the outlined processes. some of which includes:</p>
+ <p>1. Wrong or improper constitution of panel; the panel must be set by the chief judge or chief justice as the case may be. Also anything short of a 7 man panel renders the process otiose.</p>
+<p> 2. Wrong venue: The impeachment process must as a matter of law take place in the assembly complex with the Mace (symbol of Authority) present—see: <span class= "case-law">INAKOJU V. ADELEKE (2007) ALL FWLR 853.<span></p>
+<p> 3. The house must be seated at the stipulated time.</p>
+<p> 4. Wrong vote count: Where the house fails to come at the constitutionally stipulated vote count in passing the motion for impeachment, then it will render the process unconstitutional.</p>
+
+<h3>OUTLINE OF IMPEACHMENT PROCEDURE (IN STAGES):</h3>
+
+<p>Stage 1. <span class= "case-law"><u>Notice Stage:</u> Section 188(2)</span> provides that Notice of the allegation must be presented in writing and must be signed by not less than 1/3 members of the House.</p>
+<p>Stage 2. The Notice of the misconduct is received by the leader of the house who shall within <span class= "case-law">7<span> days present a copy of the Allegation to the accused and all members of the house, and shall cause any reply to be transmitted to every member of the house.</p>
+<p>Stage 3. <span class= "case-law"><u>Motion stage:</u></span> Within <span class= "case-law">14</span> days of presenting the notice, whether or not the accused replies to the allegation, the house shall pass a vote without debate to proceed with an investigation of the allegations.</p>
+<p>Stage 4: In this stage the motion for investigation shall not be passed unless supported by not less than <span class= "case-law">2/3 vote of members of the house.</span> Without which there shall be no investigation.</p>
+<p>Stage 5. <span class= "case-law"><u>Appointment of investigative committee:</u></span> Within <span class= "case-law">7</span> days of passing the motion, <span class= "case-law">The chief Justice (Judge) shall appoint a 7 man panel on the request of the speaker to investigate and try the allegation.</span>
+The 7 men shall be of unquestionable integrity; must not be members of public service, legislative house or political party.</p>
+<p>Stage 6. <span class= "case-law"><u>Defence stage:</u></span> The accused office holder shall be given the opportunity to defend himself or through a legal practitioner of choice.</p>
+<p>Stage 7: The investigative committee shall within <span class= "case-law">30</span> days report back to the house their investigation findings.</span></p>
+<p>Stage 8. <span class= "case-law"><u>Proof of Allegation</u></span>: When the panel reports to the house that the allegations are unfounded (has not been proved) no further proceedings shall be taken in respect of the matter.
+<span class= "case-law">S. 188(9)</span> where the allegations have been proved then within <span class= "case-law">14</span> days of the receipt of the investigation report, the house shall consider the report. If the report is by a resolution of the house supported by not less than two-thirds majority of all its members then the office holder shall stand removed from office as from the date of the adoption of the report.</p>
+
+
+<h3>REMOVAL OF SENATE PRESIDENT OR SPEAKER</h3>
+<p>Pursuant to the provision of <span class= "case-law">Sections 60 and 101 of the constitution</span> the law empowers the legislative houses with the authority to regulate its own procedure. Hence, in view of this provision, members have the right to select and remove the speaker, in line with the house regulations. This allows for a degree of legislative autonomy. And unless the process of removal is unconstitutional, the court cannot entertain any matter regarding the removal of a speaker. The law has been well espoused and settled in <span class= "case-law">ASOGWA V. CHUKWU (2003) 4 NWLR that:</span></p>
+<blockquote> “...The justiciability of the action involving the removal of the speaker could only arise if the constitutional requirement were not met.”</blockquote>
+<p>According to <span class= "case-law">Section 50(2)(c) of the 1999 Constitution, the President of the Senate or the Speaker of the House of Representatives shall vacate their office <u>"if he is removed from office by a resolution of the Senate or of the House of Representatives, as the case may be, by the votes of not less than two-thirds majority of the members of that House"</u></span>. However, while the constitution focuses on the two-thirds majority vote, the standing rules of the National Assembly provide the procedure for conducting this motion. <br>
+It should be noted also that the constitution does not provide the ground for the removal of a Presiding officer of a legislative house like it does in the case of impeachment.
+
+This same principle of legislative autonomy applies where the legislative house suspends a legislator for misconduct.</p>
+
+<h3>SUSPENSION AND DISCIPLINE OF LEGISLATIVE OFFICERS.</h3>
+
+<p>We shall now examine the law regarding suspension and discipline of legislative members.
+As we have seen above, the legislative houses enjoy the constitutional power to organise its procedures as long as they are in tandem with the provisions of the constitution. Hence, where they act contrary to the constitution, nothing prevents the court from hearing and determining an action brought before it.<br>
+Thus, in <span class= "case-law">Asogwa’s case (Supra)</span> the honourable <span class= "case-law">Justice Pat Acholonu spoke unequivocally in favour of this principle, he stated that:</span></p>
+<blockquote>
+ "It is not part of the duty of the court to forage into areas that ought to vest either directly or impliedly in the legislature such as the issue of suspension of a member of the assembly which is a matter that comes within the purely internal affair of the Assembly..."</blockquote>
+<p>The Legislative Houses (Powers and Privileges) Act 2018 recognises the authority of legislative houses to enforce discipline and punish acts of contempt, including disrupting proceedings, refusing to appear before the house or disobeying lawful orders. <span class= "case-law">(See sections 14-17 LHPPA 2018)</span><br>
+<span class= "case-law">S. 21</span> also grants legislative bodies the power to enforce compliance with their decisions, including taking disciplinary actions against members where necessary.
+However such powers must be exercised within the bounds of the law, ensuring due process, fair hearing and safeguarding the right of constituents to fair representation.
+In view of this, the courts have ruled that suspending a lawmaker for an excessive period or without due process could violate democratic principles.</p>
+<p>In Speaker, Bauchi State House of <span class= "case-law">Assembly v. Honourable Rifkatu Danna (2017)</span>, the Nigerian Court of Appeal ruled that legislative houses cannot suspend a member indefinitely, as they are not employees of the House. The Court held that such suspensions violate the right of the constituents to representation.
+
+<h3>TENURE OF SEAT OF MEMBERS</h3>
+<ul>
+ <li><p><span class= "case-law"><u>Loss of seat by defection:</u></span></li></ul> The constitution provides under<span class= "case-law"> sections 68 (1) and 109 (1)</span> for the conditions under which a member of a Legislative house may be required to vacate their seat in Nigeria. The particular paragraphs of interest are paragraphs <span class= "case-law">(g)</span>. The provision of this particular paragraph seeks to prevent the wanton practice of cross carpeting of legislators for financial gains or otherwise.<br>
+<span class= "case-law">Section 68(1)g and 109(1)g</span> prohibits legislative officers from leaving the party which sponsored their election to another, before the expiration of the period for which the house was elected, on pain of losing their seat.</p>
+<p>The only ground for which such a detection would be tolerated according to the said section is where the membership of the new political party occurred due to a split, division within the party or of a merger of two or more political parties or factions by one of which he was previously sponsored.
+Therefore, a person elected to congress in party X must remain in party X for which he was elected. If they defect to party Y without leading evidence to show that there is an in-party division, factioning or merger of two or more parties, the Congressman must lose his seat.</p>
+<span class= "case-law">But how does this actually operate?<br>
+Does it occur automatically?<br>
+How does one prove that the Congressman has defected?<br>
+Who is to declare the seats vacant?<br></span>
+<p>
+All these questions were addressed in a recent case of <span class= "case-law">R.S.H.A v. Govt., RIVERS STATE (2025) 7 NWLR.</span><br>
+The general principle established is that once a person or group of persons defect from their political party to another political party, without division in the party, they lose their seat. However, to answer our question posed above, the loss of seat is usually dealt with during plenary. It is reported during the proceedings of the house. If it is established the presiding officer declares the person’s seat vacant. What this implies is that the sections are not self-effecting.</p>
+<p>To establish defection therefore, <span class= "case-law">S. 68(2) and S. 109(2)</span> provides that:</p>
+<blockquote> “The speaker of the House of Assembly shall give effect to Subsection (1) of this section, so however that the speaker or a member shall first present evidence satisfactory to the House that any provisions of that subsection has become applicable in respect of such of the member.”</blockquote>
+<p>The practical implication of this section is that the presiding officer can only effectuate <span class= "case-law">S. 109(1)g</span> if there is evidence to satisfy the claim that the person(s) have cross-carpeted without any justification.
+This position was reaffirmed in <span class= "case-law">R.S.H.A v. Govt., Rivers State (supra) when the court held that:</span></p>
+<blockquote><center><u><span class= "case-law">Defection is an active term. It manifests itself. It cannot be left to conjecture. If a person defects from one Political Party to another, there must be empirical proof of such defection. For a person or group of persons to be said to have defected, the Political party from which they defected must, at least, be aware of such defection, and the political party where they defected to must also have evidence of their new members.</span></u></center></blockquote>
+<p>This principle therefore acts as a procedural safeguard where the presiding officer acts as the custodian of the House, rather than immediate disqualification by courts and Governors.<span class= "case-law">See Also: ABEGUNDE V. O.S.H.A (2015) 8 NWLR</span>.</p>
+
+<blockquote>Further Reading:<br>
+1.	KEHINDE M. MOWOE, Constitutional Law In Nigeria<br>
+2.	JOSEPH EKPE EDET, Notes On Constitutional Law<br>
+3.	Ibrahim U, ‘Legislative Discipline in the Nigerian Legislature: A Comparative Lens’ (2025) 4(1) KWASU Law Journal 51–70</blockquote>
+
+	<footer><center ><span class= "case-law"> A luculent contribution of ADIE CHRISTOPHER</span></center></footer>
+			
+			
+			
+        `;
+    </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

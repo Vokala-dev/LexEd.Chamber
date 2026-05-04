@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Digest | Lex Educationis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --gold: #c9a227; 
+            --dark-bg: #0a0a0a; 
+            --paper-bg: #141414;
+            --text-main: #e0e0e0; 
+        }
+
+        body { 
+            background: var(--dark-bg); 
+            color: var(--text-main); 
+            font-family: 'Playfair Display', serif; 
+            line-height: 1.8;
+            padding: 50px; 
+            margin: 0;
+        }
+
+        .paper { 
+            max-width: 850px; 
+            margin: auto; 
+            background: var(--paper-bg); 
+            padding: 80px; 
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.8);
+        }
+
+        /* Editorial Drop Cap */
+        #content-area p:first-of-type::first-letter {
+            font-family: 'Cinzel', serif;
+            float: left;
+            font-size: 3.5rem;
+            line-height: 1;
+            padding-right: 12px;
+            color: var(--gold);
+        }
+
+        h2, h3 { 
+            color: var(--gold); 
+            font-family: 'Cinzel', serif; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+            padding-bottom: 8px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .case-law {
+            color: var(--gold);
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        blockquote { 
+            border-left: 3px solid var(--gold); 
+            padding: 10px 20px; 
+            font-style: italic; 
+            margin: 25px 0;
+            background: rgba(201, 162, 39, 0.05);
+        }
+
+        .back-link { 
+            color: var(--gold); 
+            text-decoration: none; 
+            font-family: 'Cinzel', serif; 
+            margin-bottom: 30px; 
+            display: inline-block;
+            transition: 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .back-link:hover { 
+            opacity: 1; 
+            letter-spacing: 1px;
+        }
+
+        ::selection { 
+            background: var(--gold); 
+            color: var(--dark-bg); 
+        }
+
+        center {
+            display: block;
+            padding: 20px;
+            font-style: italic;
+            border-top: 1px solid rgba(201, 162, 39, 0.1);
+            border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+            margin: 20px 0;
+        }
+
+        /* RESPONSIVE CORRECTIONS */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px; /* Less outer padding on mobile */
+            }
+
+            .paper {
+                padding: 40px 20px; /* Narrower internal margins */
+                box-shadow: none; /* Shadow can look messy on small screens */
+            }
+
+            #content-area p:first-of-type::first-letter {
+                font-size: 2.8rem; /* Scale down drop cap */
+            }
+
+            h2 {
+                font-size: 1.4rem; /* Scale down titles */
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#in-portal" class="back-link">← Return to Vault</a>
+    <div class="paper">
+        <div id="content-area">
+            <!-- JavaScript populates this section -->
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+        
+        document.getElementById('content-area').innerHTML = `
+            <h2>THE FUNDAMENTAL OBJECTIVES AND DIRECTIVE PRINCIPLES</h2> 
+            <p>The Fundamental Objectives And Directive Principles Of State Policies are provided for under the Nigerian Constitution, particularly from <span class= "case-law">Section 13 to 24.</span><br>
+The fundamental objectives are generally non-justiciable by virtue of the ouster provision in <span class= "case-law">S. 6(6)c of the Constitution</span> which bars the court from investigating into the conformity or otherwise of the provisions of the said sections. Section 13 however makes provision for the application and conformity of all organs of government to the provision of the fundamental objectives and directive principles of state policies.</p>
+ The section reads that:
+<blockquote>"It shall be the duty and responsibility of all organs of government, and of all authorities and persons, exercising legislative, executive and judicial powers to conform to, observe and apply the provisions of this chapter of the Constitution."</blockquote>
+
+<p>The question of justiciability has remained an issue of intense debate among jurists and scholars. Comparatively, the provisions of Chapter II which has been included in the Nigerian Constitution from the 1979 constitution, is justiciable in some other countries as economic, social and cultural rights in states like India by integrating them into their fundamental right to Life.</p>
+<p>The debates therefore with regards the justiciability and inclusion of Chapter II to the Constitution of Nigeria was described by the <span class= "case-law">1977 CDC — Constitutional Drafting Committee:
+<center><u>"Fundamental objectives and Directive priciples is the identification of the ultimate objectives of the nation whilst directive principles of state policy indicates the paths which lead to those objectives. Fundamental objectives are the ideals towards which the nation is expected to strive whilst directive principles lay down the policies which are expected to be pursued in the effort of the nations to realize the national ideals."</u></center></span></p>
+
+<p>It follows therefore that in spite of its inclusion in the constitution; save as otherwise provided by the constitution itself the provisions cannot be enforced by an action in any court within the Republic of Nigeria.</p>
+<p><span class= "case-law">S. 6(6)c of the 1999 CFRN provides that:
+"...shall not except as otherwise provided by this constitution, extend to any issue or question as to whether any act or omission by any authority or person or as to whether any law or any judicial decision is in conformity with the fundamental objectives and directive principles of state policy as set out in Chapter II of this constitution."</span>
+</p>
+<p>It is in light of this that various legal authorities backed particularly by the Supreme Court decision in <span class= "case-law">Attorney General Of Ondo State V. Attorney General Of The Federatio</span> identified has identified certain instances wherein the court can decide on and give effect to the fundamental objectives and directive principles of state policy (FODP):
+<ol><li>	Where there is a legislative enactment on any provision thereof.</li>
+<li>	 Where the FODP is connected with the provision of Chapter IV.</li>
+<li>	Wherein another part of the Constitution has made such provision enforceable.</li></ol>
+<span class="case-law">We shall now examine each of these exceptions in seriatim.</span></p>
+
+<h3>	WHERE LEGISLATED UPON</h3>
+<p>By virtue of <span class= "case-law">Item 60(a) of the Exclusive list of the 1999 CFRN</span>, it is provided that Federal legislature shall have the power to establish and regulate authorities for the Federation or any part thereof</p>
+ <blockquote>"...to promote and enforce the observance of the fundamental objectives and directive principles of state policies contained in this constitution."</blockquote>
+
+<p>That is to say the Legislature can legislate on any issue within Chapter II of the CFRN and by so doing make it justiciable. This position was further reaffirmed by the court in the case of <span class= "case-law">Olafisoye V. F.R.N (2004) 4 NWLR (Pt. 864) 580 where NIKI TOBI JSC</span> held that:</p>
+<blockquote> "By a community reading of the two provisions [Item 60(a) & S. 6(6)c], section 15(5) becomes justiciable. In other words, the exception in section 6(6)c of the constitution anticipates, amongst other possible provisions, the provision of Item 60(a)."</blockquote>
+
+<p>This has been exemplified in the establishment of the Economic and Financial Crimes Commission (EFCC), Independent Corrupt Practices Commission (ICPC), and federal agencies saddled with the responsibility of combating corruption and corrupt practices in line with the provisions of <span class = "case-law">S. 15(5) CFRN that provides that the state shall abolish all corrupt practices and abuse of power. (See A.G ONDO STATE v. A. G FEDERATION)</span></p>
+<p>Similarly, the establishment of the Universal Basic Education Board seems to justify the provisions of <span class= "case-law">S. 18(3) CFRN that provides for free, compulsory and universal education in Nigeria. The enforceability of this particular provision was illustrated in the case of SERAP v. FED REPUBLIC OF NIGERIA (ECOWAS COURT, 2010)</span> where the court held that the right to education in <span class= "case-law">S. 18</span> is a human right that the Nigerian government must provide by virtue of the establishment of the UBEC, bypassing the non-justiciability hurdle of the constitution.</p>
+
+<p>  Thus, once the legislature "activates" a Directive principle through a law, it becomes justiciable. Notwithstanding this provision, a more recent dispute clarifies a constitutional ambiguity as regards who should legislate on the provision of <span class= "case-law">S. 15(5) CFRN</span> on corruption and abuse of power.</p>
+<p>To this issue the court in <span class= "case-law">AG KOGI AND 15 ORS V. A-G FED (2024) </span> ruled that the federal agencies (NFIU, EFCC, ICPC) were well within their constitutional competence in the issuance of guidelines, pursuant to Acts enacted by the National Assembly, ruling them binding on all states. These guidelines are legal if they do not conflict with the constitution.</p>
+
+<h3>WHETHER THE STATE LEGISLATURE CAN ENFORCE THE PROVISION OF THE FUNDAMENTAL OBJECTIVES</h3>
+<p>Without prejudice to the provisions of the Exclusive legislative list, particularly Item 60(a), we will now examine the possibility of the State House of Assembly legislating on items within the <span class= "case-law">Chapter II of the CFRN</span>, shifting particularly to the provision of <span class= "case-law">Section 15(5) CFRN</span>.</p>
+<p>To appreciate and understand the source and extent of this posture, an examination of <span class= "case-law">S. 13, 15(5)</span>, and <span class= "case-law">Item 60(a) of the Exclusive list; CFRN</span> will be pivotal to this brief analysis.</p>
+<p>As we have seen earlier, <span class= "case-law">Section 13</span> charges all arms, organs, authorities and persons exercising legislative, executive or judicial powers to conform to, observe and apply the provisions of this chapter. While this provision may seem omnibus, the court was explicit in answering the above question when it held in <span class= "case-law">A.G ONDO v. A.G FED (2002) 9 NWLR (Pt. 772) 222,</span> that:</p>
+<blockquote> "Going by the definition of 'state' and 'Government' in S. 318(1) of the 1999 constitution, the directive under S. 15(5) of the constitution that 'the state shall abolish all corrupt practices and abuse of government' applies to all the three tiers of government."</blockquote>
+
+<h3>CONFLICT BETWEEN DIRECTIVES IN CHAPTER II AND FUNDAMENTAL RIGHTS IN CHAPTER IV.</h3>
+<p>Where there is conflict between the fundamental objective and directive principles, and a fundamental right the provision of law has always been to resolve such conflict as a Fundamental Right. That is to say the fundamental right takes prevalence over the Directive Principle which would otherwise be non-justiciable. This is the view of the Indian court in <span class= "case-law">MADRA v. CHAMPAKAN </span>and the Zambian case of <span class= "case-law">GEORGE PETER MWANZA V. ATTORNEY GENERAL.</span><br> In the latter the court identified the right to food as a universal right by taking cognizance of the growing trend by other jurisdictions to recognize and enforce Economic, social and cultural rights, either directly or indirectly through civic and political rights.</p>
+<p>In George Mwanza's case the court took the view that the right to life has an inter-linkage with the right to food (availability, accessibility and affordability of and the right to health, thereby acknowledging the right to food indirectly through the interconnected right to life.</p>
+<p>In Nigeria, the Lagos High court adopted the view that the directive principles have to conform to and run subsidiary to the fundamental rights because the fundamental rights are enforceable— <span class= "case-law"><u>as upheld in MADRA’s case (supra)—in ARCHBISHOP OKOGIE V. A-G LAGOS</u></span>. In the <span class= "case-law">Okogie’s</span> case the state counsel contended that the state decided to take over private primary school in order to provide free education in fulfillment of <span class= "case-law">S. 18 CFRN</span>. The High court rejected this view and held that the directive principles must conform to, and run subsidiary to the fundamental rights to personal liberty and freedom of association outlined in <span class= "case-law">Sections. 35 and 40 respectively</span>.</p>
+
+<h3>EXCEPT AS OTHERWISE PROVIDED BY THIS CONSTITUTION. </h3>
+<p>By this very proviso in <span class= "case-law">S. 6(6)c</span> — the constitution provides another angle or exception to the general non-justiciability rule that ousts the jurisdiction of the court to uphold the fundamental objectives and uphold the responsibility and accountability of the government to the people, and the right of the people to claim remedy before an independent and impartial body when violation of right has occurred or is likely to.</p>
+<p>For instance, <span class= "case-law">Section 147(3)</span> and <span class= "case-law"> Section 192(2)</span> refer to <span class= "case-law">section 14(3)</span> and <span class= "case-law">section 14(4)</span> of the constitution respectively. It therefore follows that for the purpose of <span class= "case-law">sections 147(3) and 192(2)</span> the provisions laid down in sections <span class= "case-law">14(3) and (4) are justiciable</span>. For context the provisions emphasize that the appointments of Ministers and Commissioners by the Presidents and Governors must comply with the Federal character principle in <span class= "case-law">S. 14.</span> This provision was reaffirmed in <span class= "case-law">LAFIA LGA v. EXECUTIVE GOVERNOR OF NASARAWA AND ORS.</span></p>
+
+<p>Let us now examine the sections under <span class= "case-law">CHAPTER II of the Constitution:</span>
+ <blockquote><ol><li>Section 14: This section adopts the principle of democracy and social justice.</li>
+<li>Section 15: Provides for political objectives; encourages national integration.</li>
+<li>Section 16: Economic objectives; The constitution adopts the concept of the mixed economy and a welfare state. S. 16A outlines provisions for food security.</li>
+<li>Section 17: Social objectives—this section provides that the state social order is founded on ideals of freedom, equality and justice.</li>
+<li>Section 18 provides for educational objectives. By this section the government is under an obligation when practicable to provide free and universal primary, secondary, university and adult education which must be compulsory.</li>
+<li>Section 19 provides for foreign policy objectives with emphasis on African problems.</li>
+<li>Section 20 provides for environmental objectives; this section directs the government to protect and improve the environment and safeguard the water, air and land, forest and wildlife of Nigeria.</li>
+<li>Section 21 stipulates that the state shall protect and enhance Nigeria culture.</li>
+<li>Section 22 obligates the mass media to uphold the responsibility and accountability of the government to the people.</li>
+ <li>Section 23 proclaims that discipline, self reliance and patriotism are the National ethics.</li>
+ <li>Section 24 outlines the duties of the citizen. Duties such as obedience to the constitution; respect for the dignity of other citizens; rendering assistance to the appropriate and lawful agencies in the maintenance of law and order, etc.</li><o/l></blockquote>
+
+
+
+</p>
+			
+			
+			
+			
+			
+			
+<footer><center> <span class= "case-law">A luculent contribution of ADIE CHRISTOPHER</span></center></footer>			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+        `;
+    </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>

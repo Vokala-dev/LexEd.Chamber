@@ -1,0 +1,270 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Mistake</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --gold: #c9a227; 
+            --dark-bg: #0a0a0a; 
+            --paper-bg: #141414;
+            --text-main: #e0e0e0; 
+        }
+
+        body { 
+            background: var(--dark-bg); 
+            color: var(--text-main); 
+            font-family: 'Playfair Display', serif; 
+            line-height: 1.8;
+            padding: 50px; 
+            margin: 0;
+        }
+
+        .paper { 
+            max-width: 850px; 
+            margin: auto; 
+            background: var(--paper-bg); 
+            padding: 80px; 
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.8);
+        }
+
+        /* Editorial Drop Cap */
+        #content-area p:first-of-type::first-letter {
+            font-family: 'Cinzel', serif;
+            float: left;
+            font-size: 3.5rem;
+            line-height: 1;
+            padding-right: 12px;
+            color: var(--gold);
+        }
+
+        h2, h3 { 
+            color: var(--gold); 
+            font-family: 'Cinzel', serif; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+            padding-bottom: 8px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .case-law {
+            color: var(--gold);
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        blockquote { 
+            border-left: 3px solid var(--gold); 
+            padding: 10px 20px; 
+            font-style: italic; 
+            margin: 25px 0;
+            background: rgba(201, 162, 39, 0.05);
+        }
+
+        .back-link { 
+            color: var(--gold); 
+            text-decoration: none; 
+            font-family: 'Cinzel', serif; 
+            margin-bottom: 30px; 
+            display: inline-block;
+            transition: 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .back-link:hover { 
+            opacity: 1; 
+            letter-spacing: 1px;
+        }
+
+        ::selection { 
+            background: var(--gold); 
+            color: var(--dark-bg); 
+        }
+
+        center {
+            display: block;
+            padding: 20px;
+            font-style: italic;
+            border-top: 1px solid rgba(201, 162, 39, 0.1);
+            border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+            margin: 20px 0;
+        }
+
+        /* RESPONSIVE CORRECTIONS */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px; /* Less outer padding on mobile */
+            }
+
+            .paper {
+                padding: 40px 20px; /* Narrower internal margins */
+                box-shadow: none; /* Shadow can look messy on small screens */
+            }
+
+            #content-area p:first-of-type::first-letter {
+                font-size: 2.8rem; /* Scale down drop cap */
+            }
+
+            h2 {
+                font-size: 1.4rem; /* Scale down titles */
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#in-portal" class="back-link">← Return to Vault</a>
+    <div class="paper">
+        <div id="content-area">
+            <!-- JavaScript populates this section -->
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+        
+        document.getElementById('content-area').innerHTML = `
+            <h2>VITIATING ELEMENTS OF CONTRACT</h2>
+
+
+<p>There are necessary elements and factors that have to be present to enable the legal visibility and enforceability of any contract. These include the basic elements of contract which are: <span class= "case-law">offer, acceptance, consideration, intention to create legal relationship, and capacity to contract or contractual capacity</span>. They are in fact the requirements for any contract to receive legal appreciation.</p>
+
+<p>Vitiating elements of contract are the contrary. Rather than affirm the validity of a contract, their presence in any contract goes to the life root of it, in effect to make it nugatory and ipso facto unenforceable at law. Accordingly, vitiating elements of contract refer to those factors, elements and circumstances which, elementally render the enforceability of any contract void. Some affect the consensus of parties while some affect the form of the contract. The general rule is that their existence in any contract renders such agreement unenforceable in any law court.<br><br>
+
+
+Vitiating elements of contract include the following which will be discussed in seriatim: <span class="case-law">Mistake, Misrepresentation, Duress and Undue Influence, and Illegality of contracts.</span></p>
+
+<h3>MISTAKE</h3>
+
+
+<p>The mistake here has a more technical definition than its ordinary meaning and in the strongest of terms is referred to as <span class="case-law">Legal mistake</span>. Mistake of material facts will suffice although not all will. The same isn’t applicable for mistake of law as <span class="case-law">ignorantia juris non excusat.</span><br>
+
+An operative legal mistake will occur where parties to a contract enter such under a fundamental misapprehension of facts or, in other words, a mistaken belief. That is, they are unaware of the existence or inexistence of some essential facts. In reality, had they been aware of these essential facts, they would have never contracted. It follows that their consensus ad idem is lacking and for which the contract must fail.</p>
+
+in loose language;
+<blockquote><center><span class="case-law">Legal mistake refers to such circumstances that are so material at the relevant time a contract is to be made, one that if known, would have deterred parties from entering such agreements, particularly because it meddles and causes grave inconsistencies within their purported consensus. Accordingly, when a fundamental error regarding a material fact exists during the formation of the contract, that error negates consensus ad idem which in turn vitiates the contract as the law treats the agreement as not existing or void since the parties essentially predicated their intentions on false premises.</span></center></blockquote>
+
+<p>If A has a property he intends to sell to B and such a material fact unknown to them exists, and thereafter they consummate such contract, the position at Common law is that such a contract is void and void ab initio <span class="case-law">(that is, it never existed).</span></p>
+
+<p>More so, A philosophical outlook surrounding this doctrine is a ponder on the intent or purpose of any contract, which is usually to do something agreed upon by parties. With that in mind, it is an established concept in the law of contract that there must be the existence of the consensus ad idem of parties. It usually manifests in the offer and acceptance, and is of such effect that its non-existence may render any contract invalid and therefore unenforceable. <span class="case-law">See A.G. Rivers State V A.G. Akwa Ibom State</span><br>
+
+Flowing from the premises, it’s not unimaginable that if what forms the bulk and appreciation of the consensus of parties, is false in reality, even though they believed such to be true, it will actually and fatally affect the validity of the contract as it fails to meet that requirement. At this point, the instrumentality and ratio of the Doctrine of Legal Mistake can by all means be acknowledged.</p>
+
+<p>Mistake operates under a very limited scope. The types of mistake include: <span class="case-law">Common mistake, Mutual mistake, and Unilateral Mistake.</span></p>
+
+<h3>COMMON MISTAKE</h3>
+
+
+<p>Common mistake is restricted and it operates only under the <span class="case-law">Res Extincta and Res Sua rules</span>. When parties enter into a contract and are oblivious of the existence or non-existence of some fundamental facts, such contracts may be void and void ab initio at law. <span class="case-law">--</span>Parties here are unaware that upon consummation of the contract, a critical component that should hold the life of the contract is lacking. Its existence is so material that its absence substantially controverts the purported consensus of parties which the law has determined as sufficient to vitiate an agreement <span class="case-law">-See Bell v. Level Brothers Ltd</span>. The mistake here is common <span class="case-law">because both parties have made the same mistake, and the mistake relates to the same thing.</span></p>
+
+It applies in the following:
+
+<h3>Res Extincta:</h3>
+<p>This occurs where upon the consummation—that is, the making of a contract, —parties are oblivious of the fact that the subject matter has ceased to exist or has already been destroyed. The position of the law is that you can’t put a thing on nothing and expect it to stand, so the said contract is void because whatever agreement made was supposed to stand on that subject matter which is no longer in existence, effectively creating a lacuna that results in the incompleteness and therefore invalidity of the contract. <span class="case-law">-See Taylor v. Caldwell.</span></p>
+
+<p>A classic case of <span class="case-law">Res extincta is the Couturier v Hastie case</span>. In the case, the parties contracted for a cargo of corn on transit from Salonika to England. Parties were oblivious of the fact that at the time they were making the contract, the captain of the ship transporting the subject matter actually sold it to avoid loss because the goods had begun to spoil. In a subsequent suit by the aggrieved party, the court held that the contract was void for mistake and the suit was dismissed. Also see <span class="case-law">Griffin v Brymer</span>.</p>
+
+<p><span class="case-law">A bonus gist</span>: Where the contract is void for mistake, what happens if a party has already exchanged his part of consideration? Is it recoverable? <br>Your instincts are not far off; if the contract doesn’t exist, for what reason was the consideration given? Obviously, his consideration has to be recoverable, for nothing was done for which the other party should retain it. After-all <span class="case-law">Ex nihilo nihil fit.</span><br> Secondly, contracts are quid pro quo based; in the circumstance, there is no justification for which the other party should withhold the consideration, and if indeed that is the case, the aggrieved party may have recourse to the court <span class="case-law">-See Currie v. Misa and Ajayi v. R.T. Briscoe</span></p>
+
+<h3>Res sua:</h3>
+<p>Latin meaning <span class="case-law">“the thing was already his,”</span> it operates where the identity of the owner as to the ownership of the subject matter is in question. In a circumstance where parties make a contract but are oblivious of the fact that the subject matter already belonged to the purchasing party, such a contract may be void and void ab initio.</p>
+
+<p>An example is apt here: John’s Father is notorious for owning multiple pieces of land. His son, John, would grow up to know that too. John watched his father farm on a particular piece of land, although he had never made any statements that he owned it. After his death, John continued farming on the land believing it to be his. Emeka his cousin wants to buy that piece of land. He approaches John and he accepts to convey the land to him. It is later found that the said piece of land was meant for John’s father to use during his lifetime and that upon his death, it was to pass to Emeka so he may have some beneficial interest or claim over the land.</p>
+
+<p>The rule of <span class="case-law">Res sua</span> may be rightly invoked here because both parties are oblivious of the fact that the thing already belonged to him, for which their initial contract would be vitiated for common mistake. So, a contract under this head may be void because the subject matter already belongs to the purchasing party, he and the seller or vendor are oblivious of this fact, and the mistaken belief is so fundamental that the law allows parties to renounce the contract. <span class="case-law">-See Abraham v. Chief Oluwa, and a classicus case is that of Cooper v. Phibbs.</span></p>
+
+<p>Once this is acknowledged, other legal reasons for which the contract must be void are discernable. Some of which include:<br>
+- A person cannot validly transfer or sell what he does not have because <span class="case-law">Nemo dat quod non habet</span>.<br>
+- A person cannot reasonably buy what he already owns, except in the blurred lines of different representative characters legally speaking.<br>
+- The contract lacks proper offeror-offeree positions which defeats the tenacious effect of contract.<p>
+
+<h3>MUTUAL MISTAKE</h3>
+
+<p>The court is guided by what is known as an <span class="case-law">objective test</span> in determining the existence or inexistence of this kind of mistake in any contract. For newbies, an objective test is simply asking yourself, <span class="case-law">“what would a reasonable man have done or thought within the circumstance of the case or scenario,”</span> as well as analyzing the extrinsic factors surrounding the contract other than what the parties felt.<br>
+
+Mutual mistake occurs where parties make different mistakes, unlike common mistake where the mistake is as to the same thing and equally the same mistake. Where parties at the offer and acceptance stage misunderstand themselves as to the subject matter, mutual mistake may be the resultant. The contract is vitiated for mistake because the consensus of parties are inconsistent as one party negotiates for a different subject matter from what the other party thinks he bargains for.</p>
+
+<p><span class="case-law">Example:</span> John wants to buy Mike’s <span class="case-law">Lexus IS 150</span> but merely says he wants to buy his <span class="case-law">"Lexus vehicle"</span>. Mike actually owns two Lexus vehicles and assumes that John wants the other model. The contract would be vitiated for mistake as parties are not bargaining to the same end and evidently lack the requisite consensus ad idem sufficient to uphold a valid contract.</p>
+
+<p>It must be said with emphasis that the court is not fast to assume mutual mistake because it isn’t perceived by what parties felt but from the prevailing facts of each case from the lenses of the <span class="case-law">objective test</span>. A good case here is that of <span class="case-law">Tamplin v James</span>. In an auction, the defendant made bids to secure the purchase of a house he believed included a garden adjacent to it even though the survey plan clearly did not include the said garden. He only believed that because the former occupant used the garden. It was later found out that the garden wasn’t part of the house and the defendant refused to execute the performace of the contract. The court held that there was no mistake in law, and that no reasonable man in the circumstance would have believed the garden to be part of the house especially in view of the survey plan. He was ordered to execute the contract, clearly being careless. <span class="case-law">-See Riverlate Properties v Paul. Positive cases include <u>Raffles v Wichelhaus and Scriven v Hindley.</u></span></p>
+
+<h3>UNILATERAL MISTAKE;</h3>
+
+
+<p>Where only one party enters the contract under a mistaken belief <span class="case-law">(unilateral)</span>, but the other party is aware or ought to have been aware but decided to take advantage of the circumstance, the contract may be vitiated for unilateral mistake. The position of the law is that the purported consent of the oblivious party is illusory, for which the contract would be voided.</p>
+
+<p>The court applies certain tests to come to that resolution; it applies a <span class="case-law">subjective test</span> to the mistaken party to know his intention -and an <span class="case-law">objective test</span> to the other party to see if from the circumstance, he should have been aware or in fact knew of the blunder. <span class="case-law">-See Abdul Yusuf v Nigerian Tobacco Company.</span></p>
+
+<p>Another way unilateral mistake may apply occurs where a party mistakenly contracts with a different person from whom he intended to. It is a settled principle in contract law that an offeror may make an offer to which only the person he makes it to, may provide a valid acceptance or rejection <span class="case-law">-See Fitch v. Snedaker, Bolton v. Jones </span>. So where a different person accepts an offer not made to him, his purported acceptance is worthless and totally invalid.</p>
+
+<p>Again, the law isn’t fast to void a contract for unilateral mistake because there is an evidential presumption that a party contracts with whom he intends to. Accordingly, there is a burden of proof which gets even tougher to assuage when the contract was done in person (physically) than when it is done any other way (correspondence). For a successful plea of unilateral mistake as to this regard, a party must prove that <span class="case-law"><u>"he actually dealt with a person different from whom he intended and that the person knew or ought to have known of the mistake. He must also show that the identity of the person he intended to contract with was fundamental and that there was no opportunity for him to verify his identity.</u></span> <span class="case-law">See Ingram v Little and Cundy v Lindsey.</span></p>
+
+<h2>REMEDIES</h2>
+
+
+<p>Although equity follows the law so that a contract vitiated for an operative mistake may be void ab initio, equity has also intervened by providing remedies to ameliorate the harshness of the narrow scope of the doctrine where mistake isn’t operative. That is, though mistake may be insufficient to do harm to the contract, equity would provide cushions especially where it perceives injustice has been dealt </p>
+
+<h3>Rectification:</h3>
+<p>If the contract is reduced to a document expressing the contractual obligations between parties but it fails to show an intention, the court might provide an order for the document to be rectified. It is simply an order to make correct a contract and make it accurate <span class="case-law">-See Oyadiran v Baggett</span>. A party must satisfy the court that:
+<ul><li>
+ There was a prior, complete, and definite agreement that remained unchanged up till the time the contract was reduced to writing.</li>
+<li>There was in fact an intention that failed to be expressed and it is clear and perceivable.</li></ul> <span class="case-law">-See Mbonu v. Nwoti.</span></p>
+
+<h3>Rescission:</h3>
+<p>While a contract may fail to be voided by the court for mistake as a result of being less fundamental, Rescission is that order of court that may be granted to cancel the contract anyway if the court believes it manifests injustice or undue hardship on a party. <span class="case-law">-See Garrard v Frankel</span>.</p>
+
+<h3>Refusal to grant Specific Performance:</h3>
+<p>Following the same guiding principle, the court may refuse to grant an order of specific performance in a bid to avoid undue hardship and injustice.</p>
+
+<h3>Documents Mistakenly signed: Non est Factum.</h3>
+            
+			
+			
+			
+	<footer><center><span class="case-law"> An Appreciation by Igiri Vokala Synclair</span> </center></footer>		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+        `;
+    </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>
+
+
+
+
+
+
+
+
+

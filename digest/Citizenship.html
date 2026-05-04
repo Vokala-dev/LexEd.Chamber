@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizenship</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --gold: #c9a227; 
+            --dark-bg: #0a0a0a; 
+            --paper-bg: #141414;
+            --text-main: #e0e0e0; 
+        }
+
+        body { 
+            background: var(--dark-bg); 
+            color: var(--text-main); 
+            font-family: 'Playfair Display', serif; 
+            line-height: 1.8;
+            padding: 50px; 
+            margin: 0;
+        }
+
+        .paper { 
+            max-width: 850px; 
+            margin: auto; 
+            background: var(--paper-bg); 
+            padding: 80px; 
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.8);
+        }
+
+        /* Editorial Drop Cap */
+        #content-area p:first-of-type::first-letter {
+            font-family: 'Cinzel', serif;
+            float: left;
+            font-size: 3.5rem;
+            line-height: 1;
+            padding-right: 12px;
+            color: var(--gold);
+        }
+
+        h2, h3 { 
+            color: var(--gold); 
+            font-family: 'Cinzel', serif; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+            padding-bottom: 8px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .case-law {
+            color: var(--gold);
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        blockquote { 
+            border-left: 3px solid var(--gold); 
+            padding: 10px 20px; 
+            font-style: italic; 
+            margin: 25px 0;
+            background: rgba(201, 162, 39, 0.05);
+        }
+
+        .back-link { 
+            color: var(--gold); 
+            text-decoration: none; 
+            font-family: 'Cinzel', serif; 
+            margin-bottom: 30px; 
+            display: inline-block;
+            transition: 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .back-link:hover { 
+            opacity: 1; 
+            letter-spacing: 1px;
+        }
+
+        ::selection { 
+            background: var(--gold); 
+            color: var(--dark-bg); 
+        }
+
+        center {
+            display: block;
+            padding: 20px;
+            font-style: italic;
+            border-top: 1px solid rgba(201, 162, 39, 0.1);
+            border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+            margin: 20px 0;
+        }
+
+        /* RESPONSIVE CORRECTIONS */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px; /* Less outer padding on mobile */
+            }
+
+            .paper {
+                padding: 40px 20px; /* Narrower internal margins */
+                box-shadow: none; /* Shadow can look messy on small screens */
+            }
+
+            #content-area p:first-of-type::first-letter {
+                font-size: 2.8rem; /* Scale down drop cap */
+            }
+
+            h2 {
+                font-size: 1.4rem; /* Scale down titles */
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#in-portal" class="back-link">← Return to Vault</a>
+    <div class="paper">
+        <div id="content-area">
+            <!-- JavaScript populates this section -->
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+        
+        document.getElementById('content-area').innerHTML = `
+            <h2>CITIZENSHIP IN NIGERIA CONSTITUTIONAL LAW</h2> 
+            <p>To begin appreciating the concept of citizenship we ought to first understand who a citizen is. The court in <span class="case-law">Herriot V. City of Seattle</span>, defines a citizen as a member of a political community who, in their associated capacity, have established or submitted themselves to the dominion of a government for the protection of the individuals as well as their civil rights.
+            It follows therefore that Citizenship is the status of being a natural person who holds membership in a particularly political community—conferred either by Jus soli or Jus sanguinis—owes allegiance, and is entitled to its fundamental rights and protections.
+            Under the various Nigerian Constitutions since 1979, Citizenship can be acquired in three ways: By Birth, Naturalization and By Registration.</p>
+
+            <p>There is hardly any judicial legal precedent on the topic of citizenship in Nigeria, that discusses the nature of citizenship in Nigeria outside of political matters arising from a candidate's right and eligibility to run for an election.</p>
+
+            <h3>ACQUISITION OF CITIZENSHIP</h3>
+            <p>
+                The various methods of acquiring Nigerian citizenship are clearly outlined under Chapter III of the 1999 Constitution: Section 25 of the 1999 Constitution of Nigeria provides for citizenship by birth; Section 26 provides for citizenship by Registration; and section 27, Citizenship by Naturalization.
+                <br>We shall now examine them.
+            </p>
+            
+            <h3>CITIZENSHIP BY BIRTH</h3>
+            <p>Section 25 of the 1999 Constitution provides that citizenship by birth can be acquired by being borne by a person(s) who are themselves Nigerian. The Section reads that: “For people born in Nigeria before independence... if either of his parents, or any of his grandparents belongs or belonged to a community indigenous to Nigeria.”
+                <br>The phrase "Community indigenous to Nigeria" illustrates a basic fact that seeks to exclude persons from communities which prior to October 1, 1960 were part of the colony and protectorate of Nigeria, who no longer are, from claiming citizenship of Nigeria.
+                <br>Section 31 provides that "a parent or grandparent of a person shall be deemed to be a citizen of Nigeria if at the time of the birth of that person such parent or grandparent would have possessed that status by birth if he had been alive on the date of independence."
+                <br>Note that the Constitution does not specify which parent or grandparent of a child can claim through, and the words "either" or "any" used therein suggests that a person can claim citizenship through either of their parent or grandparent. In <span class="case-law">SHUGABA V. MIN. OF INTERNAL AFFAIRS (1982)</span> The court held that the applicant could claim citizenship through his mother whose citizenship as a Kanuri, which is a community indigenous to Nigeria, was established despite the fact that it was also established that his father had migrated to Nigeria from a neighbouring country.
+                <br>Section 25 (1)(b) provides that "every person born in Nigeria after the date of independence either of whose parents or any of whose parents is a citizen of Nigeria" can claim citizenship.
+                S. 25 (1)(c) "Every person born outside Nigeria, either of whose parents is a citizen of Nigeria" is also a citizen.
+                <br>Summarily, the entire position of section 25 of the Nigeria constitution is such that:
+                <br> 1. Nigerian citizenship by birth could be claimed by any person born in Nigeria on or after 1st October, 1960, if any of his parents or grandparents are Nigerians Citizens.
+                <br> 2. The section also confers Nigerian citizenship on any person born outside Nigeria, but either of his parents is a Nigerian.
+            </p>
+            
+            <h3>CITIZENSHIP BY REGISTRATION</h3>
+            <p>By the practical application of Section 26 of the Nigerian Constitution, 2 classes of persons can become citizens by registration:
+                <br>1. Any woman who is or has been married to a citizen of Nigeria; or
+                <br>2. Every person of full age and capacity born outside Nigeria, any of whose grandparents is a citizen of Nigeria.</p>
+            <p>The provisions of section 26 as it pertains to the citizenship of married women and children poses certain issues that have been identified by various scholars. One is the status of a Non Nigerian married to a Nigerian woman; the problem here is that the concession for citizenship by registration is made only to a wife of a Nigerian citizen, but not to a husband of a Nigerian citizen.
+                What this suggests however, is that a foreign husband of a Nigerian wife would have to naturalize if he desires to be a Nigerian Citizen.
+            <br>To be qualified as a Nigerian citizen, the applicant must satisfy the president that he is a person of good character. The problem with this is that the president is the judge of what character is good or is not good. Although it is not certain what constitutes good character, it seems that a character will qualify to be good if he falls outside what constitutes bad character sufficient enough to deprive a person of acquiring citizenship under S. 26 of the constitution.
+                Secondly, to register as a citizen the applicant must show clear intention of his desire to be domiciled in Nigeria;
+            <br>Furthermore, he has to be willing to swear the oath of allegiance to Nigeria as provided in the sixth (6) schedule of the constitution, whereby the applicant swears or affirms to be faithful and bear true allegiance to Nigeria, and to preserve, defend and protect the constitution.
+            <br>It is worth knowing that a citizen of Nigeria by registration, owing to the provision of S. 307 of the constitution cannot within ten years of such registration, hold any elective or appointive post, "notwithstanding anything in chapter IV—particularly the right of freedom from discrimination."   
+            </p>
+            
+            <h3>CITIZENSHIP BY NATURALIZATION</h3>
+            <p>A person who is neither a citizen by birth or eligible for citizenship by Registration may still be able to acquire this type of citizenship by fulfilling all the requirements under section 27 of the Constitution. By virtue of the aforementioned Section, such a person may apply to the president for the grant of a certificate of naturalisation once he can satisfy the president that:
+            <br>(a) he is of full age and capacity
+            <br>(b) he is of good character
+            <br>(c) he has shown clear intention of his desire to be domiciled in Nigeria
+            <br>(d) he is, in the opinion of the Governor of the state in which he proposes to reside, acceptable to the community in which he is to live permanently, and has assimilated into their way of life;
+            <br>(e) he has made, or is capable of making useful contributions to the advancement, progress and well being of Nigeria.
+            <br>(f) he has taken the oath of Allegiance
+            <br>(g) he has, immediately preceding the date of his application (i) resided in Nigeria continuously for fifteen years or (ii) resided continuously for twelve months, and within twenty years immediately preceding twelve months, he has resided in Nigeria for not less than 15 years.
+            <br>It is worth emphasizing that a citizen by Naturalization is also barred from holding any elective or appointive office in line with the provision of S. 307 CFRN.
+            </p>
+
+            <h3>DUAL CITIZENSHIP</h3>
+            <p>Under the Constitution (1999 as Amended) a citizen by birth can acquire the citizenship of another country without renouncing his Nigerian citizenship. Also, citizens by Registration and Naturalization can retain their citizenship of the country of birth. They must however, within twelve months of the grant of the certificate of registration or naturalization, renounce the citizenship of any other country other than that of the citizenship of birth.
+            <br>While the law balances the dilemma by letting the individual keep all three passports, it applies a strict filter when it comes to high political offices.
+            <br>As established in <span class="case-law">OGBEIDE V. ARIGBE-OSUCA (2004)</span> The judicial interpretation is that: A Nigerian citizen by birth is not disqualified from elective office even if they hold dual (or triple) citizenship, provided they haven't renounced their Nigerian citizenship.
+            <br>This position was further restated in <span class="case-law">RHODES-VIVOUR V. I.N.E.C (2024) 10 NWLR</span> where the court held that:
+            <center>A person who is a citizen of Nigeria by birth is clearly and undoubtedly, not subject of and is not within the purview, contemplation or the context of the provision of Section 28 of the 1999 constitution (as altered)...</center>
+            </p>
+            
+            <h3>RENUNCIATION OF CITIZENSHIP</h3>
+            <p>The 1999 constitution makes provision for a citizen of full age (18 & above) to renounce their citizenship. This is provided for under Section 29 of the Nigerian Constitution.
+            </p>
+            
+            <h3>DEPRIVATION OF CITIZENSHIP</h3>
+            <p>Of all the aforementioned methods of acquiring citizenship only citizenship by birth is inalienable, for any reason whatsoever.
+            <br>The president can deprive both a naturalized and registered citizen ship if he is satisfied from the record of proceedings of a court or tribunal or after due enquiry that such a person is disloyal to Nigeria or has, during a war in which Nigeria is physically involved, unlawfully traded with the enemy.
+            </p>
+            
+            <h3>FOR FURTHER READING:</h3>
+            <p>1. KEHINDE M. MOWOE, Constitutional Law In Nigeria<br>
+               2. JOSEPH EKPE EDET, Notes On Constitutional Law</p>
+        `;
+    </script>
+</body>
+</html>

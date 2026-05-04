@@ -1,0 +1,258 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Digest | Lex Educationis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --gold: #c9a227; 
+            --dark-bg: #0a0a0a; 
+            --paper-bg: #141414;
+            --text-main: #e0e0e0; 
+        }
+
+        body { 
+            background: var(--dark-bg); 
+            color: var(--text-main); 
+            font-family: 'Playfair Display', serif; 
+            line-height: 1.8;
+            padding: 50px; 
+            margin: 0;
+        }
+
+        .paper { 
+            max-width: 850px; 
+            margin: auto; 
+            background: var(--paper-bg); 
+            padding: 80px; 
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.8);
+        }
+
+        /* Editorial Drop Cap */
+        #content-area p:first-of-type::first-letter {
+            font-family: 'Cinzel', serif;
+            float: left;
+            font-size: 3.5rem;
+            line-height: 1;
+            padding-right: 12px;
+            color: var(--gold);
+        }
+
+        h2, h3 { 
+            color: var(--gold); 
+            font-family: 'Cinzel', serif; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+            padding-bottom: 8px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .case-law {
+            color: var(--gold);
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        blockquote { 
+            border-left: 3px solid var(--gold); 
+            padding: 10px 20px; 
+            font-style: italic; 
+            margin: 25px 0;
+            background: rgba(201, 162, 39, 0.05);
+        }
+
+        .back-link { 
+            color: var(--gold); 
+            text-decoration: none; 
+            font-family: 'Cinzel', serif; 
+            margin-bottom: 30px; 
+            display: inline-block;
+            transition: 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .back-link:hover { 
+            opacity: 1; 
+            letter-spacing: 1px;
+        }
+
+        ::selection { 
+            background: var(--gold); 
+            color: var(--dark-bg); 
+        }
+
+        center {
+            display: block;
+            padding: 20px;
+            font-style: italic;
+            border-top: 1px solid rgba(201, 162, 39, 0.1);
+            border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+            margin: 20px 0;
+        }
+
+        /* RESPONSIVE CORRECTIONS */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px; /* Less outer padding on mobile */
+            }
+
+            .paper {
+                padding: 40px 20px; /* Narrower internal margins */
+                box-shadow: none; /* Shadow can look messy on small screens */
+            }
+
+            #content-area p:first-of-type::first-letter {
+                font-size: 2.8rem; /* Scale down drop cap */
+            }
+
+            h2 {
+                font-size: 1.4rem; /* Scale down titles */
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#in-portal" class="back-link">← Return to Vault</a>
+    <div class="paper">
+        <div id="content-area">
+            <!-- JavaScript populates this section -->
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+        
+        document.getElementById('content-area').innerHTML = `
+            <h2> MISREPRESENTATION</h2>
+
+<p>The representations of parties during negotiations which devolve into a valid contract often involve certain preliminary statements which had the capacity to induce a party relying on such statements to consummate the contract. If such statements being acted upon are false, they are known as misrepresentation. Following therefrom, misrepresentation in contract means: a false statement by a party which acted to induce the other into the contract.</p>
+
+<h3>CRITERIA FOR MISREPRESENTATION</h3>
+
+
+<p>A successful proof of the presence of misrepresentation in an otherwise valid contract renders the contract void or voidable at the instance of the party who relied on the false representation of the other. To establish misrepresentation in a contract, certain factors must be proved:</p>
+
+<h3>1. INDUCEMENT:</h3>
+<p>For misrepresentation to be established, a statement must have been made by a contracting party to the other; the other relying on the statements was induced to contract. To prove inducement, the representee must show that he relied on the false statement.<br>
+
+In <span class="case-law">Smith v Chadwick</span>, despite a company's prospectus containing a false representation (indicating that a certain influential person was on the Board of Directors), the plaintiff failed to show he was influenced by the statement, thus his actions for misrepresentation failed.</p>
+
+<p>Also, in <span class="case-law">Attwood v Small</span>, it was held that misrepresentation by the seller did not induce the buyer, as the buyer had hired a private investigator to confirm the representation made by the seller, which the investigator did to the affirmation of the buyer's representation.</p>
+
+<h3>2. FALSE STATEMENT OF FACT:</h3>
+<p>In this regard, the false statement that induced the other party to enter into the contract must have been a statement of fact, as distinct from a statement of opinion or intention. While an opinion is a belief or a subjective judgment, a fact is an objective assertion of a past or existing state of affairs that is capable of being proven true or false.<br>
+Where words like <span class="case-law">"I think"</span> or a <span class="case-law">"mere boast"</span> are used, the statement is generally considered an expression of opinion rather than a factual claim, and so no liability may arise.</p>
+
+<p>The essence of this technicality is that parties often over-exaggerate; therefore, it is the duty of the representee to be cautious and contract with the diligence of a reasonable man. All parties should avoid being unnecessarily negligent. 
+However, a critical exception arises when the party making the statement possesses special knowledge or is an expert in the area—in such cases, their <span class="case-law">"opinion"</span> may be treated as a statement of fact because they are in a position to know the underlying truth.</p>
+<p>In <span class="case-law">Bisset v Wilkinson</span>, a seller stated that his land could support 2,000 sheep, despite having never farmed sheep on it himself. The buyer, knowing the seller lacked this specific experience, purchased the land. When the land failed to meet that capacity, the buyer sued for misrepresentation. The Privy Council held the statement was a mere expression of opinion, not a statement of fact, because the seller had no factual basis (like past performance) to support the claim.<br>
+What will be considered an unquestioned false statement of fact was demonstrated in <span class="case-law">Smith v Land and House Property Corp</span>. Upon the sale of a hotel, the defendants indicated it was let to a "most desirable tenant." Because the sellers knew the tenant was actually in arrears and near bankruptcy, their "opinion" was actually a false statement of a known fact. This was considered misrepresentation, and the action for rescission was upheld.</p>
+
+<h3>3. SILENCE:</h3>
+<p>Silence as a criterion for establishing misrepresentation would be considered to only hold effect when in regard to the exceptions to the general rule that mere silence is not misrepresentation.<br>
+Thus if the representor was merely silent while the representee, acted on a wrong belief and assumption, the representor does not become liable for misrepresentation for failing to correct the impression as long as he did not create it in the first place.</p>
+
+<h2>Exceptions to the general rule includes:</h2>
+
+<p>i: <span class="case-law">Change of circumstances:</span>
+This is when a party to a contract during negotiations or in the form of advertisement has made a statement that goes to the root of the contract which is true at the time the statement was made but subsequently due to change your circumstances that statement is rendered untrue, the party who made the statement is under an obligation by this exception to make known to the other party of this subsequent change. In <span class="case-law">Lockhart v. Osman</span> the application of this exception was shown. In the instant case <span class="case-law"><u>a cattle was advertised to be "suitable for breeding purposes" the statement was rendered untrue when the cattle caught a disease that affected its reproductive system before the contract was consummated</u></span>. This was known by the defendant, but plaintiff was oblivious to this; the contract was rescinded.</p>
+
+<p>ii: <span class="case-law">Full disclosure:</span>
+In line with this exception, partial disclosure of certain material facts brought up by the representor would be considered misrepresentation. A party is not obligated to disclose certain facts, but if they do, they’re expected to do so in whole. The operation of this exception was shown in <span class="case-law">Curtis v Chemical & Dyeing Co. Ltd</span>, the defendant disclosed the content of an exclusion clause to only include liability for beads & sequins, whereas upon discovery the clause covered any damage to the dress. This was held to be misrepresentation.</p>
+
+<p>iii: <span class="case-law">Conduct:</span>
+If a person, though silent, conducts himself in a manner which suggests that a particular fact exist, it would be misrepresentation if such facts does not exist. In <span class="case-law">Gordon v. Selico, <u>it was held that it is possible to make a misrepresentation either by words or by conduct</u></span>.
+
+<p>iv: <span class="case-law">Contracts of the utmost good faith (Uberrimae Fidei):</span>
+This is particular contracts, which by nature one party owes the other a duty of care. <span class="case-law">As a general rule, <u>parties thereto are required to make known all material facts influencing the contract</u></span>. The following contracts are within this category:</p>
+
+<p><blockquote><span class="case-law">- Insurance: When applying for insurance, the person or company must disclose all material facts so that the insurer can properly assess the risk involved. Failure to disclose such facts makes the policy voidable at the insurer's option. Demonstrated in <u>Lambert v Co-Operative Insurance, where a failure to disclose a spouse’s criminal record led to the insurer refusing a claim.</u></span></blockquote></p>
+
+<p><blockquote><span class="case-law">- Family Arrangement: A contract entered into between family members to resolve disputes or distribute an estate. In Gordon v Gordon, a legitimate child falsely induced an illegitimate sibling into an agreement by hiding the sibling's entitlement. This was misrepresentation due to silence.</span></blockquote></p>
+
+<p><blockquote><span class="case-law">- Companies: Public companies must provide accurate financial disclosures to the CAC. It is unlawful to authorize a prospectus containing a false statement. Similarly, partners in a partnership business owe a strict duty of transparency to one another because each partner’s actions can financially bind the others.</span></blockquote></p>
+
+<p>v: <span class= "case-law">Fiduciary Relationships:</span>
+A relationship of trust and confidence (e.g., solicitor/client). Parties must disclose all material facts. In Lowther v Lord Lowther, an agent failed to disclose the true value of a painting sold on behalf of the principal; this silence regarding value was a breach of duty</p>
+
+
+<h2>Types of Misrepresentation</h2>
+<h3>Fraudulent misrepresentation;</h3>
+<p>This occurs when a party makes a representation with intent to deceive and with the knowledge that such a representation is false. In the case of <span class="case-law">Sule v. Aromire; it was formally established that if a person fraudulently induces another into a contract, he cannot in his defence claim that the other person could have noticed the fraud & falsity if he was careful & diligent; i.e Negligence does not apply as to this aspect.</span>
+Fraud is established where the false statement is made;<br>
+(A) Knowingly<br>
+(B) Without belief in its truth & <br>
+(C) Recklessly; as regards whether it be true or not</p>
+
+<p>The court portrayed that it would uphold fraudulent misrepresentation based on these three criteria as being in contradistinction with the landmark case of <span class= "case-law">Derry v Peek</span>. In that case, <span class= "case-law">it was held that if a person makes a statement with an honest belief in its truth, even if that belief is unreasonable or negligent, it does not amount to fraud</span>. Therefore, for fraudulent misrepresentation to succeed, there must be a lack of honest belief a <span class= "case-law">"dishonest mind"</span>, which creates a higher threshold of proof than mere negligence.</p>
+
+
+<h3>Negligent Misrepresentation;</h3>
+<p>This is a false statement made by someone who has no reasonable grounds for believing in its truth. For a representor to incur liability for negligent misrepresentation, he must owe a duty of care to the representee; such duties arises where there exist a fiduciary relationship b/w the parties. <span class= "case-law">In Bristol & West Building Society v Mothew [1998], <u>Lord Millet defined a fiduciary relationship as; a situation where someone has undertaken to act for & on behalf of another in a particular matter such that it may give rise to a relationship of trust & confidence</u></span>.
+A fiduciary duty is the highest standard of care at either equity or common law. This is the basis for Negligent misrepresentation.</p>
+
+    <p><blockquote> <center><span class= "case-law">Negligent misrepresentation  was demonstrated in Nocton v. Ashburton; Mr Nocton the solicitor to Ashborn gave a misleading and unfair advice beneficial to his self interest. The action succeeded and Nocton was liable for this bad advice given the fiduciary relationship.</span></center></blockquote></p>
+
+
+<h3>Innocent Misrepresentation : </h3>
+<p>This is a false statement made by someone who has reasonable grounds for believing it was true when he made it & when he entered into the contract. That is to say the person making the false statement has no intention to deceive; it was made with an honest belief in its truth.<span class= "case-law"> - See Bisset v Wilkinson</span>.
+The party misled by the misrepresentation can rescind the contract. The court may also refuse to order specific performance of the contract affected by misrepresentation.</p>
+
+<p><span class= "case-law"><u>Remedies for misrepresentation;</u></span></p>
+<p><span class= "case-law">1. Rescission</span></p>
+<p>Misrepresentation renders a contract voidable. The innocent party has a right to rescind, that is, set aside the contract if he wishes. The remedy of rescission is available to the representee in all classes of misrepresentation (void ab initio). The idea behind rescission is that the parties are restored to the position they were before entering into contract. Rescission can be exercised either by informing the perpetrator or by requesting an order from the court. <span class= "case-law"><u>In Universal Finance v Caldwell : The court addressed the method of rescission, noting that informing the authorities (like the police) can be sufficient to rescind a contract even if the fraudster cannot be reached</u></span>.<p>
+
+<p><span class= "case-law"><u>Limits to rescission</u></span></p>
+<p>A) Affirmation: If the party who has been misled affirms the contract, he cannot afterwards claim rescission. Affirmation occurs when the party either declares his intention to continue with the or does some acts from which such an intention may be inferred.
+ <span class= "case-law">* Long v Lloyd; the defendant advertised a truck as being in good condition, this was not true, upon finding out the plaintiff still furthered the contract, rescission was not granted by the court</span>.</p>
+
+<p>B) Lapse of time: If the representee discovers the misrepresentation & fails to take steps to avoid the contract, he may not be able to rescind. <span class= "case-law">In Leaf v International Galleries, the plaintiff sued for rescission after five yrs of consummation of the contract</span>.</p>
+
+<p>C) Restitution impossible; If something happens which make it impossible to restore the parties to their original position, the right of rescission will be lost. The main essence of rescission is to revert the parties to the position the were had the contract not been effectuated. If it is therefore impossible to grant this equitable relief, it is termed restitution impossible.</p>
+
+<p>D) Third party rights: If an innocent third party acquires rights under the contract in good faith and for value, the mislead party loses his right of rescission. The third party must acquire the right before the representee rescind the contract. Any right acquired by a third party after the representee had taken reasonable steps to avoid the contract would not affect the right of rescission.<br>
+At common law, restitution requires a perfect restoration of the parties to their original position. It should be noted that in England and Wales, under Sec 2(2) of the misrepresentation act, the court has the discretion to award damages instead of rescission even if the misrepresentation is innocent misrepresentation </p>
+
+
+<p><span class= "case-law">2. Damages:</span></p>
+<p>The representee can also recover damages for loss suffered. In cases of fraudulent and Negligent misrepresentation, a claim for damages is under the tort of deceit, making the damages tortious. In other words, only actual losses are recoverable. The aim is to restore the misled party to the position he would have been in if the misrepresentation hadn’t been made.
+ <span class= "case-law">* East v. Maurer: In this case the plaintiff bought a salon from the defendant who owned two salons. He was negligently induced to buy the salon on the predication that the defendant will not stay in the other salon but leave for another country but this didn't happen as the defendant did not go anywhere and kept operating the other shop, such that he had now crippled the business of the other party ( the plaintiff) . Damages was the most sufficient remedy</span>.</p>
+
+<p><span class= "case-law">3. Indemnity;</span><p>
+<p>A victim of innocent misrepresentation, who though cannot claim damages under the contract is not totally remediless. As he cannot under the contract for damages, the remedy of indemnity is available to him. Indemnity seeks to compensate the mislead party against obligations necessarily created by the contract.
+<span class= "case-law">Whittington v Seale: In a case of innocent misrepresentation regarding the sanitary condition of a poultry farm, the court awarded an indemnity to cover the costs of rates and repairs required by the local council, though not general damages</span>.</p>
+
+
+<footer ><center > <span class="case-law">A Dissection by KINGSLEY OCHECHE</span> </center></footer>
+			
+			
+			
+			
+			
+        `;
+    </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>
+
+
+
+
+

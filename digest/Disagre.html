@@ -1,0 +1,221 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Digest | Lex Educationis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --gold: #c9a227; 
+            --dark-bg: #0a0a0a; 
+            --paper-bg: #141414;
+            --text-main: #e0e0e0; 
+        }
+
+        body { 
+            background: var(--dark-bg); 
+            color: var(--text-main); 
+            font-family: 'Playfair Display', serif; 
+            line-height: 1.8;
+            padding: 50px; 
+            margin: 0;
+        }
+
+        .paper { 
+            max-width: 850px; 
+            margin: auto; 
+            background: var(--paper-bg); 
+            padding: 80px; 
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.8);
+        }
+
+        /* Editorial Drop Cap */
+        #content-area p:first-of-type::first-letter {
+            font-family: 'Cinzel', serif;
+            float: left;
+            font-size: 3.5rem;
+            line-height: 1;
+            padding-right: 12px;
+            color: var(--gold);
+        }
+
+        h2, h3 { 
+            color: var(--gold); 
+            font-family: 'Cinzel', serif; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+            padding-bottom: 8px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .case-law  {
+            color: var(--gold);
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        blockquote { 
+            border-left: 3px solid var(--gold); 
+            padding: 10px 20px; 
+            font-style: italic; 
+            margin: 25px 0;
+            background: rgba(201, 162, 39, 0.05);
+        }
+
+        .back-link { 
+            color: var(--gold); 
+            text-decoration: none; 
+            font-family: 'Cinzel', serif; 
+            margin-bottom: 30px; 
+            display: inline-block;
+            transition: 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .back-link:hover { 
+            opacity: 1; 
+            letter-spacing: 1px;
+        }
+
+        ::selection { 
+            background: var(--gold); 
+            color: var(--dark-bg); 
+        }
+
+        center {
+            display: block;
+            padding: 20px;
+            font-style: italic;
+            border-top: 1px solid rgba(201, 162, 39, 0.1);
+            border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+            margin: 20px 0;
+        }
+
+        /* RESPONSIVE CORRECTIONS */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px; /* Less outer padding on mobile */
+            }
+
+            .paper {
+                padding: 40px 20px; /* Narrower internal margins */
+                box-shadow: none; /* Shadow can look messy on small screens */
+            }
+
+            #content-area p:first-of-type::first-letter {
+                font-size: 2.8rem; /* Scale down drop cap */
+            }
+
+            h2 {
+                font-size: 1.4rem; /* Scale down titles */
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#in-portal" class="back-link">← Return to Vault</a>
+    <div class="paper">
+        <div id="content-area">
+            <!-- JavaScript populates this section -->
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+        
+        document.getElementById('content-area').innerHTML = `
+            <h2>Discharge of contract by agreement</h2> 
+<p>The organic part of any contract is the agreement which is a delicate and precise sculpture of the minds of parties, essentially running into a number of terns that create obligations and duties between them. It is not surprising that such nature of agreements can just as well, bring to an end and effectively discharge parties of their contractual relationships as it would take just a legally valid agreement, and adherence to the relevant laws as they affect them to retain legal potency.<br> 
+
+<p>Simply, it is possible that a simple agreement between parties can discharge and extinguish any existing agreements (initial contracts) as the same consensus that brought to their existence can be also formed to end them. This is expressed in the legal maxim <span class="case-law">Mutuus consensus, Mutuus dissensus.</span></p>
+
+<p>When an agreement has to discharge a contract, it must be accompanied by good consideration for it to be legally recognized. This is because the agreement to discharge the contract is a contract itself and therefore shouldn’t lack any element of a valid one. Consideration might be money’s worth, marriage or some advantage that is of value and therefore sufficient before the eyes of the law to be good consideration. </p>
+<p>Some common ways a contract may be discharged by agreement manifest in contracts where terms that form it, provide circumstances and events that can discharge parties of it. It could be some specific prohibited acts or inactions that the contract foresees and judges as sufficient to end the contract.</p>
+<p><blockquote><center><span class="case-law">In an instance, A and B have contracted for the haulage of building materials, if there exist a clause in their contract to extinguish it, in the failure of a party to perform or not to perform a certain act, and that act or inaction is done any way, that clause is sufficient in evidence to discharge the contract between parties.</span></center></blockquote></p>
+<p>Another common way is <span class="case-law">time stipulation</span>. A contract may stipulate the time frame or period at which parties may maintain their contractual relationship, and at the time lapse, the parties may be discharged of the contract. An example of this method is a fixed tenancy agreement. In daily property law management, it is a simple agreement between a Landlord or an Attorney to the landlord with the tenant, stipulating the time frame in which the property being let-out, may be in the possession of the tenant. At the expiration, the property owner may then have legal right to evict the tenant.</p>
+
+<p>For easy understanding, we shall now consider the various ways a contract may be discharged by agreement under a specific classification of contract. There are various classifications of contract, but the one relevant here is Executory and Executed contracts. This classification is necessary because it majors on the time when performance of the contract is to be carried out, and the rules regarding discharge by agreement vary with the time of performance.</p>
+
+<h2>1.	EXECUTORY CONTRACTS:</h2>
+<p><blockquote><span class="case-law"><center><u>A contract is considered to be executory when parties have exchanged promises to each other or made an agreement, but their respective obligations are to be performed at a future time. That is, the contract has been formed, but performance has been postponed, either wholly or in part, to a later date.</u></center></span></blockquote></p>
+<blockquote><span class="case-law"><p>For example, if A makes a promise to buy from B’s furniture shop, a couple of luxury items when he finishes his conference hall in a couple of years or an agreed time, the contract is considered to be executory because it speaks to a future time, parties have not yet began performance of the contract and consideration here exist in the form of the mutual promises they have made to each other. Nevertheless, that does not affect the legal validity of their agreement, which at law is in-fact binding upon them and where upon failure to fulfill their promises to each other, can be considered to be an actual breach of contract.</p></span></blockquote>
+
+<p>A contract may also be executory if parties have carried out partial performance of it, that is, they still have outstanding obligations and are still contractually liable in-case of a breach. Parties may decide to discharge themselves of the contract by agreement, where such agreement would have legality to it even without consideration. The consideration would be derived from the forfeiture of each party’s right under the contract which are of value because they are of some beneficial interest to both parties in the eyes of the law.</p>
+<p>Accordingly, an executory contract may be discharged by one of the following: <span class="case-law">Rescission, Variation and Wavier.</span></p> 
+<h3>a.	RESCISSION OF CONTACT:</h3>
+<p>Rescission is simply mutual cancellation of the contract before performance is done. Each party releases the other from their outstanding obligations which effectively terminates the contract. 
+By mutual agreement, parties may rescind their executory contract and be discharged from it. As earlier said unlike the executed contracts where new consideration may be furnished <span class="case-law">[though an exception exist]</span>, the consideration will be deemed from the abandonment of each parties promises to each other.
+
+<center><span class="case-law">Important notes; Before the intervention of equity, contracts under seal could only be rescinded by another contract under seal. However the position of the law is that contracts under seal can be rescinded by simple agreements either written or oral. See Berry v. Berry where it was held that the simple agreement between parties validly varied the obligations of parties under the original contract.</span></center> 
+<blockquote><span class="case-law">-	Where the law mandates a contract to be in writing because of its nature, [example; disposition of interest in Land], the rescinding agreement need not be by writing as even a simple agreement orally is potent enough to end the contract. <u>-See U.A.C v John Argo; it was held that the written contract had been validly rescinded by the subsequent oral agreement.</u></span></blockquote>
+
+<h3>b.	VARIATION OF CONTACT;</h3>
+<p>Variation of contract denotes mutual alteration of the terms of an existing valid contract by parties, so that the original contract continues but in a modified form. It could also be substitution of a contract with a new contract by means known as Novation, but ordinarily, its core is to vary the terms of the contract between the parties.<br> 
+It’s important to note that, a written contract may be varied either by another written or oral agreement. However, at common law and unlike Rescission of contract, such contracts that are required to be in writing by law can only be altered by another contract in writing. That is, the variation of these kinds of contracts especially contracts that have to do with the disposition of interest in property, have to be by written contracts for them to legally valid. <span class="case-law">-See Goss v. Nugent.</span></p>
+<p>This very principle has been further expanded as statutory development provides that some contracts otherwise required by law to be written and should receive variation only by written agreements, can be varied by an ordinary oral agreement. This is encapsulated in <span class="case-law">Section 128 (1) of the evidence act</span>.<br>
+
+Ultimately, the provisions under <span class="case-law">Section 128 (1) of the evidence act</span> provides  exceptional circumstances at which contracts required by law to be in writing and to be varied only by a written contracts, may be varied by an ordinary oral agreement.  The section shall be reproduced here for easy comprehension. </p>
+
+/** for picture **/
+
+<h3>c.	WAIVER:</h3>
+<p>A waiver is a unilateral act by a party to a contract, to discharge the other for a breach he may or may not have committed or for (partial) performance. Ordinarily, when a party breaches a contract or furnishes partial performance, the other is expected to sue or repudiate and sue, under the contract depending on the circumstance of the case, but such party may choose to waive his right, that is voluntarily abandon or relinquish his right for the breach or partial performance as the case may be, which effectively discharges the other party from his obligation to him. It must be a distinct act though it can be implied and inferred, and must be intentional with knowledge of the circumstance of the breach for a requirement for its validity. <span class="case-law">See Enavharo v. Edosomwa.</span>
+Once a party has waived his right voluntarily, he is not allowed to later insist on his strict legal rights because he has consented to its abandonment. The law as well, will not allow such a party to change his earlier representation under the doctrine of <span class="case-law">promissory estoppel or estoppel by conduct</span></p>
+
+
+
+<h3>EXECUTED CONTRACT</h3>
+
+<p>Ordinarily, a contract is considered to be an executed contract when both parties have completed or performed their obligations as stipulated under the contract. However, where just one party has completed his performance, the contract may still suffice as an executed contract on his part, and below is the way it may be discharged by agreement.</p>
+
+
+
+<p><span class="case-law"><u>ACCORD AND SATISFACTION</u></span></p>
+
+<p>Where one party has completed his obligations under a contract but the other has failed to do so, the parties may agree to discharge the contract by <span class="case-law">accord and satisfaction.</p>
+
+<p>The situation above constitutes a <span class="case-law">prima facie</span> breach of contract. However, the party who has performed his part of the contract must voluntarily agree with the defaulting party to discharge the contract. This agreement is legally regarded as the <span class="case-law">accord</span>, but for it to be legally recognised, it must be accompanied by not just <span class="case-law">sufficient</span> but <span class="case-law">adequate consideration</span>, which, when performed, is regarded as the <span class="case-law">satisfaction</span>.</p>
+
+<p>Consideration is essential for a contract to be discharged by accord and satisfaction, and its absence may prove fatal to its validity. It should be greater or of more value than the sum due or accruing under the contract and a failure of which culminates the invalidity of the agreement. <span class="case-law">-See Alhaji Sanusi Dere v. Pacific Insurance Co. (Nig)</span></p> 
+
+<p>However, equity may intervene where it would be inequitable for a creditor to insist on his strict legal rights. This is seen under the doctrine of promissory estoppel as established in <span class="case-law">Central London Property Trust Ltd v High Trees House Ltd</span>. In essence, consideration for satisfaction need not be adequate but at-least sufficient <span class="case-law">-If the creditor has accepted to receive lesser consideration than what he is entitled to</span>. This is the hall mark of the doctrine of promissory estoppel, which is a defence against an individual who has made a certain promise to be bound by it.  <span class="case-law">-See Pinnel's case and Charles and Ltd v. Oppenheim.</span>
+
+			
+			
+			
+		<footer><center ><span class="case-law"> An Appreciation by IGIRI VOKALA</span></center > </footer>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+        `;
+    </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>

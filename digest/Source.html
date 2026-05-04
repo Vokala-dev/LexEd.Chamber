@@ -1,0 +1,348 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Digest | Lex Educationis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --gold: #c9a227; 
+            --dark-bg: #0a0a0a; 
+            --paper-bg: #141414;
+            --text-main: #e0e0e0; 
+        }
+
+        body { 
+            background: var(--dark-bg); 
+            color: var(--text-main); 
+            font-family: 'Playfair Display', serif; 
+            line-height: 1.8;
+            padding: 50px; 
+            margin: 0;
+        }
+
+        .paper { 
+            max-width: 850px; 
+            margin: auto; 
+            background: var(--paper-bg); 
+            padding: 80px; 
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.8);
+        }
+
+        /* Editorial Drop Cap */
+        #content-area p:first-of-type::first-letter {
+            font-family: 'Cinzel', serif;
+            float: left;
+            font-size: 3.5rem;
+            line-height: 1;
+            padding-right: 12px;
+            color: var(--gold);
+        }
+
+        h2, h3 { 
+            color: var(--gold); 
+            font-family: 'Cinzel', serif; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+            padding-bottom: 8px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .case-law {
+            color: var(--gold);
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        blockquote { 
+            border-left: 3px solid var(--gold); 
+            padding: 10px 20px; 
+            font-style: italic; 
+            margin: 25px 0;
+            background: rgba(201, 162, 39, 0.05);
+        }
+
+        .back-link { 
+            color: var(--gold); 
+            text-decoration: none; 
+            font-family: 'Cinzel', serif; 
+            margin-bottom: 30px; 
+            display: inline-block;
+            transition: 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .back-link:hover { 
+            opacity: 1; 
+            letter-spacing: 1px;
+        }
+
+        ::selection { 
+            background: var(--gold); 
+            color: var(--dark-bg); 
+        }
+
+        center {
+            display: block;
+            padding: 20px;
+            font-style: italic;
+            border-top: 1px solid rgba(201, 162, 39, 0.1);
+            border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+            margin: 20px 0;
+        }
+
+        /* RESPONSIVE CORRECTIONS */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px; /* Less outer padding on mobile */
+            }
+
+            .paper {
+                padding: 40px 20px; /* Narrower internal margins */
+                box-shadow: none; /* Shadow can look messy on small screens */
+            }
+
+            #content-area p:first-of-type::first-letter {
+                font-size: 2.8rem; /* Scale down drop cap */
+            }
+
+            h2 {
+                font-size: 1.4rem; /* Scale down titles */
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="Lexed1.html" class="back-link">← Return to Vault</a>
+    <div class="paper">
+        <div id="content-area">
+            <!-- JavaScript populates this section -->
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+        
+        document.getElementById('content-area').innerHTML = `
+            <h2>The Sources of Nigerian Law</h2>
+
+ 1. English Law<br>
+ 2. Legislations (Statutes)<br>
+ 3. Customary Law, Islamic Law<br>
+ 4. Case Law<br>
+ 5. International Law<br>
+
+
+<h3>English Law</h3>
+
+<p>English law as a source of Nigerian law is a direct effect of Nigeria's legal history as it was the catalyst or could be said to be the most basic foundation of our law. This is a direct effect of the relations of the English with the natives of the geographical area now Nigeria prior to colonialism , the relations being trade and establishment of courts to settle commercial disputes and colonialism. The above position is given credence by the operation of the **Statute of General Application** which brought by operation, introduced and made applicable all the laws which operated in all of England prior to <span class="case-law">January 1st, 1900</span></p>.
+
+<p>In the earliest stages of Nigeria's jurisprudence development, the judges, lawyers and every one participating in the operation of laws were trained by/in consonance with English Law.<br>
+The English law applicable in Nigeria can be appreciated in two aspects:<br>
+ 1. Extended English Law: Those that apply by virtue of the operation of English Statutes.<br>
+ 2. Received English Law: This is introduced by Nigerian local legislation.<p,/>
+
+ <h3>Extended English Law</h3>
+<p>These are laws of English origin and were introduced by English Statutes prior to independence.
+The extended English laws still operating are those that were made pre-independence. These laws may also be repealed through local legislation since 1960. Because English legislative pronouncements after 1st October, 1960 are of no effect in Nigeria. And also extended laws are not repealed in Nigeria only because they have been repealed in England after 1st October, 1960.</p>
+
+
+
+<h3>Received English Law in Nigeria:</h3>
+
+<p>Received English law refers to English legal principles which continue to apply in Nigeria by virtue of reception statutes introducing English laws even after colonial rule, these laws are formally incorporated into Nigerian law.
+
+Considering the development of our legal systems made English law not entirely foreign and that it is common to import foreign laws, in a situation of a lacuna English laws have been imported despite  our independence. 
+
+The first reception clause appeared in Ordinance No. 3 of 1863, later updated, with the final operative date fixed at January 1, 1900, which remains the reference point.</p>
+
+<h3>Forms of Received English Law</h3>
+<p>Received English law in Nigeria consists of three main components:<br>
+1. Common Law<br>
+Common law is the body of laws, developed from customs and judicial decisions, common to the people of England.
+It began to take a unified form after the Norman Conquest, under William I, when different local customs were harmonized into a general legal system.
+Despite its importance, common law had defects:<br>
+It was rigid and technical,<br>
+It focused heavily on procedure (writs),<br>
+Remedies were limited.<br>
+These weaknesses led to the development of equity.</p>
+
+<p>2. Doctrines of Equity<br>
+Equity developed to mitigate the harshness and rigidity of common law.
+It was administered by the Court of Chancery and focused on fairness rather than strict rules. It grew from petitions to the King when common law failed to deliver justice.
+Where there is conflict between common law and equity, equity prevails, as established in the Earl of Oxford’s Case.
+Prior to the imputation of lawyers to the ranks of Chancellor equity had been described to be judgement given commesurate to the conscience of each Chancellor and as thus was very inconsistent in its judgements, however over the years it developed certain fundamental principles "maxim of equity"</p>.
+
+<span class="case-law"><u>Maxims of Equity </u></span>
+
+<blockquote><span class="case-law">Equity will not suffer a wrong without a remedy :  Every wrong must have a solution.
+Equity follows the law : It complements, not replaces, the law.<br>.
+Equity looks to intent rather than form : Substance matters more than technicalities. For example; if a contract is poorly executed but there is Consideration and  the intent can be infererable the court will uphold it as adequate. <br>
+
+Equity treats as done what ought to be done : Assumes obligations are fulfilled.<br>
+
+Equity imputes intent to fulfil obligations  Presumes people intend to do a duty legally imposed.<br>
+
+Delay defeats equity: (laches)  delaying to seek action in court for an equitable right could hamper the availability of adequate claims.<br>
+
+He who comes to equity must come with clean hands: You must not be guilty of wrongdoing.<br>
+
+He who seeks equity must do equity : You must act fairly yourself.<br>
+
+Where equities are equal, the law prevails : where both parties have have equally equitable claims ( nobody had done wrong), the person's whose claim is emanating from a right that arises complied strict legal rules, the person with such a claim takes precedence. <br>
+
+First in time prevails : Earlier rights take priority.<br>
+
+Equality is equity : Fairness often means equal distribution.<br>
+
+
+Equity acts in personam : The judgement given in consonant to equity binds the individual personally( it is not limited by territory).</span></blockquote>
+
+<p>3. Statutes of General Application<br>
+These are statutes which:
+<center><span class="case-law">.Were in force in England on January 1, 1900, and
+Applied generally to the public.
+They are applied in Nigeria only if:
+Local conditions permit,
+Necessary modifications are made,
+No Nigerian law overrides them.
+Application and Legal Position
+Received English law applies subject to Nigerian circumstances.
+It may be modified to fit local realities.
+Local legislation is superior and can override it.
+English court decisions are persuasive only, not binding.
+Legislations or Statutes</span></center></p>
+
+
+<p>These are laws enacted by the legislative arm of government (the National Assembly and State House of Assembly). The legislators are saddled with the constitutional obligation of making laws for the peace, order, and good government of Nigeria. The laws made by the legislative at the national level must be in line with the provisions of Section 58 of CFRN, and at the state level Section 100.</p>
+<p>Acts and Laws<br>
+The purpose of this distinction is to give nomenclature appraisal as regards the jurisdiction of a statute. A statute enacted by the National Assembly are called Acts, while statutes passed by a State House of Assembly are called Laws.</p>
+<p>Bye-Laws<br>
+These are laws passed by a Local Government Council. The LGC have jurisdiction to legislate on certain matters such as: establishment and maintenance of cemeteries, motor parks, naming of roads, registration of births, deaths, and marriages, shops, sale of liquor, etc.</p>
+<p>Delegated Legislation<br>
+This is legislation by some administrative authority or agency, under a power given by the Constitution or an enabling statute permitting such administrative authority to make laws. The rules created by the delegated authority is subject to parliamentary approval or amendment.</p>
+<p>Decrees and Edicts<br>
+A statute passed by the Federal Military Government of Nigeria through the ruling military council is called a Decree, while a statute by the State Council is an Edict.</p>
+
+<p> <span class="case-law"><u>Case Law</u></span><br>
+
+<p>Case law exists as a direct effect of the fundamental objective of the judiciary to interpret laws. What is most essential in appreciating case law as a source of law is the observation that the interpretation of the law affects the nature of the law, and that in the Nigerian legal system, the doctrine of _stare decisis_ is intricate and operative. The doctrine _stare decisis_ means “let the decision stand”; this means that the court, in its duty of interpreting the law and disseminating justice, should do so, but also, for the purpose of sanity and uniformity, stick to similar, correct positions as they have held in similar cases.
+When judges decide civil or criminal cases, they provide specific reasons for their rulings. If a future case arises with similar facts and legal principles, judges refer to and follow these earlier decisions.</p>
+
+<p>The binding force of case law in Nigeria is governed by the hierarchy of courts, following a system established centuries ago where decisions of higher courts strictly bind lower ones. At the apex is the Supreme Court, whose decisions are binding on all other courts in Nigeria. However, the Supreme Court is not bound by its own previous rulings; it has the power to depart from them, overrule itself, or declare a decision reached *per incuriam* (through lack of care or regard for relevant law) to ensure justice and legal evolution</p>
+<p>Following the Supreme Court, the Court of Appeal’s decisions bind all lower courts, including High Courts and Magistrate Courts. While the Court of Appeal is generally bound by its own previous decisions, there are specific exceptions: it may choose between its own conflicting decisions, it must follow a Supreme Court ruling that contradicts its previous stance, and it can depart from a decision made *per incuriam*. High Courts similarly bind lower courts, but Magistrate Courts occupy the lowest tier, meaning their decisions do not create binding precedents for any other court.<br>
+For courts of "co-ordinate jurisdiction"—such as different divisions of the Court of Appeal or various State and Federal High Courts—decisions are not strictly binding on one another. While these courts are of equal power, they treat each other’s rulings with strong persuasive influence to maintain certainty and uniformity in the law. This entire framework of referring to and following earlier decisions is what constitutes the doctrine of judicial precedent, ultimately distilling court rulings into the body of law known as case law.</p>
+
+<p>Nigerian courts may refer to and adopt decisions from other common law jurisdictions, provided they do not conflict with Nigerian law. However, these foreign rulings are generally considered **persuasive** rather than binding. Legal experts and the Supreme Court have cautioned against "slavishly" following foreign precedents, emphasizing that a Nigerian decision is not considered "wrong" simply because it differs from a foreign one. As seen in <span class="case-law">Alli v. Okulaja</span>, Nigerian courts maintain the autonomy to reject foreign rulings, such as those from the English Court of Appeal, if they are deemed unsuitable.<br>
+The only foreign decisions that hold **binding authority** are those established before Nigeria's complete judicial independence. Specifically, decisions made by the **Privy Council** before 1963 bind all courts below the Supreme Court, and rulings from the **West African Court of Appeal (WACA)** before 1954 bind all courts below the Court of Appeal. Outside of these specific historical windows, foreign judgments serve only as helpful guides for interpreting similar legal provisions.</p>
+
+
+
+<h3>NB:</h3> 
+<span class="case-law"><p>- Ratio Decidendi : 
+This is the reason for the decision. A case may have more than one ratio decidendi, that is, a case may have rationes decidendi for instance in ascending degrees of generality or importance. Thus, a case may establish more than one legal principle and that case becomes an authority in respect of all such areas of law.</p>
+<p>- Obiter dictum :
+This refers to supplemental remarks, analogies, or hypothetical illustrations made by a judge during a ruling that are not central to the final decision. Unlike the *ratio decidendi*, an *obiter dictum* is not a binding legal precedent because it is often made without full consideration of all legal consequences or a conclusive opinion on the specific point of law. However, it remains highly persuasive in the legal system, especially when originating from a respected judge or a higher court, as it provides valuable insight, clarifies the judge's reasoning, and can serve as a useful analogy for future cases where that specific rule of law might be directly applicable.</p></span>
+
+
+<p><span class="case-law"> International Law</span></p>
+
+<p>International law is source of law in the Nigerian legal system by virtue of Section 12 of the Constitution of the Federal Republic of Nigeria. By the provisions of this section, treaties entered into by the Nigerian government can be ratified and made into local laws. This is the basis of international law in Nigeria.</p>
+
+<p><span class="case-law">Customary Law</span><p>
+
+<p>Customary laws often referred to as local or native law, this system is inherently unwritten. It draws its authority not from a central government, but from the collective acceptance of the community. In the landmark case <span class="case-law">Zaidan v. Mohosen</span>, the Supreme Court clarified that while these laws aren't enacted by a legislature, they remain legally enforceable and binding on those subject to them.<br>
+Customary law is Nigeria's most ancient legal source. It predates the arrival of British colonialists and the formal creation of the Nigerian state. For centuries, it served as the primary mechanism for maintaining order and resolving disputes across diverse ethnic territories.</p>
+
+<p>While customary law remains a vital part of the Nigerian legal systems and a primary source of law, its application  is subject to specific constitutional limitation  It is applicable almost exclusively to civil matters (such as marriage, inheritance, and land disputes).
+ By virtue of Section <span class="case-law">36(12) of the Constitution</span>, no one can be convicted of a criminal offense unless that offense is defined in a written law. Since customary law is generally unwritten, it cannot be used to prosecute crimes.<br>
+It applies specifically to members of the community who recognize these customs or those who voluntarily subject themselves to its jurisdiction ( makes such customary thier personal law ) .</p>
+
+ <h3>The applicability of customary law.</h3> 
+
+<p><span class="case-law">S. 19 Supreme Court Ordinance 1914:</span></p>
+<p>Nothing in the said act shall prohibit the application of Customary Law so long as such native law and custom is not *repugnant to natural justice, equity and good conscience.*
+Where there is no applicable rule the court shall be governed by *Natural justice, Equity & good conscience.*
+(Although this said ordinance has been repealed similar provisions have been entrenched in local statutes.) see: *S. 34 High Court Law of Northern Nigeria* for example.
+The law provides that Nigeria courts shall observe and enforce native laws and customs provided they are not repugnant to *NJ&GC* (Natural Justice, Equity & Good Conscience) & is not incompatible with any law for the time being in force.
+The court shall apply such principles to causes & matters between native, native & non-natives and in cases where strict adherence to English law will breed injustice.</p>
+
+<p>*Natural Justice, Equity and Good Conscience doctrine has two major connotations:*
+ 1. It refers to the repugnancy doctrine for the *Negative aspect*.<br>
+ 2. It relates to the *Residual justice clause* for the positive.</p>
+
+<p>Customary laws must thus be applied only to such an extent that it is not repugnant to natural justice equity & good conscience.
+Let us call it the *"Natural Justice Clause"*</p>
+
+<p>How does this Natural Justice Clause affect the application of customary law & what is its impact on the capacity of residual laws?<br>
+It is submitted that the Natural Justice clause is that which attaches a single meaning, namely *fairness & Justice*, to the expression, because this will reduce the area of uncertainty, which may otherwise be created if the expression were split into its component parts. This is the view adopted by many Judges & Jurists.</p>
+
+ 
+ <h3>REPUGNANCY DOCTRINE</h3>
+<p>This is regarded as the negative side of the Natural justice clause.
+This principle determines the validity of the customary law to this effect for a customary law doctrine to apply it must not be repugnant to natural justice, equity and good conscience (that is ; what is fair & just).<br>
+The repugnancy doctrine’s application can be broadly divided in relation to *SUBSTANTIVE AND PROCEDURAL LAW.</p>
+
+<p>For substantive law:<span class="case-law">— Owoniyin v. Omotosho*
+The court held that: "Native law & custom is, I think, a mirror of accepted usage."<br>
+
+*ESHUGBAYI ELEKO V. OFFICER ADMINISTRATION OF The GOVERNMENT OF NIGERIA:*
+ "The court cannot itself transform a barbarous custom into a milder one. If it still stands in its barbarous character, it must be rejected as repugnant to Natural justice, equity & Good conscience."</span></p>
+ 
+
+<p>In essence, a custom is either good or bad and there is no middle ground. If it is bad then it ought to be outrightly jettisoned for being repugnant to Natural justice, equity & good conscience.
+However, judges seem to have been adopting a less more stringent application of this principle.
+To this end, the court applied a modified version of the Fanti custom in *RE WHITE* as regards a custom that required the deceased property to be transferred to the deceased sister, but was distributed between the deceased’s sister and her daughter. (Instead rather than outrightly declaring it repugnant, it was applied differently.)
+In *Edet v. Essien*, the court rejected the application of a custom that seeks to give a person’s child to another, stating that it is barbarous & outrageous.
+The court will however uphold any good custom. The standard for measuring this goodness will be deduced from the idiosyncrasies of the people.<br>
+
+- *For procedural law* : the repugnancy rule has serve to severely water down many harsh rules of procedure in customary law.
+The customary courts have provisions that regulate their practice & procedures yet resort is frequently had to rules of procedure under customary law where the statutory rules of court are silent.<br>
+-  *No one shall be judged unheard*<br>
+-  *No one shall be a judge in his own case*<br>
+Any proceeding in customary law which offends the above principles of law shall be considered unfair & thus repugnant.<br>
+<span class="case-law">See: *GARI V. HADEJIA N/A*</span><br>
+The court has also rejected the enforcement of an order made by a biased & interested party adjudging a matter which affects him.
+The English law is not however a yardstick for measuring the repugnancy or otherwise of a Nigerian custom.
+A custom shall not be deprived of its right of applicability mainly on grounds that it contravened English law or procedure, in as much as it is not in fact "contrary to natural justice, morality, equity or good conscience nor incompatible with the provisions of any written law."</p>
+
+
+<p>Where a Customary law has been declared repugnant, it ceases to have the enforceable right in court.
+*Would a customary practice also cease to have the force of law in another community of Nig. if it has been declared repugnant in another?*
+ "If [repugnancy doctrine] has operated in general by striking down or excising from the corpus of customary law rules, which are considered to be repugnant, & in this way it has provided some means for the adaptation of customary law to meet social & economic needs which have emerged since the est. of British rule." — **Dr. F.A. AJAYI**
+</p> 
+<h3>RESIDUAL JUSTICE CLAUSE</h3>
+<p><span class="case-law">*In COLE V. COLE*</span>
+The residual justice clause is of the effect that where there are not specific rules regarding where native laws & customs was to apply the Court is to be guided by the principles of *Natural justice, equity & good conscience.*
+This is owing to the flexibility & non-uniformity of Native laws & customs in Nigeria.
+In filling this gap or lacuna, it has been suggested that judges can either borrow out of another legal system or apply their subjective sense of what is just & fair.
+<span class="case-law">See: *ANDRE V. JOHNSON*</span> — The court applied the residual justice clause as encapsulated in *S. 20 S.C. Ordinance.*</p>
+
+
+			
+<footer><center><span class="case-law">A Dissection by KINGSLEY OCHECHE</span></center></footer>			
+			
+			
+			
+			
+        `;
+    </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>

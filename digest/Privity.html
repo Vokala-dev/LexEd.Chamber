@@ -1,0 +1,226 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Digest | Lex Educationis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --gold: #c9a227; 
+            --dark-bg: #0a0a0a; 
+            --paper-bg: #141414;
+            --text-main: #e0e0e0; 
+        }
+
+        body { 
+            background: var(--dark-bg); 
+            color: var(--text-main); 
+            font-family: 'Playfair Display', serif; 
+            line-height: 1.8;
+            padding: 50px; 
+            margin: 0;
+        }
+
+        .paper { 
+            max-width: 850px; 
+            margin: auto; 
+            background: var(--paper-bg); 
+            padding: 80px; 
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.8);
+        }
+
+        /* Editorial Drop Cap */
+        #content-area p:first-of-type::first-letter {
+            font-family: 'Cinzel', serif;
+            float: left;
+            font-size: 3.5rem;
+            line-height: 1;
+            padding-right: 12px;
+            color: var(--gold);
+        }
+
+        h2, h3 { 
+            color: var(--gold); 
+            font-family: 'Cinzel', serif; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+            padding-bottom: 8px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .case-law {
+            color: var(--gold);
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        blockquote { 
+            border-left: 3px solid var(--gold); 
+            padding: 10px 20px; 
+            font-style: italic; 
+            margin: 25px 0;
+            background: rgba(201, 162, 39, 0.05);
+        }
+
+        .back-link { 
+            color: var(--gold); 
+            text-decoration: none; 
+            font-family: 'Cinzel', serif; 
+            margin-bottom: 30px; 
+            display: inline-block;
+            transition: 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .back-link:hover { 
+            opacity: 1; 
+            letter-spacing: 1px;
+        }
+
+        ::selection { 
+            background: var(--gold); 
+            color: var(--dark-bg); 
+        }
+
+        center {
+            display: block;
+            padding: 20px;
+            font-style: italic;
+            border-top: 1px solid rgba(201, 162, 39, 0.1);
+            border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+            margin: 20px 0;
+        }
+
+        /* RESPONSIVE CORRECTIONS */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px; /* Less outer padding on mobile */
+            }
+
+            .paper {
+                padding: 40px 20px; /* Narrower internal margins */
+                box-shadow: none; /* Shadow can look messy on small screens */
+            }
+
+            #content-area p:first-of-type::first-letter {
+                font-size: 2.8rem; /* Scale down drop cap */
+            }
+
+            h2 {
+                font-size: 1.4rem; /* Scale down titles */
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#in-portal" class="back-link">← Return to Vault</a>
+    <div class="paper">
+        <div id="content-area">
+            <!-- JavaScript populates this section -->
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+        
+        document.getElementById('content-area').innerHTML = `
+            <h2>PRIVITY OF CONTRACT</h2>
+
+
+<p>The word privity denotes a relationship between parties seen as being a result of their mutual interest or participation in a contract. However, it is necessary to state that the essence of this topic is not just to establish what being privy to a contract means, but to establish how the concept actually operates in law, the necessity of knowing who is privy to a contract, and the exceptions.<br>
+
+The doctrine of privity of contract states that only parties to a contract can acquire rights and liabilities emanating as a result of that contract. This doctrine's necessity can be rightly viewed from the perspective that it is the law that establishes the frame on which rights and liability can be accrued.</p>
+
+<p>The case of <span class="case-law">Tweddle v Atkinson</span> laid down the foundation of the doctrine of privity of contract. According to the case, a contract is between the parties only, and no stranger to the contract can sue even if the contract is made for his benefit. In this case, the father of the plaintiff entered a contract with the defendant. It was agreed that each, the plaintiff's father and the defendant, would pay the plaintiff a sum of money. The defendant failed to do so, and the plaintiff sued. It was held that, although the sole objective of the contract was to accrue benefit on the plaintiff, he cannot maintain an action because he was not a party thereto.</p>
+
+<p>Also, in <span class="case-law">Rebold Ind. Ltd v Magreola & Ors</span>, the court reaffirmed the fundamental character of this doctrine when it held thus:</p>
+
+<p><blockquote><center><span class="case-law"><u>There is in the law of contract what is referred to as privity of contract. It is always between the contracting parties who must stand or fail, benefit or lose from the provision of their contract. That is to say, their contract cannot bind third parties, nor can third parties take or accept liabilities under it, nor benefit thereunder. Put differently, only parties to a contract can enforce it. A person who is not a party cannot do so even if the contract was made for his benefit.</u></span></center></blockquote>
+
+
+It is important to state that the parties, those who would incur liabilities or be accrued rights, are those who actually contracted and a person that has furnished consideration.</p>
+
+<h3>EXCEPTIONS TO THE RULE OF PRIVITY OF CONTRACT</h3>
+
+
+<p>It could be observed that the doctrine, if followed without reservation, could serve to defeat the purpose of the entire contract. Given that it is a fundamental precept in contract law that the wishes of the parties be adhered to, it may become rather counterintuitive. Hence, the need for the following exceptions:</p>
+
+<p><span class="case-law"><u>1. AGENCY</u></span></p>
+
+<p>A significant exception occurs in the context of agency. When an agent acts on behalf of a principal to negotiate a contract with a third party, the law treats the contract as existing directly between the principal and the third party.
+In <span class="case-law">U.B.A Plc. v. Ogundokun, <u>the court noted that while contracts generally only affect the parties involved, an agent has the legal standing to sue on behalf of their principal, and conversely, may be held liable alongside the principal.</u></span></p>
+
+<p><span class="case-law"><u>2. COLLATERAL CONTRACTS</u></span></p>
+
+<p>A collateral contract is a secondary agreement that <span class="case-law">"accompanies"</span> the main contract. It often involves one of the original parties and a third party.
+<span class="case-law">Shanklin v. Detel Ltd</span>: This case provides a classic example. While a main contract existed for painting work, the owner <span class="case-law">(Shanklin)</span> received a specific guarantee regarding the paint's durability from the manufacturer <span class="case-law">(Detel)</span>. This guarantee created a <span class="case-law"><u>"collateral" relationship</u></span>, allowing the owner to sue the manufacturer directly despite not being a party to the primary sale of the paint to the painter.</p>
+
+<p><span class="case-law"><u>3. COVENANTS RUNNING WITH LAND</u></span></p>
+
+<p>This is a restrictive covenant voluntarily accepted by the purchaser of land as part of the contract of sale, intended to bind subsequent purchasers even though they are not privy to the original agreement. It is an obligation placed on the buyers of land by the original deed of the land. An example would be homage paid to the community pursuant to the completion of a land agreement.
+In <span class="case-law">Folacin v. Durojaiye</span>, the court acknowledged the right of family members, who are not parties to a deed of alienation, to sue under the contract. The doctrine is not limited in scope as may be portrayed.<br>
+In the case of <span class="case-law">Tulk v. Moxhay</span>, an injunction was granted on the ground of the defendant's awareness of the existence of the restrictive covenant. Thus, a covenant restricting a property for a specific use may be enforced against a subsequent purchaser with knowledge.
+In <span class="case-law">Agadan v. Ohlishi & Others</span>, it was held that members of the family were entitled to bring an action to set aside any sale of land made without their consent. In Nigeria, the whole basis of this doctrine is the exceptions provided by enabling statutes. The Land Use Act makes provision for family members to be privy to land transactions, with specific reservation.</p>
+
+<p><span class="case-law"><u>4. INSURANCE CONTRACTS</u></span></p>
+
+<p>Some statutes provide exceptions to the doctrine of privity of contract for the purpose of upholding the essence of insurance contracts, <span class="case-law">e.g., The Motor Vehicle Insurance Act 1990, where Section 11 <u>gives a third party the right to bring claims against the insurance company even though they are not party to the initial contract.</u></span>
+This is well demonstrated in the case of <span class="case-law">Liberty Insurance v. John</span>, where the original contracting party's wife was deemed privy to the insurance transaction.</p>
+
+<p><span class="case-law"><u>5. CONTRACTS FOR THE HIRE OF A CHATTEL</u></span></p>
+
+<p>This exception addresses the legal need to enforce a third party's rights regarding the leasing or hiring of personal property (chattels). This is most frequently seen in maritime law and shipping contracts.
+<span class="case-law">De Mattos v Gibson: This case established the foundational rule for this exception. <u>It states that if a person is granted a legal charge or interest in a property and knows that the property is already subject to an existing contractual obligation, they can be legally restrained from exercising their rights in a way that interferes with the performance of that original contract</u></span>.<br>
+<span class="case-law">Suppose Party A, the owner of a ship, charters the vessel to Party B for a specific period. If Party A later sells the ship to Party C, and Party C has full knowledge of the existing charter agreement, the courts have held that Party C is bound by that knowledge. Consequently, Party B can take legal action against Party C to ensure the contract is honored, even though Party B and Party C never signed a direct agreement.</span></p>
+
+<p><span class="case-law"><u>6. INTERFERENCE WITH CONTRACTUAL RIGHTS</u></span></p>
+
+<p>This exception addresses situations where a third party, a <span class="case-law">"stranger"</span> to the contract, intentionally causes one of the contracting parties to breach their agreement. At common law, it is considered a legal wrong, a tort, to knowingly interfere with the contractual rights of others.
+<span class="case-law">Tarleton v. McGawley:</span> In this case, the defendants fired cannons from their ship, the Othello, off the coast of Africa. Their goal was to maliciously scare away and prevent local natives from trading with the plaintiff’s ship. The court held that this was a wrongful interference with the plaintiff's potential and existing contractual relations.<br>
+<span class="case-law">Lumley v. Gye:</span> This case established that a person who induces a breach of contract is liable for damages. Here, the defendant persuaded an opera singer to break her exclusive contract with the plaintiff’s theater. The court ruled that knowingly inducing a breach of contract is a legal wrong.</p>
+
+<p><span class="case-law"><u>7. ASSIGNMENT AND NOVATION</u></span></p>
+
+<p>While related to how rights move between parties, these concepts specifically alter who is "privy" to a legal obligation.
+Assignment: This involves the transfer of contractual rights from one party, the assignor, to a third party, the assignee. A valid assignment effectively ends the privity between the original assignor and the debtor, and creates a new legal link, privity, between the debtor and the assignee.
+Example: If Party A is owed ₦1m by Party B, Party A can assign the right to receive that money to Party C. Party C can then sue Party B for the debt under <span class="case-law">Section 26(6) of the Judicature Act 1873</span>.
+Novation: Unlike assignment, novation replaces an original party with an entirely new party. This requires the consent of all involved. The old contract is extinguished, and a brand-new, enforceable contract is created.</p>
+
+<p><span class="case-law"><u>PRIVITY AND TRUST CONCEPT</u></span></p>
+
+<p>Equity created a major exception to privity through the device of a "trust." A trust is an equitable obligation where one person, the trustee, holds property or a legal right for the benefit of another, the beneficiary.
+Gregory and Parker v. Williams: This case reaffirmed that if a contract is made for the benefit of a third party, and the circumstances show an intention to create a trust, that third party can derive an equitable right to enforce the agreement.
+<span class="case-law">Vandepitte v. Preferred Accident Insurance Corp: <u>The court held that the intention to create a trust must be affirmatively proved.</u> In this instance, a father's insurance policy intended to benefit his daughter failed as a trust because there wasn't sufficient evidence of a specific intent to create an equitable trust for her.</span></p>
+			
+			<footer><center><span class="case-law"> A Dissection by KINGSLEY OCHECHE </span></center></footer>
+			
+			
+			
+			
+			
+			
+        `;
+    </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>
+
+
+
+

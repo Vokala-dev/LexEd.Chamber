@@ -1,0 +1,219 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Digest | Lex Educationis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --gold: #c9a227; 
+            --dark-bg: #0a0a0a; 
+            --paper-bg: #141414;
+            --text-main: #e0e0e0; 
+        }
+
+        body { 
+            background: var(--dark-bg); 
+            color: var(--text-main); 
+            font-family: 'Playfair Display', serif; 
+            line-height: 1.8;
+            padding: 50px; 
+            margin: 0;
+        }
+
+        .paper { 
+            max-width: 850px; 
+            margin: auto; 
+            background: var(--paper-bg); 
+            padding: 80px; 
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.8);
+        }
+
+        /* Editorial Drop Cap */
+        #content-area p:first-of-type::first-letter {
+            font-family: 'Cinzel', serif;
+            float: left;
+            font-size: 3.5rem;
+            line-height: 1;
+            padding-right: 12px;
+            color: var(--gold);
+        }
+
+        h2, h3 { 
+            color: var(--gold); 
+            font-family: 'Cinzel', serif; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+            padding-bottom: 8px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .case-law {
+            color: var(--gold);
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        blockquote { 
+            border-left: 3px solid var(--gold); 
+            padding: 10px 20px; 
+            font-style: italic; 
+            margin: 25px 0;
+            background: rgba(201, 162, 39, 0.05);
+        }
+
+        .back-link { 
+            color: var(--gold); 
+            text-decoration: none; 
+            font-family: 'Cinzel', serif; 
+            margin-bottom: 30px; 
+            display: inline-block;
+            transition: 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .back-link:hover { 
+            opacity: 1; 
+            letter-spacing: 1px;
+        }
+
+        ::selection { 
+            background: var(--gold); 
+            color: var(--dark-bg); 
+        }
+
+        center {
+            display: block;
+            padding: 20px;
+            font-style: italic;
+            border-top: 1px solid rgba(201, 162, 39, 0.1);
+            border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+            margin: 20px 0;
+        }
+
+        /* RESPONSIVE CORRECTIONS */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px; /* Less outer padding on mobile */
+            }
+
+            .paper {
+                padding: 40px 20px; /* Narrower internal margins */
+                box-shadow: none; /* Shadow can look messy on small screens */
+            }
+
+            #content-area p:first-of-type::first-letter {
+                font-size: 2.8rem; /* Scale down drop cap */
+            }
+
+            h2 {
+                font-size: 1.4rem; /* Scale down titles */
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#in-portal" class="back-link">← Return to Vault</a>
+    <div class="paper">
+        <div id="content-area">
+            <!-- JavaScript populates this section -->
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+        
+        document.getElementById('content-area').innerHTML = `
+            <h2>DISCHARGE OF CONTRACT BY FRUSTRATION</h2>
+<p>Before the doctrine of <span class= "case-law">Force Majeure</span>, french for expressing the doctrine of <span class= "case-law">Frustration of contract</span>, -parties under a contract where deemed to accomplish their obligations under a contract even though they became impossible to be performed. Parties risked contractual liability to the full amount for breach of contracts that occurred independent of their control and labour. This was regarded as the Principle of Absolute contract.  <span class= "case-law">- See Paradine v. Jane. </span>.</p>
+<p>The doctrine of frustration was developed to create exceptions to when parties may be excused from the obligations under a contract, especially when performance of their obligations became nearly impossible to complete.
+Accordingly, where under a contract, an event occurs so that it renders the performance of the contract nearly impossible, and this event happened independent of the control or will of the parties, the contract would have been treated as frustrated and parties will be equally discharged from it. <span class= "case-law"> - See Taylor v Caldwell</span></p>
+<p>It operates within the following exceptions, so such supervening events or circumstances that are enough to frustrate a contract and equally discharge parties from it include;<br>
+1.	Death of a party<br>
+2.	Destruction of the subject matter <br>
+3.	Act of God<br>
+4.	Subsequent legal changes<br> 
+5.	Government requisition<br>
+6.	War.      <span class= "case-law"><u>See Folia v. Trelinski-Also see Nwaolisah v. Nwabutoh</u></span></p>
+
+<h3>Death or incapacity of a party:</h3>
+Especially for contracts that involve personal services or skills (e.g. Entertainers), the death or incapacity (sometimes relating to kinesiological or physical inability to perform) of a party, is sufficient to frustrate a contract.   <span class= "case-law">-See Cutter v. Powell</span>. Just as well, where the continued performance of a contract involving personal skill may put a party at serious health risk, the contract may be rendered as frustrated.     <span class= "case-law">- See Condor v The Baron Knights</span>
+ 	
+<h3>Destruction of the Subject Matter:</h3>
+<p>Where the subject matter has ceased to exist or has been destroyed, as a result of an unforeceeable circumstance, not attributable to the fault of either party, the contract has been frustrated and parties are equally discharged .  <span class= "case-law">- See Taylor v. Cardwell. Krell v. Henry</span>-The destruction of an event hall is sufficient to discharge a contract for its rentage for a wedding. </p>
+
+<h3>Act of God:</h3> 
+<p>Such events that happen independent of the control of the labor of man, but from the destructive tendencies of nature, is sufficient to render a contract terminated by frustration if it is serious enough to render the performance impossible, but not onerous. Some examples include, wild fires, floods, tsunamis, or other natural disasters</p>
+
+<h3> Outbreak of War</h3>
+<p> A contract is frustrated upon an outbreak of war when parties are even incidentally citizens of the warring countries. Apart from the fact that performance of a contract during a war is not only onerous but also dangerous, -it would be considered treasonable to continue trading with an enemy of the state. Parties are therefore discharged from the contract and are free from any civil liability.   <span class= "case-law">-- See Finelvet A.G. v. Vinava Shipping Co. Ltd </span>
+As well, a war within a country is enought to discharge a contract if the performance of the contract becomes dangerous to execute without potential threat to or loss of life</p>
+	
+
+<h3>	Subsequent Legal Changes </h3>
+<p> The relevant maxim of law here is <span class="case-law"> Lex non cogit ad imposibilia.</span> Although the subsistence of a contract, - where later or further legislations or laws regarding the state, illegalize the said contract, such contract may be frustrted and the parties discharged from it. This is because the subsequent legal change, creates a legal impossiblility of performance under the contract since the law now precludes it execution. <span class= "case-law"> - See Baily v De Grespigny.</span> A tendentious opinion around this fact is that; in a different light, the further performance of the contract may lead to vitiation for illegality of contract as performed and by statute.</p>
+
+<h3> Government Requisition</h3>
+<p> During periods of national emergencies or even wars, governments may requisition, that is to "take" the properties of private individuals to fulfil public necessities with the justification of preserving the state or maintaining the peace as the case may be. Accordingly, where the subject-matter of a contract has been requisitioned by the government, it is sufficient to discharge parties from the contract <span class="case-law"> - See Sylvanus Uzoma v. Shell B.P. Co. L.T.D</span>. However, mere government requisition of the subject-matter own it's own cannot frustrate a contract, especially if the requisition last for a transient period of time although subject to the perculiarity of the nature of each contract. <span class="case-law">-See FA Tamplin Steamship Co. L.T.D v Anglo American Petroleum Products Co. L.T.D</span></p>
+<p> Therefore, the requisition of government should be so as to deprive parties of the subject-matter in a way that defeats the purpose and substance of the contract. For example, various governments around the world, requisitioned hotels, schools and other private held infrastructure during the COVID 19 period for the sake of health ammenities, an act that sufficienty frustrated contracts subsisting on them. </p>			
+		
+	<h2>Notes;</h2>
+	<p> Frustration of contract will not arrise in the following circumstances;
+	<ul>
+	<li> Self induced events or events attributable to the fault of either parties </li>
+	<li> Where the contract was predicated on a condition and that conditon later doesn't occur (incidentally a partial kind of discharge of contract by agreement)</li>
+	<li> Events envisaged and planned for under the contract: What was agreed to be the course of action in thier occurence, guides the contract by default and no the doctrine of frustration </li>
+	</ul></p>
+	<p> Where performance of a contract just merely becomes harder or more expensive to execute but not impossible, it would fail to discharge a contract</p>
+	
+		<h2> When a contract has been frustrated, where does that leave parties ?</h2>
+		<p> Once a contract is frustrated by an event, the effect is an automatic discharge. The contract is immediately brought to an end and parties cannot decide to even continue the contract under common law. Parties are also relieved of their obligations under the contract, but are however liable for any other right accruing from the contract prior to the frustrating event. This is because the idea of frustration stops further performance of an impossible task while dissolving further contractual relatiosnhip, but fails to have a retrospective effect so rights under the contract must be upheld. </p>
+		<p>That is to say where a contract is frustrated, for work or performance already done, a party may be liable for the full liability of it. In another light and what was established in the now called <span class= "case-law"> Fibrosa case</span>, where a party has exchanged his consideration, and recieves nothing in return before the frustrating event, he is entitled to the consideration he furnished, but that is still determined in a way that defeats injustice.
+		
+		<h2>Statutory Intervention </h2>
+		<span class="case-law"><center><p>To bridge these gaps, the Law Reform (Frustrated Contracts) Act 1943 was enacted in Britain. Its principles were adopted in Nigeria, notably:
+		•	Federal Capital Territory & Lagos: Law Reform (Contracts) Act 1961.<br>
+		•	Regional Variance: While many Southern states adopted this reform, some Northern states continue to operate under the original common law principles.<br></p>
+		<p>The Act empowers courts with greater discretion to ensure equitable outcomes:<br>
+		•	Recovery of Prepayments: Enables the recovery of money paid before the frustrating event, even where there is only a partial failure of consideration.<br>
+		•	Set-off of Expenses: Gives courts discretion to allow a party to set off expenses incurred towards contract execution against money paid or payable.<br>
+		•	Non-monetary Benefits: Allows a party who has conferred a "valuable benefit" (other than payment of money) to recover a sum not exceeding the value of that benefit.</p></center></span>
+<p>In <span class="case-law">BP Exploration Co (Libya) Ltd v Hunt</span> a landmark case, serves as the leading authority on the practical application of these statutory provisions.<br>
+•	The Context: A contract was frustrated due to the expropriation of an oil field by the Libyan government.<br>
+•	The Legal Principle: The presiding judge, Goff J, utilized the Act to prevent unjust enrichment.<br>
+•	The Ruling: The court assessed a "just sum" by:<br>
+1.	Calculating the total valuable benefit obtained by the defendant (oil value + compensation).<br>
+2.	Deducting expenses incurred by the plaintiff.<br>
+3.	Awarding the net balance to the plaintiff to ensure neither party unfairly profited at the expense of the other.</p>
+		
+		
+		<footer><center><span class= "case-law"> An Appreciation by IGIRI VOKALA</span><center></footer>
+		
+		
+        `;
+    </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>
+
+
+
+
+

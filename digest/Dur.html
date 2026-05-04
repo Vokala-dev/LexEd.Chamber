@@ -1,0 +1,242 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Digest | Lex Educationis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --gold: #c9a227; 
+            --dark-bg: #0a0a0a; 
+            --paper-bg: #141414;
+            --text-main: #e0e0e0; 
+        }
+
+        body { 
+            background: var(--dark-bg); 
+            color: var(--text-main); 
+            font-family: 'Playfair Display', serif; 
+            line-height: 1.8;
+            padding: 50px; 
+            margin: 0;
+        }
+
+        .paper { 
+            max-width: 850px; 
+            margin: auto; 
+            background: var(--paper-bg); 
+            padding: 80px; 
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.8);
+        }
+
+        /* Editorial Drop Cap */
+        #content-area p:first-of-type::first-letter {
+            font-family: 'Cinzel', serif;
+            float: left;
+            font-size: 3.5rem;
+            line-height: 1;
+            padding-right: 12px;
+            color: var(--gold);
+        }
+
+        h2, h3 { 
+            color: var(--gold); 
+            font-family: 'Cinzel', serif; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+            padding-bottom: 8px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .case-law {
+            color: var(--gold);
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        blockquote { 
+            border-left: 3px solid var(--gold); 
+            padding: 10px 20px; 
+            font-style: italic; 
+            margin: 25px 0;
+            background: rgba(201, 162, 39, 0.05);
+        }
+
+        .back-link { 
+            color: var(--gold); 
+            text-decoration: none; 
+            font-family: 'Cinzel', serif; 
+            margin-bottom: 30px; 
+            display: inline-block;
+            transition: 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .back-link:hover { 
+            opacity: 1; 
+            letter-spacing: 1px;
+        }
+
+        ::selection { 
+            background: var(--gold); 
+            color: var(--dark-bg); 
+        }
+
+        center {
+            display: block;
+            padding: 20px;
+            font-style: italic;
+            border-top: 1px solid rgba(201, 162, 39, 0.1);
+            border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+            margin: 20px 0;
+        }
+
+        /* RESPONSIVE CORRECTIONS */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px; /* Less outer padding on mobile */
+            }
+
+            .paper {
+                padding: 40px 20px; /* Narrower internal margins */
+                box-shadow: none; /* Shadow can look messy on small screens */
+            }
+
+            #content-area p:first-of-type::first-letter {
+                font-size: 2.8rem; /* Scale down drop cap */
+            }
+
+            h2 {
+                font-size: 1.4rem; /* Scale down titles */
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="Lexed1.html" class="back-link">← Return to Vault</a>
+    <div class="paper">
+        <div id="content-area">
+            <!-- JavaScript populates this section -->
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+        
+        document.getElementById('content-area').innerHTML = `
+            <h2> DURESS AND UNDUE INFLUENCE</h2>
+			<h3> Duress</h3>
+			<p>Duress occurs where a party to a contract is coerced to enter into a contract against his will. It is a common law doctrine which means any actual violence, imprisonment or restraint of personal liberty of a person or his or her relations, which induces such a person to enter into a contract against his will.
+In order for a person to establish that they have suffered from duress during the formation of a contract they must be able to show that, there has been some illegitimate pressure exerted on him by the other contractant. Once it has been established that there exist some illegitimate pressure, it must be shown that the pressure induced a compulsion of the will, which vitiates consent and but for that illegitimate pressure, the claimant would not have entered into the contract.
+Even though legitimated consideration, or sufficient consideration had been furnished, if the requirement to establish the existence of duress has been met, the contract is voidable; the requirements are:</p>
+ * That there was illegitimate pressure<br>
+ * The pressure (threat) being to the person of the contractant, his close relatives or to his property.<br>
+ * That consent was obtained under such pressure and by compulsion.<br>
+Duress upheld in the case of <span class="case-law">Friedeberg-Seeley v. KLASS; In the instant case, the defendants physically forced the plaintiff to sign a receipt for a jewel-case and its content, though leaving her a cheque of 90 Pounds.</span>
+
+<p>Furthermore, the case of <span class="case-law">Maskell v. Horner has abolished the former principle of law that threat to property did not suffice as duress. In the instant case, Lord Reading, C.J. stated:<br>
+<u>If a person pays money, which he is not bound to pay, under the compulsion of urgent and pressing necessity of seizure, actual or threatened, of his goods, he can recover it as money had and received.</u></span>Following therefrom, the doctrine further evolved and gave essence to Economic duress</p>
+
+
+<h3>Economic Duress:</h3>
+<p>In this regards, where a threat to break a contract had led to a further contract, that further contract, even though it was made for good consideration is voidable. <span class="case-law">North Ocean Shipping v. Hyundai Construction;</span> in this case, Mocatta J. decided that the illegitimate pressure exerted by the building company which was a threat to break the construction contract amounted to economic duress.</p>
+
+
+<h2> Undue influence</h2> 
+
+<p>The court of appeal in, <span class="case-law">First Bank of Nigeria v funso akinyosoye defined undue influence as; <u>any improper or wrongful constraint or persuasion whereby the will of a person is overpowered and he is induced to do or forebeer an act he would not  if left to act freely</u>.</span>
+
+The principle of undue influence was designed to give relief in circumstances not amounting to duress but a person enters into a disadvantageous contract inspite of their will .  This particular aspect of vitiating elements of contrast is perversive in situations where one party exercises some dominance over the other.<br>
+
+The circumstances of undue influence could manifest in different ways in which trickery or coercion can be employed in human affairs.
+The supreme court in the case of Bua Usman v. Bashinu dauda, In this case the plaintiff a car battery seller, sold his house to a native doctor at a considerably low rate than its actual worth. </p>
+<p>The court held that;<br>
+<<blockquote><span class="case-law">-  Undue influence is a product of abuse on misuse of the confidence reposed in someone who is able to put some pressure on or take unfair advantage of another's necessities or distress. It could arise from confidence or fudiciary relationship existing between the part is which raise a  presumption of that influence such as solicitors and client;  principal and agent; religious adviser and disciple.</span></blockquote></p>
+
+
+<p><span class="case-law">To establish a cliam under undue influence the following as of necessity are to be proven : <br>
+- that the other party to the transaction had the capacity to influence the complainant <br>
+- that the influence was exercised <br>
+- that the exercise was undue <br>
+- that the exercise brought about the transaction in question <br>
+- that the was disadvantageous to the complainant.</span></p>
+
+
+<p>The cases in which the doctrine of undue influence operates are conventionally divided into two classes:<span class="case-law"> Presumed undue influence and Actual undue influence</span >.</p>
+
+<h3> Presumed undue influence: </h3>
+<p>The legal burden of proving undue influence rest on the plaintiff but if a plaintiff can establish the existence of a relationship of influence and that the nature of the transaction is so suspicious that calls for an explanation this satisfies the evidential burden of proving undue influence and the burden moves to the defendant to provide a satisfactory explanation for the transaction. In the absence of a satisfactory explanation the inference of the undue influence can be drawn and the legal burden of proof will be satisfied even if there is no direct evidence of undue influence . 
+<br><br>
+In this regards the existence of a special relationship alone is not enough for undue influence to be established, in addition the nature of the contract or transaction should be so suspicious that it should call for an explanation,  Such as a case where the alleging party is greatly disadvantaged in the transaction. If the transaction upon analysis is considered to be a fair trade or deal; it will not be set aside even though there exist a special relationship . Thus the disadvantages position of the person influenced is a critical consideration in presumed undue influence.</p>
+
+<blockquote><span class="case-law">- In Morley v. lougman,  Wright J,  presumed the existence of undue influence for according to him;  the donee had taken possession of the whole life of the deceased and the gift were not the result of the deceased's own free will but the effect of the influence and dominance over the disease.
+
+The fact of the case was that the donee an epileptic had donated 140,000 pounds to a member of a religious group known as the 'exclusive brethren' who he'd  lived with for years and Under whose religious influence he had been. The executors of the epileptic donor brought the action to recover the said gift. The court held that the gift was recoverable.</span></blockquote>
+
+<p>This presumption can however be dislodged in prof of the following: <br>
+<span class="case-law">- if it is established that the plaintiff was acting independent of the defendant's influence; this will be considered if can be shown that he initiated and consummated the contract on his own terms <br>
+- if the plaintiff sought and received independent advice <br>
+- if there was no disadvantage to the party seeking redress. William v Franklin; In this case, the house sold was at a higher price than the highest bid at an auction.<br>  Facts: in the instant case the action was brought by the family of a former client of a legal practitioner to recover a house which the respondent ( legal practitioner) had already paid reasonably for, also clearing off an outstanding mortgage thereby meeting the requirement that the contract is not in any form disadvantages</span>.</p>
+
+
+<h3>ACTUAL UNDUE INFLUENCE.</h3>
+
+<p>In this circumstance, undue influence has to be proved by the party alleging that he entered into the transaction due to undue influence. This is the normal course of evidence in which he who alleges must prove. The burden of proof is upon the plaintiff to satisfy the court through sufficient evidence that there was actual influence by the defendant which compelled him (the plaintiff) into the transaction.<p>
+
+<p><span class="case-law">Requirements to Establish</span></p>
+
+<p>The plaintiff must demonstrate that the defendant exercised such a degree of domination and control over him such that he acted independent of the exercise of his free will. The critical elements are:<br><span class="case-law">
+- The existence of a relationship where one party has a dominating influence.<br>
+- The exercise of that influence to the extent to negate the other party’s free will <br> .
+- Evidence showing the transaction was a result of this domination rather than a voluntary act</span>.</p>
+
+
+
+<blockquote><center><span class="case-law">Williams v. Bailey (1866)
+ * Facts: A son forged his father’s signature on promissory notes and gave them to their bankers. At a meeting, the bankers told the father that it was a serious matter and his son could face "transportation for life" (a long prison sentence). To save his son from these implications and threats to his liberty, the father agreed to an equitable mortgage to the bank to cover the notes. The father later brought an action for the cancellation of the agreement.
+ * Court Holding: Lord Westbury held that the security given for the debt of the son was not the act of a man who acted with that freedom and power of deliberation required to validate a contract. The mortgage was held to be invalid on the ground that undue influence had been exerted on the father by the bank, who exploited his fears for the safety of his son.</span></center></blockquote>.
+
+<p><span class="case-law">Case Law Illustrating the  Non-Operation of undue influence</span></p> 
+
+<span class="case-law">In Re Brocklehurst  (1978): <br>
+ The Court of Appeal upheld that the nature of the relationship was not one of confidence and trust that would give rise to influence by the defendant. The evidence established the relationship was one of friendship; it was actually the deceased who tended to dominate the defendant. The claim was unsuccessful</center>.</span></p>
+
+<span class="case-law">National Westminster Bank v. Morgan (1985)<br>
+<p>Facts: A wife executed a charge over her home to help her husband’s business liabilities after a bank manager incorrectly assured her the charge was limited in extent. She later argued the manager exercised undue influence over her and that she required independent legal advice.
+ The court per Lord Scarman concluded that ;  the transaction would not be set aside. He held that a transaction is not set aside unless it can be shown that it was manifestly disadvantageous to the party alleged to be influenced. In this case, the transaction was not unfair to the wife, and it was not maintained that the banker had a dominating influence. The bank was not under a duty to ensure she had independent advice.</center>.</span></p>
+
+<p><span class="case-law"><u>Legal Effect</u></span><br> 
+If the requirements of undue influence are met, the contract is voidable and thereby capable of being rescinded by the aggrieved party. However, the right to rescind a contract that was unduly influenced may be lost by:<br>
+ * Express affirmation of the transaction.<br>
+ * Delay amounting to acquiescence.</p>
+ 
+ 
+ 
+ <footer ><center><span class="case-law"> A Dissection by KINGSLEY OCHECHE </span></center></footer>
+ 
+       
+	   
+	   
+	   
+	   
+        `;
+    </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>

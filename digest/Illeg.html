@@ -1,0 +1,260 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Digest | Lex Educationis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --gold: #c9a227; 
+            --dark-bg: #0a0a0a; 
+            --paper-bg: #141414;
+            --text-main: #e0e0e0; 
+        }
+
+        body { 
+            background: var(--dark-bg); 
+            color: var(--text-main); 
+            font-family: 'Playfair Display', serif; 
+            line-height: 1.8;
+            padding: 50px; 
+            margin: 0;
+        }
+
+        .paper { 
+            max-width: 850px; 
+            margin: auto; 
+            background: var(--paper-bg); 
+            padding: 80px; 
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.8);
+        }
+
+        /* Editorial Drop Cap */
+        #content-area p:first-of-type::first-letter {
+            font-family: 'Cinzel', serif;
+            float: left;
+            font-size: 3.5rem;
+            line-height: 1;
+            padding-right: 12px;
+            color: var(--gold);
+        }
+
+        h2, h3 { 
+            color: var(--gold); 
+            font-family: 'Cinzel', serif; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+            padding-bottom: 8px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .case-law {
+            color: var(--gold);
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        blockquote { 
+            border-left: 3px solid var(--gold); 
+            padding: 10px 20px; 
+            font-style: italic; 
+            margin: 25px 0;
+            background: rgba(201, 162, 39, 0.05);
+        }
+
+        .back-link { 
+            color: var(--gold); 
+            text-decoration: none; 
+            font-family: 'Cinzel', serif; 
+            margin-bottom: 30px; 
+            display: inline-block;
+            transition: 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .back-link:hover { 
+            opacity: 1; 
+            letter-spacing: 1px;
+        }
+
+        ::selection { 
+            background: var(--gold); 
+            color: var(--dark-bg); 
+        }
+
+        center {
+            display: block;
+            padding: 20px;
+            font-style: italic;
+            border-top: 1px solid rgba(201, 162, 39, 0.1);
+            border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+            margin: 20px 0;
+        }
+
+        /* RESPONSIVE CORRECTIONS */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px; /* Less outer padding on mobile */
+            }
+
+            .paper {
+                padding: 40px 20px; /* Narrower internal margins */
+                box-shadow: none; /* Shadow can look messy on small screens */
+            }
+
+            #content-area p:first-of-type::first-letter {
+                font-size: 2.8rem; /* Scale down drop cap */
+            }
+
+            h2 {
+                font-size: 1.4rem; /* Scale down titles */
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="Lexed1.html" class="back-link">← Return to Vault</a>
+    <div class="paper">
+        <div id="content-area">
+            <!-- JavaScript populates this section -->
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+        
+        document.getElementById('content-area').innerHTML = `
+            <h2>ILEGAL CONTRACT</h2>
+
+<p>An illegal contract is an agreement where the conduct, formation, purpose, or specific acts and omissions constitute a legal wrong. These wrongs can include criminal acts, civil wrongs, or actions that go against the public good.
+For a contract to be deemed illegal, the following factors must be present:<br>
+- The act of making the contract is explicitly forbidden.<br>
+- The method of performance (how the contract is carried out) is unlawful.<br>
+- The ultimate objectives or purpose of the agreement are illegal.</p>
+
+<p>Conventionally, based on the nature of the laws that make such agreements unlawful, illegal contracts are categorized into two groups:
+ <span class="case-law">1. Contracts Illegal by Statute</span><br>
+ <span class="case-law">2. Contracts Illegal at Common Law</span></p>
+
+ <h3>Contracts Illegal by Statute:</h3> 
+<p>In this category, the consequences depend on the specific wording of the legislation making the agreement illegal. A statute may render an act completely illegal or merely unenforceable (void).
+
+A contract is illegal by statute when there is a written law—such as acts passed by the National Assembly, laws from a State House of Assembly, or Military Decrees and Edicts—that prohibits the agreement. This prohibition is usually reinforced by a specific punishment or sanction.
+The Supreme Court, in the case of <span class="case-law">COPERATE IDEAL INSURANCE Ltd v. AJAOKUTA STEEL COMPANY Ltd & Ors</span>, asserted that when a statute expressly prohibits a contract and attaches a sanction for its breach, that contract is illegal. It is important to note that a contract declared "void" by a provision might not be "illegal" unless the law also imposes a penalty for engaging in it. For example, Section 3 of the Hire Purchase Act provides instances of contracts that are merely void.</p>
+
+<p>Statutes may declare a contract illegal in two ways:<span class="case-law"> <u>As Formed or As Performed.</u></span><p>
+
+<p><span class="case-law">Contracts Illegal as Formed</span><br>
+A contract is illegal "as formed" when the law prohibits the specific type of agreement being made. In these cases, the contract is "dead on arrival" because the law forbids parties from even entering into such contracts.<br>
+
+<span class="case-law">Contracts illegal as formed are exemplified as follows:</span><br>
+<span class="case-law">Re Mahmoud & Ispahani (1921): A statutory order prohibited the buying or selling of linseed oil without a specific license. A buyer lied to a seller, claiming he had a license, and then later refused to accept the delivery. Even though the seller was innocent and acted in good faith, he could not sue for damages because the very formation of the contract was forbidden by law without the required licenses</span>.<br>
+
+Sale of Banned Substances: Any agreement to trade in prohibited narcotics or hard drugs is illegal as formed because the law forbids the existence of such a transaction.<br>
+<span class="case-law">Unlicensed Professional Services</span>: If a statute requires a person to be registered or licensed to perform a specific trade (like a lawyer or a medical doctor) and expressly prohibits contracts made by unlicensed persons, any contract formed by an unregistered individual to provide those services is illegal from the start.
+As seen in <span class="case-law">Cope v RowlandsM</span> a broker was unable to claim commission because they were not duly licensed; the court ruled the statute was for the protection of the public.</p>
+
+
+<p><span class="case-law"><u>Contracts Illegal as Performed</u></span></p>
+<p>In this scenario, the contract is perfectly legal when it is first created, but it becomes illegal because one or both parties perform their obligations in a manner that violates a statute.
+<span class="case-law">St. John Shipping Corp. v. Joseph Rank Ltd (1957): A ship was used to carry cargo (a legal contract). However, the master overloaded it, which was a statutory offense. It is easy to deduce that merely transporting goods isn't illegal, but overloading while transporting is illegal.</span></p>
+
+<p><span class="case-law"> Protection of Vulnerable Classes (Statutory Exemptions)</span></p>
+<p>The law in certain cases makes provision for the exemption of liability on the part of disadvantaged persons. The law identifies certain groups such as Infants, Illiterates, and the Mentally Impaired as susceptible to fraud or exploitation. Ironically, while a contract may violate a protective statute, the law often allows the protected party to enforce the contract if it benefits them, while preventing the other party from enforcing it.</p>
+<p><span class="case-law">The Illiterate Protection Act: </span></p>
+<p>Any person writing a document on behalf of an illiterate must include their own name and address and ensure the document is explained. Failure to do this is a criminal offense. The "writer" cannot enforce the contract against the illiterate person, as seen in  <span class="case-law">Osefor v Uwania.</span></p>
+
+ <p><span class="case-law">The Money Lenders Act</span>:</p> 
+ <p>Protects borrowers from "oppression, exploitation, and victimization." Lenders must be licensed and follow strict formalities. If a lender fails to comply, the loan is unenforceable. In <span class="case-law">Kasumu v Baba-Egbe, the court held the lender could not recover even the principal amount if they violated the Act.</span></p>
+
+
+
+<h3>2. Contract illegal at common law </h3>
+
+<p>The distinction between the contract illegal at statute and at common law is one that could relatively be said to be a distinction based on the source of the law making such a contract illegal.  In this regards contract illegal at common law is a contract the formation of which is prohibited by common law for being so injurious to the society and prejudicial to the social and economic interests of the state .</p>
+
+<p>Consequential to the evolution of common law, these set of contracts are as follows :</p>
+<p>
+ A.  A Contract to commit a crime, or tort or a fraud: a contract for which its purpose is the commission of a tort or crime against a third party is illegal. <br>
+
+B. A contract prejudicial to the administration of justice : <br>
+In this regards contract that have the tendency that affect the administration of justice is illegal and void<br>
+<span class="case-law">- agreement to give false evidence in criminal proceedings  R. v Andrews<br>
+- agreement to stifle a prosecution: it is illegal to construe a contract for the purpose of discharging, halting or making a criminal proceedings loose it's credibility ( for example a contract with a criminal witness to withdraw testimony). In Windhill local board of Health v Vint, Cotton J., referred to the rationale of the rule as being to ensure that the administration of the law is not taken out of the hands of the judges and put into the hands of a private individual</span>.</p>
+
+<p>- C. Contracts Promoting Corruption in Public Life: <br>
+Contracts that involve "buying" public office or using bribes to influence appointments are void.
+A contract where a person pays a "private consideration" (bribe) to be appointed to a public office is contrary to public interest. <span class="case-law">- See Golden v. Nwoga.</span></p>
+
+<p>- D. Contracts to Defraud the state of  Revenue<br>
+Agreements designed to cheat the state out of taxes or other revenue are illegal.
+<span class="case-law">In Napier v. National Business Agency Ltd.</span>
+The parties structured a salary in a misleading way to reduce the tax burden. The court held this to be unenforceable.</p>
+
+<p>- E. Contracts Prejudicial to Public Safety<br>
+This usually involves contracts with "alien enemies" or those that harm the country's security during wartime.
+In <span class="case-law">Daps v. Haco Ltd</span> during the Nigerian Civil War, a plaintiff who left Lagos for Port Harcourt (the warring side) could not later sue for his unpaid salaries because the relationship was considered void during the conflict.</p>
+
+
+<p>- F. Contracts Prejudicial to the Status of Marriage<br>
+The law seeks to protect the institution of marriage. Any contract that encourages divorce or violates the sanctity of marriage is void.
+This in <span class="case-law">Abdullah v. Sharma</span>. A loan given on the condition that the woman (who was already married) would divorce her husband and marry the lender was held to be illegal and unenforceable.</p>
+
+<p>- G. Contracts to Oust the Jurisdiction of the Courts<br>
+Parties cannot agree to bypass the legal system entirely or prevent a person from seeking redress in court.
+
+Exception (ADR): Parties can agree to use Alternative Dispute Resolution (ADR), such as arbitration, before going to court. This is not seen as "ousting" the court but rather delaying it until a specific process is finished.</p>
+
+<p>- H. Contracts Tainted with Sexual Immorality:<br>
+Contracts that directly or indirectly promote sexual immorality (like prostitution) are void.
+In <span class="case-law">Pearce v. Brooks. A contract to supply a carriage to a prostitute, knowing it would be used to attract clients, was unenforceable</span>.</p>
+
+<p>- I. Contracts in restraint of trade:<br>  They are generally void unless they are proven to be reasonable both between the parties and in the public interest. For employees, an employer can only protect legitimate interests like trade secrets or customer influence, as seen in <span class="case-law">Leontaritis v Nigerian Textile Mills Ltd, rather than simply stifling competition</span>. In the sale of a business, restraints are more easily upheld to protect purchased "goodwill," though they must not exceed the scope of the actual business sold <span class="case-law">(Goldsoll v Goldman).</span></p>
+
+<h3>Exceptions to illegality</h3> 
+
+<p>In Nigerian contract law, the starting point for any discussion on illegality is the maxim <span class="case-law">ex turpi causa non oritur actio</span>, which dictates that no court will lend its aid to a man who founds his cause of action upon an immoral or an illegal act. As illustrated in <span class="case-law">Universal Insurance Co Ltd v. Phulco Nigeria Ltd, <u>once a contract is found to be illegal, whether because its subject matter is prohibited by statute or because it is contrary to public policy, it is generally treated as void 'ab initio'</u></span>. This means the contract is unenforceable and the law will not allow a party to derive any rights or interests from it. The immediate consequence is a money paid or property transferred under such an agreement is typically irrecoverable, however this is contingent on the operation of the doctrine  <span class="case-law">"in pari delicto potior est conditio defendentis"; <u>which suggests that where the parties are equally at fault, the defendant’s position is stronger</u></span>. A principle further reinforced by cases like <span class="case-law">NPA v. Saidu Service Ltd</span>, which highlight that the court will not assist in dissolving or settling accounts for an illegal enterprise.</p>
+
+<pp>However, the law is not entirely indifferent to potential injustices, leading to the development of several critical exceptions.</p>
+
+ <p><blockquote><span class="case-law"><u>Where the parties are not in pari delicto:</u><br>
+ The first exception is, relief becomes possible when the parties are not in pari delicto.As seen in 'Hughes v. Liverpool Victoria Legal Friendly Society ', if a party was induced into an illegal contract through fraud, duress, or undue influence, they are not considered equally culpable and may recover their assets. Similarly, under the ruling in Item v. Paul, a party who is genuinely ignorant of the facts making a contract illegal such as a tenant unaware that a building violates local government regulations, is protected by the court's discretion to grant recovery.</span></blockquote></p>
+
+ <p><blockquote><span class="case-law"><u>Repentance and withdrawal from the illegal contract</u> <br>
+Beyond the degree of fault, the law also provides a window for "repentance" known as "locus poenitentiae". This allows a party to withdraw from an illegal contract and recover their property, provided the illegal purpose has not been substantially performed. It is vital to note that this repentance must be genuine and voluntary; in Bigos v. Bousted, the court refused to assist a party whose "repentance" only occurred because their illegal scheme had ainly y failed. Actual repentance was illustrated in Cowan v. Milbourn, where the party rescinded from letting a house for the purpose of unlawful activity ( upon finding out).
+<br><br>
+
+Where the statute violated is meant to protect one of the parties:  the court looks at the intent of the statute being violated. In cases like Kasumu v. Baba-Egbe, if a statute (such as the Illiterate protection Act) is specifically designed to protect a vulnerable class of persons, that protected party can often enforce their rights or recover property even if the contract itself is technically voided by the law’s requirements.</span></blockquote></p>
+
+<p><blockquote><span class="case-law"> <u>Void contract and the doctrine of severance</u><br>
+
+When a contract is only partially tainted, the court may employ the doctrine of severance to save the valid portions of the agreement. Through this, judges can strike out illegal or unreasonable terms such as the overly broad geographic restriction in Price v. Green while keeping the remainder of the contract enforceable. This is only permissible if the contract consists of separate, independent promises and the severance doesn't fundamentally alter the nature of the agreement. If the legal and illegal parts are so inextricably linked that they cannot be separated without rewriting the contract, the entire agreement must fall. This nuanced approach ensures that while the court upholds the integrity of the law, it remains flexible enough to prevent a wrongdoer from using illegality as a shield against a less guilty party.
+<br><br>
+The case involved the sale of a perfumery business where the seller covenanted not to compete within London and Westminster, or within 600 miles of those cities.
+The court ruled that while the 600-mile restriction was an illegal and unreasonable restraint of trade, the restriction covering London and Westminster was perfectly valid. Because the two geographic limits were written as distinct, independent promises, the court applied the Rule to strike out the 600-mile clause. This allowed the court to enforce the reasonable portion of the restraint, demonstrating that where an illegal provision is grammatically and conceptually severable, the entire contract need not perish.</span></blockquote></p>
+
+
+		<footer><center><span class="case-law"> A Dissection by KINGSLEY OCHECHE</span></center></footer>
+
+
+        `;
+    </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>
