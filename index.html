@@ -255,7 +255,60 @@
         .comment-form button { background: var(--gold); color: black; border: none; padding: 12px 30px; cursor: pointer; font-family: 'Cinzel'; font-weight: bold; }
 
         footer { text-align: center; padding: 40px; opacity: 0.5; font-size: 0.8rem; letter-spacing: 2px; }
+
+
+
+
+		/* ... your existing .comment-form button and footer styles ... */
+        footer { text-align: center; padding: 40px; opacity: 0.5; font-size: 0.8rem; letter-spacing: 2px; }
       
+      
+        /* DROP THIS ENTIRE BLOCk HERE AT THE END OF YOUR STYLES */
+        .mobile-nav {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .mobile-nav {
+                display: flex;
+                justify-content: center;
+                background: rgba(10, 10, 10, 0.95);
+                border-bottom: 1px solid var(--gold-muted);
+                position: sticky;
+                top: 0;
+                z-index: 900;
+            }
+
+            .mobile-nav a {
+                flex: 1;
+                text-align: center;
+                padding: 15px;
+                color: var(--gold);
+                text-decoration: none;
+                font-family: 'Cinzel', serif;
+                font-size: 0.85rem;
+                letter-spacing: 1px;
+                transition: background 0.3s;
+            }
+
+            .mobile-nav a:not(:last-child) {
+                border-right: 1px solid var(--gold-muted);
+            }
+
+            .mobile-nav a:hover {
+                background: var(--gold-muted);
+            }
+
+            .split-layout-wrapper {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .sidebar-left, .main-content-right {
+                width: 100%;
+                position: static;
+            }
+        }
       
      
     </style>
@@ -286,12 +339,19 @@
             <h2 class="gold-text">The Academic Vault</h2>
         </header>
 
+		<nav class="mobile-nav">
+            <a href="#courses-anchor">Jump to Courses</a>
+            <a href="#gist-anchor">Read Legal Gist</a>
+        </nav>
+
+
         <div class="container">
             <div id="home-view" class="view active">
 
-<div class="split-layout-wrapper">
-                    
-                    <aside class="sidebar-left">
+                <div class="split-layout-wrapper">
+                                    
+                    <!-- UPDATE THIS LINE TO INCLUDE THE ID -->
+                    <aside class="sidebar-left" id="gist-anchor">
                         <h2 class="gold-text" style="font-size: 2.4rem; margin-bottom: 20px; text-align: left;  border: 5px solid var(--gold);">Legal Gist &amp; Insights</h2>
                         
                         <div class="gist-card">
@@ -305,8 +365,9 @@
                         </div>
                     </aside>
 
-
-		<div class="main-content-right">
+                    <!-- UPDATE THIS LINE TO INCLUDE THE ID -->
+                    <div class="main-content-right" id="courses-anchor">
+						
 
 
 
