@@ -20,12 +20,7 @@
 		color: var(--text-main);
 		margin:0;
 		padding:0;
-		font-family: Cinzel;
-	
-		p1{
-		--gold: #c9a227;
-		}
-	
+		font-family: Cinzel;	
 	}
 	
 	.list-item{
@@ -39,7 +34,8 @@
 			font-family: 'Cinzel', serif;
 			letter-spacing: 1px;
 			}
-			.list-html:hover {
+		
+	.list-item:hover {
 			background: rgba(201, 162, 39, 0.1);
 			padding-left: 35px;
 			border-left-width: 10px;
@@ -170,7 +166,70 @@
         .frame { flex: 1; aspect-ratio: 3/4; border: 2px solid var(--gold); background: #1a1a1a; transition: 0.3s; }
         .frame.elevated { transform: translateY(-25px); border-width: 3px; }
 
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .container { max-width: 1300px; margin: 0 auto; padding: 40px 20px; }
+
+
+
+/* The flex wrapper layout for the split layout */
+        .split-layout-wrapper {
+            display: flex;
+            gap: 40px;
+            align-items: stretch;
+			flex: 1;
+			min-height: 0;
+        }
+
+        /* Left Column: Hot Gist Section (40%) */
+        .sidebar-left {
+            flex: 4; /* Takes up roughly 40% */
+			overflow-y: auto;
+			padding-right: 10px;
+            position: sticky;
+            top: 20px; /* Sticks to top when scrolling down */
+        }
+		 /* Right Column: Original Hub Content (60%) */
+        .main-content-right {
+            flex: 6; /* Takes up roughly 60% */
+            width: 100%;}
+
+
+        /* Sharp Legal Aesthetic for Hot Gist Cards */
+        .gist-card {
+            background: radial-gradient(circle at top right, rgba(184, 134, 11, 0.1), rgba(20, 20, 20, 0.95));
+            border: 1px solid var(--gold-muted);
+            border-left: 3px solid var(--gold);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+
+.gist-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 0 10px rgba(201, 162, 39, 0.2);
+        }
+
+.gist-card h3 {
+            color: var(--gold);
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+.gist-card p {
+            color: #ccc;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 0;
+            font-family: var(--accent-font);
+            font-style: italic;
+        }
+
+
+
+
+				
         .view { display: none; animation: fadeIn 0.5s ease forwards; }
         .view.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
@@ -229,6 +288,29 @@
 
         <div class="container">
             <div id="home-view" class="view active">
+
+<div class="split-layout-wrapper">
+                    
+                    <aside class="sidebar-left">
+                        <h2 class="gold-text" style="font-size: 2.4rem; margin-bottom: 20px; text-align: left;  border: 5px solid var(--gold);">Legal Gist &amp; Insights</h2>
+                        
+                        <div class="gist-card">
+                            <h3>The Impact of Recent Rulings</h3>
+                            <p><a href= digest/DocEvi.html>"A quick breakdown of this week's most talked-about Supreme Court judgment..."</a></p>
+                        </div>
+
+                        <div class="gist-card">
+                            <h3>Scholarly Perspectives</h3>
+                            <p>"Examining constitutional loopholes in local government financial autonomy..."</p>
+                        </div>
+                    </aside>
+
+
+		<div class="main-content-right">
+
+
+
+				
                 <div class="gallery-container">
                     <div class="frame">
 					<img src="img/spiv2.jpg" alt="Author" style="width:100%; height:auto;" class="gold-frame">
