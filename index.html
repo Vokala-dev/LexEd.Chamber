@@ -262,54 +262,63 @@
 		/* ... your existing .comment-form button and footer styles ... */
         footer { text-align: center; padding: 40px; opacity: 0.5; font-size: 0.8rem; letter-spacing: 2px; }
       
-      
-        /* DROP THIS ENTIRE BLOCk HERE AT THE END OF YOUR STYLES */
+      /* --- PREMIUM NAVIGATION MENU --- */
         .mobile-nav {
-            display: none;
+            display: none; /* Keeps it hidden entirely on desktop */
         }
 
+        /* --- MOBILE SCREEN LAYOUT ARCHITECTURE --- */
         @media (max-width: 600px) {
+            /* 1. Hide the Legal Gist column completely on mobile screens */
+            .sidebar-left {
+                display: none !important;
+            }
+
+            /* 2. Force the course hub dashboard to span full screen width */
+            .main-content-right {
+                flex: 10 !important;
+                width: 100% !important;
+            }
+
+            /* 3. Render a clean horizontal navigation bar at the top */
             .mobile-nav {
                 display: flex;
-                justify-content: center;
+                justify-content: flex-end; /* Places button neatly on the right */
                 background: rgba(10, 10, 10, 0.95);
                 border-bottom: 1px solid var(--gold-muted);
+                padding: 12px 20px;
                 position: sticky;
                 top: 0;
                 z-index: 900;
             }
 
+            /* Style the Legal Gist button using the Supreme Court aesthetic */
             .mobile-nav a {
-                flex: 1;
-                text-align: center;
-                padding: 15px;
                 color: var(--gold);
                 text-decoration: none;
                 font-family: 'Cinzel', serif;
-                font-size: 0.85rem;
+                font-weight: bold;
                 letter-spacing: 1px;
-                transition: background 0.3s;
-            }
-
-            .mobile-nav a:not(:last-child) {
-                border-right: 1px solid var(--gold-muted);
+                font-size: 0.85rem;
+                border: 1px solid var(--gold-muted);
+                padding: 8px 16px;
+                background: rgba(201, 162, 39, 0.05);
+                cursor: pointer;
+                transition: all 0.3s ease;
             }
 
             .mobile-nav a:hover {
-                background: var(--gold-muted);
+                background: var(--gold);
+                color: black;
             }
 
+            /* Resets layout behavior */
             .split-layout-wrapper {
                 flex-direction: column;
-                gap: 40px;
-            }
-
-            .sidebar-left, .main-content-right {
-                width: 100%;
-                position: static;
+                gap: 0;
             }
         }
-      
+
      
     </style>
 
@@ -340,9 +349,8 @@
         </header>
 
 		<nav class="mobile-nav">
-            <a href="#courses-anchor">Jump to Courses</a>
-            <a href="#gist-anchor">Read Legal Gist</a>
-        </nav>
+            <a onclick="openView('gist-view')">Legal Gist</a>
+		</nav>
 
 
         <div class="container">
@@ -421,6 +429,27 @@
             </div>
 </div>
 			</div>
+
+  <!-- PASTE THIS DEDICATED PAGE ALONGSIDE YOUR OTHER LEVEL VIEWS -->
+            <div id="gist-view" class="view">
+                <button class="back-btn" onclick="openView('home-view')">← Return to Lobby</button>
+                <div class="card">
+                    <h2 class="gold-text" style="border-bottom: 1px solid var(--gold-muted); padding-bottom: 15px; margin-bottom: 30px; font-size: 1.8rem; text-align: left;">Legal Gist &amp; Insights</h2>
+                    
+                    <div class="gist-card">
+                        <h3>The Impact of Recent Rulings</h3>
+                        <p>"A quick breakdown of this week's most talked-about Supreme Court judgment..."</p>
+                    </div>
+
+                    <div class="gist-card">
+                        <h3>Scholarly Perspectives</h3>
+                        <p>"Examining constitutional loopholes in local government financial autonomy..."</p>
+                    </div>
+                </div>
+			</div>
+
+
+			
 
             <div id="level-view" class="view">
                 <button class="back-btn" onclick="openView('home-view')">← Return to Lobby</button>
