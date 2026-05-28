@@ -777,27 +777,41 @@ window.addEventListener('load', () => {
     }
 });
 
-// The Game Changer: This strictly handles the browser/hardware back navigation
+// --- 3. Airtight Global Event Listeners ---
+window.addEventListener('load', () => {
+    // If arriving with the hash, bypass gate and sync view
+    if(window.location.hash === "#in-portal") {
+        document.getElementById('landing-gate').classList.add('dismissed');
+        currentActiveView = 'home-view';
+    } else {
+        // Safe baseline state reset for clean history alignment
+        window.history.replaceState({viewId: 'gate'}, "", "");
+    }
+});
+
+// The Fixed Game Changer: Smooth programmatic tracking via native popstate matching
 window.addEventListener('popstate', (event) => {
+    // If the user goes all the way back past our portal marker
+    if (!event.state || event.state.viewId === 'gate') {
+        document.getElementById('landing-gate').classList.remove('dismissed');
+        currentActiveView = 'home-view';
+        return;
+    }
+
+    // Handle structural layout adjustments smoothly 
     if (currentActiveView !== 'home-view') {
-        // 1. If deep inside the app, step back structurally via the map
         let targetView = previousViewMapping[currentActiveView] || 'home-view';
         
-        // Re-push the baseline state so the browser back button remains armed
-        window.history.pushState({viewId: targetView}, "", "#in-portal");
-        
-        // Handle structural step-back logic programmatically
         if (targetView === 'home-view') {
             openView('home-view', false);
         } else if (targetView === 'level-view') {
             openView('level-view', false);
         } else if (targetView === 'toc-view') {
-            document.getElementById('toc-back-btn').click();
+            const tocBtn = document.getElementById('toc-back-btn');
+            if (tocBtn) tocBtn.click();
         }
     } else {
-        // 2. If we are in the Lobby (home-view), drop down the gate completely
         document.getElementById('landing-gate').classList.remove('dismissed');
-        // Hitting back one more time now exits the website because the history stack is empty!
     }
 });
 		
