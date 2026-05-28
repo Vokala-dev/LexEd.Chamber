@@ -515,6 +515,45 @@
             }
         }
 
+		/* --- Add this at the bottom of your style section --- */
+
+/* This adds the dark cover overlay and background mechanics to any card */
+.vault-card {
+    position: relative;
+    overflow: hidden; /* Keeps the pictures constrained to card borders */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Creates the dark overlay tint over the image so your text stays readable */
+.vault-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.88), rgba(20, 20, 20, 0.92));
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+/* Brightens the image slightly on hover */
+.vault-card:hover::before {
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.75), rgba(20, 20, 20, 0.85));
+}
+
+/* Pushes text layers to sit on top of the images */
+.vault-card-header, .vault-card h3, .vault-card p, .vault-card-footer {
+    position: relative;
+    z-index: 2;
+}
+
+/* Specific image perceptions for each level */
+.v-100 { background-image: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=600'); } 
+.v-200 { background-image: url('https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?auto=format&fit=crop&q=80&w=600'); } 
+.v-300 { background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=600'); } 
+.v-400 { background-image: url('https://images.unsplash.com/photo-1447069387593-a5de0862481e?auto=format&fit=crop&q=80&w=600'); } 
+.v-500 { background-image: url('https://images.unsplash.com/photo-1423592707957-3b2d2ffa6c33?auto=format&fit=crop&q=80&w=600'); }
+
      
     </style>
 
@@ -608,7 +647,7 @@
 
                     <!-- 100L VAULT CARD -->
 
-                    <div class="vault-card" onclick="showLevel('100L')">
+                    <div class="vault-card v-100" onclick="showLevel('100L')">
 
                         <div class="vault-card-header">
 
@@ -634,7 +673,7 @@
 
                     <!-- 200L VAULT CARD -->
 
-                    <div class="vault-card" onclick="showLevel('200L')">
+                    <div class="vault-card v-200" onclick="showLevel('200L')">
 
                         <div class="vault-card-header">
 
@@ -660,7 +699,7 @@
 
                     <!-- 300L VAULT CARD -->
 
-                    <div class="vault-card" onclick="showLevel('300L')">
+                    <div class="vault-card v-300" onclick="showLevel('300L')">
 
                         <div class="vault-card-header">
 
@@ -686,7 +725,7 @@
 
                     <!-- 400L VAULT CARD -->
 
-                    <div class="vault-card" onclick="showLevel('400L')">
+                    <div class="vault-card v-400" onclick="showLevel('400L')">
 
                         <div class="vault-card-header">
 
@@ -712,7 +751,7 @@
 
                     <!-- 500L VAULT CARD -->
 
-                    <div class="vault-card" onclick="showLevel('500L')">
+                    <div class="vault-card v-500" onclick="showLevel('500L')">
 
                         <div class="vault-card-header">
 
