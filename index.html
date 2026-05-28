@@ -500,15 +500,15 @@ function openView(id, addToHistory = true) {
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
     document.getElementById(id).classList.add('active');
     
-    // Track our current location in memory
     currentActiveView = id;
     
     if (addToHistory){
-        // We REPLACE the state instead of pushing. The history stack size stays at 1.
-        window.history.replaceState({viewId: id}, "", "#in-portal");
+        // Change replaceState to pushState so Android registers every screen change!
+        window.history.pushState({viewId: id}, "", "#" + id);
     }
     window.scrollTo(0,0);
 }
+
 
 // --- 2. Structural Dynamic Renderers ---
 const curriculum = {
@@ -650,43 +650,40 @@ function showDigest(topic, backFn) {
 
 // --- 3. Airtight Global Event Listeners ---
 window.addEventListener('load', () => {
-    if(window.location.hash === "#in-portal") {
+    // If arriving or refreshing with a hash link, keep the gate open smoothly
+    if (window.location.hash && window.location.hash !== '#gate') {
         document.getElementById('landing-gate').classList.add('dismissed');
-        currentActiveView = 'home-view';
-    }
-});
-
-// --- 3. Airtight Global Event Listeners ---
-window.addEventListener('load', () => {
-    // If returning with the hash parameter, instantly clear the gate
-    if (window.location.hash === "#in-portal") {
-        document.getElementById('landing-gate').classList.add('dismissed');
-        currentActiveView = 'home-view';
+        // Extract view name from hash (e.g., "#toc-view" becomes "toc-view")
+        let savedView = window.location.hash.substring(1);
+        if (document.getElementById(savedView)) {
+            openView(savedView, false);
+        } else {
+            currentActiveView = 'home-view';
+        }
     } else {
-        // Create an anchor point so the first back swipe doesn't exit the browser completely
-        window.history.pushState({ viewId: 'baseline' }, "", "");
+        window.history.replaceState({ viewId: 'gate' }, "", "#gate");
     }
 });
 
-// The Bulletproof Gesture Engine: Reads the active screen directly!
+// The Bulletproof Gesture Engine: Intercepts swipes and maps them directly
 window.addEventListener('popstate', (event) => {
-    // 1. If we are deep inside a topic content page, go back to the course menu
+    // If the user swipes all the way back to the gate hash, drop the landing gate
+    if (!window.location.hash || window.location.hash === '#gate') {
+        document.getElementById('landing-gate').classList.remove('dismissed');
+        currentActiveView = 'home-view';
+        return;
+    }
+
+    // Direct Screen Layout Mapping
     if (currentActiveView === 'digest-view') {
         openView('toc-view', false);
-        // Keep the back button armed
-        window.history.pushState({ viewId: 'baseline' }, "", "");
     } 
-    // 2. If we are looking at a course menu, step back to the Level selections
     else if (currentActiveView === 'toc-view') {
         openView('level-view', false);
-        window.history.pushState({ viewId: 'baseline' }, "", "");
     } 
-    // 3. If we are looking at a Level, step back to the main Home Lobby
     else if (currentActiveView === 'level-view' || currentActiveView === 'gist-view') {
         openView('home-view', false);
-        window.history.pushState({ viewId: 'baseline' }, "", "");
     } 
-    // 4. If we are in the Home Lobby, the user is trying to exit, so drop the gate!
     else if (currentActiveView === 'home-view') {
         document.getElementById('landing-gate').classList.remove('dismissed');
     }
