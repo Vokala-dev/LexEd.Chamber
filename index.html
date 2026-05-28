@@ -479,7 +479,8 @@
             /* 3. Render a clean horizontal navigation bar at the top */
             .mobile-nav {
                 display: flex;
-                justify-content: flex-end; /* Places button neatly on the right */
+                justify-content: space-between; /* Pushes logo to left, button to right */
+                align-items: center;
                 background: rgba(10, 10, 10, 0.95);
                 border-bottom: 1px solid var(--gold-muted);
                 padding: 12px 20px;
@@ -488,6 +489,25 @@
                 z-index: 900;
             }
 
+            /* NEW: Shimmer logo inside the mobile nav bar */
+            .mobile-nav-logo {
+                font-family: 'Cinzel', serif;
+                font-weight: bold;
+                font-size: 0.95rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                
+                /* Shimmer effect text mask */
+                background: linear-gradient(to right, #c9a227 30%, #fff 50%, #c9a227 70%);
+                background-size: 200% auto;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: navShine 4s linear infinite;
+            }
+
+            @keyframes navShine {
+                to { background-position: 200% center; }
+            }
             /* Style the Legal Gist button using the Supreme Court aesthetic */
             .mobile-nav a {
                 color: var(--gold);
@@ -583,6 +603,7 @@
         </header>
 
 		<nav class="mobile-nav">
+            <div class="mobile-nav-logo">Lex Educationis</div>
             <a onclick="openView('gist-view')">Legal Gist</a>
 		</nav>
 
