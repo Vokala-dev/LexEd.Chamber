@@ -239,13 +239,209 @@
             border: 1px solid var(--gold-muted); box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .level-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-bottom: 40px; }
-        .btn-premium {
-            background: radial-gradient(circle at top right, rgba(184, 134, 11, 0.2), var(--card-bg)); color: var(--gold); border: 1px solid var(--gold);
-            padding: 20px 10px; cursor: pointer; transition: 0.3s; font-family: 'Cinzel'; font-weight: bold;
-			font-size: 20px;
+
+		
+/* --- UPGRADED VAULT CARD GRID SYSTEM --- */
+
+        .level-grid { 
+
+            display: grid; 
+
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+
+            gap: 25px; 
+
+            margin-bottom: 40px; 
+
         }
-        .btn-premium:hover { background: var(--gold); color: black; }
+
+
+
+        .vault-card {
+
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.95), rgba(10, 10, 10, 0.98));
+
+            border: 1px solid var(--gold-muted);
+
+            border-top: 4px solid var(--gold);
+
+            padding: 25px;
+
+            border-radius: 4px;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            display: flex;
+
+            flex-direction: column;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+        }
+
+
+
+        .vault-card:hover {
+
+            transform: translateY(-5px);
+
+            border-color: var(--gold);
+
+            box-shadow: 0 8px 25px rgba(201, 162, 39, 0.15);
+
+        }
+
+
+
+        .vault-card-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .vault-tag {
+
+            font-family: 'Cinzel', serif;
+
+            font-size: 1.3rem;
+
+            font-weight: bold;
+
+            color: var(--gold);
+
+        }
+
+
+
+        .vault-status {
+
+            font-size: 0.7rem;
+
+            text-transform: uppercase;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            color: #aaa;
+
+            border: 1px solid rgba(255, 255, 255, 0.2);
+
+            padding: 3px 8px;
+
+            border-radius: 2px;
+
+        }
+
+
+
+        .vault-status.verified {
+
+            color: #00ffcc;
+
+            border-color: rgba(0, 255, 204, 0.3);
+
+            background: rgba(0, 255, 204, 0.02);
+
+        }
+
+
+
+        .vault-status.dynamic {
+
+            color: #ffaa00;
+
+            border-color: rgba(255, 170, 0, 0.3);
+
+        }
+
+
+
+        .vault-card h3 {
+
+            color: #ffffff;
+
+            margin: 0 0 10px 0;
+
+            font-size: 1.15rem;
+
+            font-family: 'Cinzel', serif;
+
+            letter-spacing: 0.5px;
+
+        }
+
+
+
+        .vault-card p {
+
+            color: #bcbcbc;
+
+            font-size: 0.88rem;
+
+            line-height: 1.6;
+
+            margin: 0 0 20px 0;
+
+            font-family: 'Playfair Display', serif;
+
+            font-style: italic;
+
+            flex-grow: 1;
+
+        }
+
+
+
+        .vault-card-footer {
+
+            text-align: right;
+
+            border-top: 1px solid rgba(201, 162, 39, 0.1);
+
+            padding-top: 15px;
+
+        }
+
+
+
+        .vault-action-text {
+
+            color: var(--gold);
+
+            font-family: 'Cinzel', serif;
+
+            font-size: 0.85rem;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            transition: color 0.3s;
+
+        }
+
+
+
+        .vault-card:hover .vault-action-text {
+
+            color: #fff;
+
+        }
+
+		
+    
+
 
         .back-btn { background: none; border: none; color: var(--gold); cursor: pointer; margin-bottom: 20px; text-transform: uppercase; font-weight: bold; font-size: 20px;}
         
@@ -402,13 +598,148 @@
 						<h2 class="direction-quote"> Click your level of study to access our courses</h2>
 					</section>	
 
+						
+
+               <!-- UPGRADED PREMIUM LEVEL VAULTS -->
+
                 <div class="level-grid">
-                    <button class="btn-premium" onclick="showLevel('100L')">100 Level</button>
-                    <button class="btn-premium" onclick="showLevel('200L')">200 Level</button>
-                    <button class="btn-premium" onclick="showLevel('300L')">300 Level</button>
-                    <button class="btn-premium" onclick="showLevel('400L')">400 Level</button>
-                    <button class="btn-premium" onclick="showLevel('500L')">500 Level</button>
+
+                    
+
+                    <!-- 100L VAULT CARD -->
+
+                    <div class="vault-card" onclick="showLevel('100L')">
+
+                        <div class="vault-card-header">
+
+                            <span class="vault-tag">100L</span>
+
+                            <span class="vault-status">Base Vault</span>
+
+                        </div>
+
+                        <h3>Foundational Chambers</h3>
+
+                        <p>Beginner blueprints including Legal Method and core introductory legal frameworks.</p>
+
+                        <div class="vault-card-footer">
+
+                            <span class="vault-action-text">Enter Chambers →</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 200L VAULT CARD -->
+
+                    <div class="vault-card" onclick="showLevel('200L')">
+
+                        <div class="vault-card-header">
+
+                            <span class="vault-tag">200L</span>
+
+                            <span class="vault-status verified">Fully Archived</span>
+
+                        </div>
+
+                        <h3>Core Substantive Law</h3>
+
+                        <p>Complete structural modules covering Constitutional Systems, Contracts, and Legal Systems.</p>
+
+                        <div class="vault-card-footer">
+
+                            <span class="vault-action-text">Enter Chambers →</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 300L VAULT CARD -->
+
+                    <div class="vault-card" onclick="showLevel('300L')">
+
+                        <div class="vault-card-header">
+
+                            <span class="vault-tag">300L</span>
+
+                            <span class="vault-status dynamic">Phased Release</span>
+
+                        </div>
+
+                        <h3>Commercial &amp; Tort Vault</h3>
+
+                        <p>Comprehensive breakdown sheets for the Law of Torts, Criminal Law, and Commercial Sales.</p>
+
+                        <div class="vault-card-footer">
+
+                            <span class="vault-action-text">Enter Chambers →</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 400L VAULT CARD -->
+
+                    <div class="vault-card" onclick="showLevel('400L')">
+
+                        <div class="vault-card-header">
+
+                            <span class="vault-tag">400L</span>
+
+                            <span class="vault-status dynamic">Phased Release</span>
+
+                        </div>
+
+                        <h3>Property &amp; Equity Juris</h3>
+
+                        <p>Advanced synthesis covering Land Law systems, Equity Maxims, and Matrimonial Causes.</p>
+
+                        <div class="vault-card-footer">
+
+                            <span class="vault-action-text">Enter Chambers →</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 500L VAULT CARD -->
+
+                    <div class="vault-card" onclick="showLevel('500L')">
+
+                        <div class="vault-card-header">
+
+                            <span class="vault-tag">500L</span>
+
+                            <span class="vault-status dynamic">Phased Release</span>
+
+                        </div>
+
+                        <h3>The Philosophy of Law</h3>
+
+                        <p>The highest academic tier analyzing global Jurisprudence and Corporate Company Law structures.</p>
+
+                        <div class="vault-card-footer">
+
+                            <span class="vault-action-text">Enter Chambers →</span>
+
+                        </div>
+
+                    </div>
+
+
+
                 </div>
+
+						
+			
 				
 				<section class="portal-container">
 				<h2> Status Notice </h2>
