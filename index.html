@@ -601,26 +601,163 @@
 
         function showSubTopics(parent, lvl, course) {
             const list = document.getElementById('topic-list');
-            document.getElementById('course-title').innerText = parent.title;
-            document.getElementById('toc-back-btn').onclick = () => showCourse(lvl, course);
-            list.innerHTML = '';
+// --- 1. Navigation State Tracking ---
+// We keep a manual look-back variable to know exactly what structural room is behind us
+let currentActiveView = 'home-view';
+let previousViewMapping = {
+    'level-view': 'home-view',
+    'toc-view': 'level-view',
+    'digest-view': 'toc-view'
+};
 
-            parent.subTopics.forEach(sub => {
-                const item = document.createElement('div');
-                item.className = 'list-item';
-                item.innerText = "→ " + sub.title;
-                item.onclick = () => showDigest(sub, () => showSubTopics(parent, lvl, course));
-                list.appendChild(item);
-            });
-            openView('toc-view');
+function enterPortal() {
+    document.getElementById('landing-gate').classList.add('dismissed');
+    // Create exactly ONE historical checkpoint. Hitting 'Back' on Android from here drops down the gate.
+    window.history.pushState({viewId: 'home-view'}, "", "#in-portal");
+    currentActiveView = 'home-view';
+}
+
+function openView(id, addToHistory = true) {
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    
+    // Track our current location in memory
+    currentActiveView = id;
+    
+    if (addToHistory){
+        // We REPLACE the state instead of pushing. The history stack size stays at 1.
+        window.history.replaceState({viewId: id}, "", "#in-portal");
+    }
+    window.scrollTo(0,0);
+}
+
+// --- 2. Structural Dynamic Renderers ---
+const curriculum = {
+    '100L': { 'Legal Method': [{ title: 'Fundamentals', content: '## Legal Method\nWelcome to your 100 level studies.' }] },
+    '200L': {
+        'Law of Contract': [
+            { 
+                title: 'Vitiating elements of contract', 
+                isParent: true,
+                subTopics: [
+                    { title: 'Mistake', content: 'digest/Mistake.html' },
+                    { title: 'Misrepresentation', content: 'digest/Misrep.html' },
+                    { title: 'Undue influence and Duress', content: 'digest/Dur.html' },
+                    { title: 'Illegal contracts', content: 'digest/Illeg.html' }
+                ]
+            },
+            { title: 'Privity of contract', content: 'digest/Privity.html' },
+            { title: 'Remedies', content: 'by Breach\nFundamental' },
+            { 
+                title: 'Discharge of contract', 
+                isParent: true,
+                subTopics: [
+                    { title: 'Performance', content: 'digest/Disperf.html' },
+                    { title: 'Agreement', content: 'digest/Disagre.html' },
+                    { title: 'Frustration', content: 'digest/DisFru.html' },
+                    { title: 'Breach', content: '## Discharge by Breach\nFundamental vs Minor breaches.' }
+                ]
+            }
+        ],
+        'Constitutional law': [
+            { title: 'Citizenship(updated)', content: 'digest/Citizenship.html' },
+            { title: 'Fundamental Rights (Chapter IV)(updated)', content: 'digest/Fundamental.html' },
+            { title: 'Fundamental Objectives(updated)', content: 'digest/Fundobj.html' },
+            { title: 'Creation of States', content: '## State Creation\nConstitutional Amendment procedures.' },
+            { title: 'Legislative Power(updated)', content: 'digest/Legis.html' },
+            { title: 'Judicial Power', content: '## Judicial\nPowers of the Supreme and High Courts.' },
+            { title: 'Executive Power', content: '## Executive\nPresidential and Gubernatorial oversight.' },
+            { title: 'Local Government(updated)', content: 'digest/Localgov.html' }
+        ],
+        'Legal system': [{ title: 'Sources of Law', content: 'digest/Source.html' }],
+        'Labour law': [{ title: 'Master and Servant', content: '## Labour Law\nContract of Service and Liability.' }]
+    },
+    '300L': {
+        'Law of Tort': [
+            { title: 'Strict Liability', content: '## Strict Liability\nRylands v Fletcher.' },
+            { title: 'Defamation', content: '## Defamation\nLibel and Slander.' },
+            { title: 'Malicious Falsehood', content: '## Falsehood\nIntentional economic harm.' },
+            { title: 'Tort of Conspiracy', content: '## Conspiracy\nCollective tortious acts.' },
+            { title: 'Tort of Interference', content: '## Interference\nBusiness and contract disruption.' }
+        ],
+        'Criminal law': [{ title: 'Felonies and Misdemeanors', content: '## Criminal Law' }],
+        'Commercial law': [{ title: 'Sale of Goods', content: '## Commercial Law' }],
+        'Criminal litigation': [{ title: 'Arrest and Bail', content: '## Criminal Lit' }],
+        'Civil litigation': [{ title: 'Writ of Summons', content: '## Civil Lit' }]
+    },
+    '400L': {
+        'Law of Evidence': [{ title: 'Admissibility', content: '## Evidence' }],
+        'Equity and Trust': [{ title: 'Maxims of Equity', content: '## Equity' }],
+        'Land Law': [{ title: 'Tenure Systems', content: '## Land Law' }],
+        'Family law': [{ title: 'Matrimonial Causes', content: '## Family Law' }]
+    },
+    '500L': {
+        'Jurisprudence': [{ title: 'Natural Law', content: '## Jurisprudence' }],
+        'Company Law': [{ title: 'Incorporation', content: '## Company Law' }]
+    }
+};
+
+function showLevel(lvl) {
+    const list = document.getElementById('course-list');
+    document.getElementById('level-title').innerText = "CHAMBER: " + lvl;
+    list.innerHTML = '';
+    
+    Object.keys(curriculum[lvl]).forEach(course => {
+        const item = document.createElement('div');
+        item.className = 'list-item';
+        item.innerText = course;
+        item.onclick = () => showCourse(lvl, course);
+        list.appendChild(item);
+    });
+    openView('level-view');
+}
+
+function showCourse(lvl, course) {
+    const list = document.getElementById('topic-list');
+    document.getElementById('course-title').innerText = course;
+    
+    // Enforce back link to return to the specific level view
+    document.getElementById('toc-back-btn').onclick = () => showLevel(lvl);
+    
+    list.innerHTML = '';
+
+    curriculum[lvl][course].forEach(topic => {
+        const item = document.createElement('div');
+        item.className = 'list-item';
+        item.innerText = topic.title;
+        if(topic.isParent) {
+            item.onclick = () => showSubTopics(topic, lvl, course);
+        } else {
+            item.onclick = () => showDigest(topic, () => showCourse(lvl, course));
         }
+        list.appendChild(item);
+    });
+    openView('toc-view');
+}
 
-       function showDigest(topic, backFn) {
-    // If the content starts with "http" or ends with ".html", it's a link!
+function showSubTopics(parent, lvl, course) {
+    const list = document.getElementById('topic-list');
+    document.getElementById('course-title').innerText = parent.title;
+    
+    // Enforce back link to return to the specific parent course selection
+    document.getElementById('toc-back-btn').onclick = () => showCourse(lvl, course);
+    
+    list.innerHTML = '';
+
+    parent.subTopics.forEach(sub => {
+        const item = document.createElement('div');
+        item.className = 'list-item';
+        item.innerText = "→ " + sub.title;
+        item.onclick = () => showDigest(sub, () => showSubTopics(parent, lvl, course));
+        list.appendChild(item);
+    });
+    openView('toc-view');
+}
+
+function showDigest(topic, backFn) {
     if (topic.content.endsWith('.html') || topic.content.startsWith('http')) {
         window.location.href = topic.content;
     } else {
-        // Otherwise, show it on the same page as usual
         document.getElementById('digest-title').innerText = topic.title;
         let parsed = topic.content
             .replace(/^## (.*$)/gm, '<h2 style="color:var(--gold);">$1</h2>')
@@ -632,20 +769,37 @@
     }
 }
 
-		window.addEventListener('load', () => {
-		if(window.location.hash === "#in-portal") {
-			document.getElementById('landing-gate').classList.add('dismissed');
-			}
-		});
-		
-		window.addEventListener('popstate', (event) => {
-		if(event.state&&event.state.viewId){
-			openView(event.state.viewId, false);
-			}else{
-			openView('home-view', false);
-			//if no state exists, default to home openView('home-view', false);
-		}
-		});
+// --- 3. Airtight Global Event Listeners ---
+window.addEventListener('load', () => {
+    if(window.location.hash === "#in-portal") {
+        document.getElementById('landing-gate').classList.add('dismissed');
+        currentActiveView = 'home-view';
+    }
+});
+
+// The Game Changer: This strictly handles the browser/hardware back navigation
+window.addEventListener('popstate', (event) => {
+    if (currentActiveView !== 'home-view') {
+        // 1. If deep inside the app, step back structurally via the map
+        let targetView = previousViewMapping[currentActiveView] || 'home-view';
+        
+        // Re-push the baseline state so the browser back button remains armed
+        window.history.pushState({viewId: targetView}, "", "#in-portal");
+        
+        // Handle structural step-back logic programmatically
+        if (targetView === 'home-view') {
+            openView('home-view', false);
+        } else if (targetView === 'level-view') {
+            openView('level-view', false);
+        } else if (targetView === 'toc-view') {
+            document.getElementById('toc-back-btn').click();
+        }
+    } else {
+        // 2. If we are in the Lobby (home-view), drop down the gate completely
+        document.getElementById('landing-gate').classList.remove('dismissed');
+        // Hitting back one more time now exits the website because the history stack is empty!
+    }
+});
 		
 		
     </script>
