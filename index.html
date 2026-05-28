@@ -658,33 +658,38 @@ window.addEventListener('load', () => {
 
 // --- 3. Airtight Global Event Listeners ---
 window.addEventListener('load', () => {
-    // If arriving with the hash, bypass gate and sync view
-    if(window.location.hash === "#in-portal") {
+    // If returning with the hash parameter, instantly clear the gate
+    if (window.location.hash === "#in-portal") {
         document.getElementById('landing-gate').classList.add('dismissed');
         currentActiveView = 'home-view';
     } else {
-        // Safe baseline state reset for clean history alignment
-        window.history.replaceState({viewId: 'gate'}, "", "");
+        // Create an anchor point so the first back swipe doesn't exit the browser completely
+        window.history.pushState({ viewId: 'baseline' }, "", "");
     }
 });
 
-// PASTE ONLY THIS SURGICAL FIX IN ITS PLACE:
+// The Bulletproof Gesture Engine: Reads the active screen directly!
 window.addEventListener('popstate', (event) => {
-    // 1. If they back out past the home portal hash, drop the landing gate safely
-    if (window.location.hash !== "#in-portal") {
+    // 1. If we are deep inside a topic content page, go back to the course menu
+    if (currentActiveView === 'digest-view') {
+        openView('toc-view', false);
+        // Keep the back button armed
+        window.history.pushState({ viewId: 'baseline' }, "", "");
+    } 
+    // 2. If we are looking at a course menu, step back to the Level selections
+    else if (currentActiveView === 'toc-view') {
+        openView('level-view', false);
+        window.history.pushState({ viewId: 'baseline' }, "", "");
+    } 
+    // 3. If we are looking at a Level, step back to the main Home Lobby
+    else if (currentActiveView === 'level-view' || currentActiveView === 'gist-view') {
+        openView('home-view', false);
+        window.history.pushState({ viewId: 'baseline' }, "", "");
+    } 
+    // 4. If we are in the Home Lobby, the user is trying to exit, so drop the gate!
+    else if (currentActiveView === 'home-view') {
         document.getElementById('landing-gate').classList.remove('dismissed');
-        currentActiveView = 'home-view';
-        return;
     }
-
-    // 2. Map out exactly where the user should go based on where they just were
-    let structuralParentView = previousViewMapping[currentActiveView] || 'home-view';
-    
-    // 3. Force the app to show the correct parent layout room
-    openView(structuralParentView, false);
-    
-    // 4. Arm the history stack again so the next back swipe keeps working
-    window.history.pushState({viewId: structuralParentView}, "", "#in-portal");
 });
 		
 		
